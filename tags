@@ -1,0 +1,104 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+FitsConvertor	convertor.py	/^class FitsConvertor(object):$/;"	c
+QtGui	qtdemo.py	/^from PyQt4 import QtGui$/;"	i
+__init__	convertor.py	/^    def __init__(self, image=None):$/;"	m	class:FitsConvertor
+app	qtdemo.py	/^app = QtGui.QApplication([])$/;"	v
+convolve	background_extract.py	/^def convolve( image, size, kernel_recipe='gaussian'):$/;"	f
+convolve	convertor.py	/^    def convolve(self, size, kernel):$/;"	m	class:FitsConvertor
+convolve	pipeline.py	/^def convolve( image, size, kernel_recipe='gaussian'):$/;"	f
+convolve	pipeline_save.py	/^def convolve( image, size, kernel_recipe='gaussian'):$/;"	f
+convolve2d	background_extract.py	/^from scipy.signal import convolve2d$/;"	i
+convolve2d	convertor.py	/^from scipy.signal import convolve2d$/;"	i
+convolve2d	pipeline.py	/^from scipy.signal import convolve2d$/;"	i
+convolve2d	pipeline_save.py	/^from scipy.signal import convolve2d$/;"	i
+copy	background_extract.py	/^import copy$/;"	i
+copy	pipeline.py	/^import copy$/;"	i
+copy	pipeline_save.py	/^import copy$/;"	i
+create_artificial_background	background_extract.py	/^def create_artificial_background(image):$/;"	f
+cv2	background_extract.py	/^import cv2$/;"	i
+cv2	pipeline.py	/^import cv2$/;"	i
+cv2	pipeline_save.py	/^import cv2$/;"	i
+download_file	background_extract.py	/^from astropy.utils.data import download_file$/;"	i
+download_file	convertor.py	/^from astropy.utils.data import download_file$/;"	i
+download_file	pipeline.py	/^from astropy.utils.data import download_file$/;"	i
+download_file	pipeline_save.py	/^from astropy.utils.data import download_file$/;"	i
+edit_fits_data	background_extract.py	/^def edit_fits_data(fits_file, new_data, new_file_name):$/;"	f
+extract_lines	pipeline.py	/^def extract_lines( image, min_line_length=10, max_line_gap=10, canny_thresh1=50, canny_thresh2=150, apertureSize=7 ):$/;"	f
+extract_lines	pipeline_save.py	/^def extract_lines( image ):$/;"	f
+extracted_background	background_extract.py	/^extracted_background = sigma_clipper(image)$/;"	v
+f	extractor.py	/^f = np.fft.fft2(img[0].data)$/;"	v
+fits	background_extract.py	/^from astropy.io import fits$/;"	i
+fits	convertor.py	/^from astropy.io import fits$/;"	i
+fits	extractor.py	/^from astropy.io import fits$/;"	i
+fits	hist.py	/^from astropy.io import fits$/;"	i
+fits	pipeline.py	/^from astropy.io import fits$/;"	i
+fits	pipeline_save.py	/^from astropy.io import fits$/;"	i
+flattened	hist.py	/^flattened = img[0].data.flatten()$/;"	v
+fshift	extractor.py	/^fshift = np.fft.fftshift(f)$/;"	v
+gauss_kernel	background_extract.py	/^def gauss_kernel( kernlen=3, nsig=3):$/;"	f
+gauss_kernel	convertor.py	/^    def gauss_kernel(self, kernlen=3, nsig=3):$/;"	m	class:FitsConvertor
+gauss_kernel	pipeline.py	/^def gauss_kernel( kernlen=3, nsig=3):$/;"	f
+gauss_kernel	pipeline_save.py	/^def gauss_kernel( kernlen=3, nsig=3):$/;"	f
+image	background_extract.py	/^image = read_fits_file('M27_R_60s-001.fit')$/;"	v
+image	background_extract.py	/^image = read_fits_file('tralala.fit')$/;"	v
+image_file	convertor.py	/^    image_file = download_file('http:\/\/data.astropy.org\/tutorials\/FITS-images\/HorseHead.fits', cache=True )$/;"	v	class:FitsConvertor
+image_preprocess	background_extract.py	/^def image_preprocess(image):$/;"	f
+img	extractor.py	/^img = fits.open('AGO_2017_PR25_R-005.fit')$/;"	v
+img	hist.py	/^img = fits.open('AGO_2017_PR25_R-005.fit')$/;"	v
+imresize	background_extract.py	/^from scipy.misc import imresize$/;"	i
+instance	convertor.py	/^    instance = FitsConvertor()$/;"	v	class:FitsConvertor
+iterative_sigma_clipping	background_extract.py	/^def iterative_sigma_clipping(original_image, preprocessed_image, curr_iter, last_iter_background):$/;"	f
+load_image	convertor.py	/^    def load_image(self, image_name):$/;"	m	class:FitsConvertor
+magnitude_spectrum	extractor.py	/^magnitude_spectrum = 20*np.log(np.abs(fshift))$/;"	v
+matplotlib	background_extract.py	/^import matplotlib.pyplot as plt$/;"	i
+matplotlib	convertor.py	/^import matplotlib.pyplot as plt$/;"	i
+matplotlib	pipeline.py	/^import matplotlib.pyplot as plt$/;"	i
+matplotlib	pipeline_save.py	/^import matplotlib.pyplot as plt$/;"	i
+maximum	background_extract.py	/^maximum = 3000$/;"	v
+medfilt2d	background_extract.py	/^from scipy.signal import medfilt2d$/;"	i
+minimum	background_extract.py	/^minimum = 1600$/;"	v
+np	background_extract.py	/^import numpy as np$/;"	i
+np	convertor.py	/^import numpy as np$/;"	i
+np	extractor.py	/^import numpy as np$/;"	i
+np	hist.py	/^import numpy as np$/;"	i
+np	pipeline.py	/^import numpy as np$/;"	i
+np	pipeline_save.py	/^import numpy as np$/;"	i
+perform_sigma_clipping	background_extract.py	/^def perform_sigma_clipping(original_image, number_of_iterations=9):$/;"	f
+pipeline	pipeline.py	/^def pipeline( img_src ):$/;"	f
+pipeline	pipeline_save.py	/^def pipeline( img_src ):$/;"	f
+plt	background_extract.py	/^import matplotlib.pyplot as plt$/;"	i
+plt	convertor.py	/^import matplotlib.pyplot as plt$/;"	i
+plt	extractor.py	/^from matplotlib import pyplot as plt$/;"	i
+plt	hist.py	/^from matplotlib import pyplot as plt$/;"	i
+plt	pipeline.py	/^import matplotlib.pyplot as plt$/;"	i
+plt	pipeline_save.py	/^import matplotlib.pyplot as plt$/;"	i
+psf	pipeline.py	/^def psf(data):$/;"	f
+psf	pipeline_save.py	/^def psf(data):$/;"	f
+random	background_extract.py	/^import random$/;"	i
+read_fits_file	background_extract.py	/^def read_fits_file(fits_file):$/;"	f
+result	background_extract.py	/^result = image-extracted_background$/;"	v
+result	pipeline.py	/^result = pipeline('STREAK_test_1-026.fit')$/;"	v
+result	pipeline_save.py	/^result = pipeline('sample.fit')$/;"	v
+scipy	background_extract.py	/^import scipy.stats as st$/;"	i
+scipy	convertor.py	/^import scipy.stats as st$/;"	i
+scipy	pipeline.py	/^import scipy.stats as st$/;"	i
+scipy	pipeline_save.py	/^import scipy.stats as st$/;"	i
+show_hist	background_extract.py	/^def show_hist(image):$/;"	f
+show_histogram	pipeline.py	/^def show_histogram( image ):$/;"	f
+show_histogram	pipeline_save.py	/^def show_histogram( image ):$/;"	f
+show_image	background_extract.py	/^def show_image( image, name):$/;"	f
+show_image	convertor.py	/^    def show_image(self,image=self.image cmap=plt.get_cmap('gray')):$/;"	m	class:FitsConvertor
+show_image	pipeline.py	/^def show_image( image, name):$/;"	f
+show_image	pipeline_save.py	/^def show_image( image, name):$/;"	f
+sigma_clipper	background_extract.py	/^def sigma_clipper( image, num_tiles_width = 1, num_tiles_height = 1 ):$/;"	f
+st	background_extract.py	/^import scipy.stats as st$/;"	i
+st	convertor.py	/^import scipy.stats as st$/;"	i
+st	pipeline.py	/^import scipy.stats as st$/;"	i
+st	pipeline_save.py	/^import scipy.stats as st$/;"	i
+sys	qtdemo.py	/^import sys$/;"	i
+window	qtdemo.py	/^window = QtGui.QWidget()$/;"	v
