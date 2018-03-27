@@ -10,6 +10,8 @@ from scipy.misc import imresize
 import scipy.stats as st
 from scipy.signal import medfilt2d
 
+from fits_control import read_fits_file, edit_fits_data, show_image
+
 from plot3d import show_3d_data
 
 
@@ -23,19 +25,6 @@ def create_artificial_background(image):
     background = convolve(background, 86, 'gaussian')
     np.save('data/background_map.npy', background)
     return background
-
-def read_fits_file(fits_file):
-    data_and_headers = fits.open('data/' + fits_file)
-    data = data_and_headers[0].data
-    print('Astonomical image with shape {} loaded'.format(data.shape))
-    data_and_headers.close()
-    return data
-
-def edit_fits_data(fits_file, new_data, new_file_name):
-    data_and_headers = fits.open('data/' + fits_file)
-    data_and_headers[0].data = new_data
-    data_and_headers[0].writeto('data/' + new_file_name)
-    return
 
 def convolve( image, size, kernel_recipe='gaussian'):
     kernel = None
@@ -58,19 +47,6 @@ def gauss_kernel( kernlen=3, nsig=3):
     kernel_raw = np.sqrt(np.outer(kern1d, kern1d))
     kernel = kernel_raw/kernel_raw.sum()
     return kernel
-
-def show_image( image, name):
-    print('Showing img')
-    if type(image) is type(list()):
-        fig, ax = plt.subplots(nrows=1, ncols=len(image))
-        for i,row in enumerate(ax):
-            row.imshow(image[i], cmap='gray')
-            # row.title(name[i]), plt.xticks([]), plt.yticks([])
-        plt.show()
-    else:
-        plt.imshow(image, cmap='gray')
-        plt.title(name), plt.xticks([]), plt.yticks([])
-        plt.show()
 
 def iterative_sigma_clipping(original_image, preprocessed_image, curr_iter, last_iter_background):
     print('==================================================')
