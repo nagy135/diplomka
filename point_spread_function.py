@@ -42,5 +42,5 @@ def recurent_point_search(i, u, points, mask):
 
 
 image = read_fits_file('M27_R_60s-001.fit')
-create_psf_objects(image)
-# show_3d_data(image, 'test')
+# create_psf_objects(image)
+show_3d_data(image)
