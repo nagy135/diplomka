@@ -27,18 +27,30 @@ def create_psf_objects(image):
     while mask.sum() > 0:
         try:
             print(mask.sum())
-            for i, row in enumerate(mask):
-                for u, point in enumerate(row):
+            for y, row in enumerate(mask):
+                for x, point in enumerate(row):
                     if point == 1:
-                        points_around = recurent_point_search(i, u, list(), mask)
+                        points_around = recurrent_point_search(x, y, list(), mask)
                         point_spread_mashes.append(PointSpreadMesh(points_around))
                         raise continue_while_loop
         except ContinueWhileLoop:
             continue
 
-def recurent_point_search(i, u, points, mask):
-    # TODO
-    return recurent_point_search(i-1, u, points, mask)
+def recurrent_point_search(x, y, points, mask):
+    if mask[y][x] == 1 and (x,y) not in points:
+        points.append((x,y))
+    new_points = list()
+    if x-1 >= 0:
+        new_points.append(recurrent_point_search(x-1, y, points, mask))
+    if x+1 < mask.shape[1]:
+        new_points.append(recurrent_point_search(x+1, y, points, mask))
+    if y-1 >= 0:
+        new_points.append(recurrent_point_search(x, y-1, points, mask))
+    if x+1 < mask.shape[0]:
+        new_points.append(recurrent_point_search(x, y+1, points, mask))
+
+
+    return points + new_points
 
 
 image = read_fits_file('M27_R_60s-001.fit')
