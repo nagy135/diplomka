@@ -14,15 +14,18 @@ from fits_control import read_fits_file, edit_fits_data, show_image
 from plot3d import show_3d_data
 from PointSpreadMesh import PointSpreadMesh
 
+from decorators import print_function, time_function
+
 class ContinueWhileLoop(Exception):
     pass
 continue_while_loop = ContinueWhileLoop()
 
+@print_function('Starting creation of PSF objects')
 def create_psf_objects(image):
     threshold = np.mean(np.array([np.max(image), np.median(image)])) * 1/2
 
     mask = image > threshold
-    show_image([image,mask], ['image','maska'])
+    # show_image([image,mask], ['image','maska'])
     point_spread_mashes = list()
 
     mask_sum = mask.sum()
@@ -59,12 +62,12 @@ def recurrent_point_search(x, y, points, mask):
     return list(set(points + new_points))
 
 
-image = read_fits_file('M27_R_60s-001.fit')
-# image = np.array([
-#     [0,0,0,0],
-#     [0,1000,1000,0],
-#     [0,1000,1000,0],
-#     [0,0,0,0],
-#     ])
+# image = read_fits_file('M27_R_60s-001.fit')
+image = np.array([
+    [0,0,0,0],
+    [0,1000,1000,0],
+    [0,1000,1000,0],
+    [0,0,0,0],
+    ])
 create_psf_objects(image)
 # show_3d_data(image)
