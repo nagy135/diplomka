@@ -1,3 +1,4 @@
+import math
 import random
 import numpy as np
 import copy
@@ -16,53 +17,25 @@ from PointSpreadMesh import PointSpreadMesh
 
 from decorators import print_function, time_function
 
-class ContinueWhileLoop(Exception):
-    pass
-continue_while_loop = ContinueWhileLoop()
-
 @print_function('Starting creation of PSF objects')
 def create_psf_objects(image):
     threshold = np.mean(np.array([np.max(image), np.median(image)])) * 1/2
 
     mask = image > threshold
     # show_image([image,mask], ['image','maska'])
-    point_spread_mashes = list()
+    points = list()
 
-    mask_sum = mask.sum()
-    while mask_sum > 0:
-        try:
-            print('Points remaining in mask : {}'.format(str(mask_sum)))
-            for y, row in enumerate(mask):
-                for x, point in enumerate(row):
-                    if point == 1:
-                        points_around = recurrent_point_search(x, y, [], mask)
-                        mask_sum -= len(points_around)
-                        point_spread_mashes.append(PointSpreadMesh(points_around))
-                        raise continue_while_loop
-        except ContinueWhileLoop:
-            continue
-    print('Algorithm detected {} point meshes'.format(str(len(point_spread_mashes))))
+    for y, row in enumerate(mask):
+        for x, point in enumerate(row):
+            if point == 1:
+                points.append((x,y))
+    print('Algorithm detected {} points'.format(str(len(points))))
 
-def recurrent_point_search(x, y, points, mask):
-    if mask[y][x] == 1 and (x,y) not in points:
-        points.append((x,y))
-        mask[y][x] = 0
-    else:
-        return []
-    new_points = []
-    if x+1 < mask.shape[1]:
-        new_points += recurrent_point_search(x+1, y, points, mask)
-    if y+1 < mask.shape[0]:
-        new_points += recurrent_point_search(x, y+1, points, mask)
-    if x-1 >= 0:
-        new_points += recurrent_point_search(x-1, y, points, mask)
-    if y-1 >= 0:
-        new_points += recurrent_point_search(x, y-1, points, mask)
-
-    for point in new_points:
-        if point not in points:
-            points.append(point)
-    return points
+def neighbor_check(first_point, second_point):
+    dist = np.linalg.norm( np.array(first_point) - np.array(second_point) )
+    if dist == 1 or dist == math.sqrt(2):
+        return True
+    return False
 
 
 image = read_fits_file('M27_R_60s-001.fit')
@@ -72,5 +45,5 @@ image = read_fits_file('M27_R_60s-001.fit')
 #     [0,1000,1000,0],
 #     [0,0,0,0],
 #     ])
-create_psf_objects(image)
+# create_psf_objects(image)
 # show_3d_data(image)
