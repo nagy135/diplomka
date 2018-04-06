@@ -50,24 +50,27 @@ def recurrent_point_search(x, y, points, mask):
     else:
         return []
     new_points = []
-    if x-1 >= 0:
-        new_points += recurrent_point_search(x-1, y, points, mask)
     if x+1 < mask.shape[1]:
         new_points += recurrent_point_search(x+1, y, points, mask)
-    if y-1 >= 0:
-        new_points += recurrent_point_search(x, y-1, points, mask)
     if y+1 < mask.shape[0]:
         new_points += recurrent_point_search(x, y+1, points, mask)
+    if x-1 >= 0:
+        new_points += recurrent_point_search(x-1, y, points, mask)
+    if y-1 >= 0:
+        new_points += recurrent_point_search(x, y-1, points, mask)
 
-    return list(set(points + new_points))
+    for point in new_points:
+        if point not in points:
+            points.append(point)
+    return points
 
 
-# image = read_fits_file('M27_R_60s-001.fit')
-image = np.array([
-    [0,0,0,0],
-    [0,1000,1000,0],
-    [0,1000,1000,0],
-    [0,0,0,0],
-    ])
+image = read_fits_file('M27_R_60s-001.fit')
+# image = np.array([
+#     [0,0,0,0],
+#     [0,1000,1000,0],
+#     [0,1000,1000,0],
+#     [0,0,0,0],
+#     ])
 create_psf_objects(image)
 # show_3d_data(image)
