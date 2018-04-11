@@ -18,7 +18,7 @@ from PointSpreadMesh import PointSpreadMesh
 from decorators import print_function, time_function
 
 @print_function('Starting creation of PSF objects')
-def create_psf_objects(image):
+def extract_point_spread_meshes(image):
     threshold = np.mean(np.array([np.max(image), np.median(image)])) * 1/2
 
     mask = image > threshold
@@ -30,6 +30,35 @@ def create_psf_objects(image):
             if point == 1:
                 points.append((x,y))
     print('Algorithm detected {} points'.format(str(len(points))))
+    joined_points = join_neigbor_points(points)
+    print('{} point meshes detected'.format(len(joined_points)))
+    point_meshes = []
+    for point_mesh in joined_points:
+        point_meshes.append(PointSpreadMesh(point_mesh))
+    global extracted_point_spread_meshes
+    extracted_point_spread_meshes = point_meshes
+
+
+def join_neigbor_points(points):
+    joined = list()
+    extracted_point = points.pop()
+    joined.append([extracted_point])
+    while len(points) > 0:
+        point = points.pop()
+        found_spot = False
+        for i,point_mesh in enumerate(joined):
+            if found_spot:
+                break
+            for u,point_mesh_point in enumerate(point_mesh):
+                if found_spot:
+                    break
+                if neighbor_check(point_mesh_point, point):
+                    found_spot = True
+                    joined[i].append(point)
+        if not found_spot:
+            joined.append([point])
+    return joined
+
 
 def neighbor_check(first_point, second_point):
     dist = np.linalg.norm( np.array(first_point) - np.array(second_point) )
@@ -45,5 +74,13 @@ image = read_fits_file('M27_R_60s-001.fit')
 #     [0,1000,1000,0],
 #     [0,0,0,0],
 #     ])
-# create_psf_objects(image)
-# show_3d_data(image)
+# image = np.array([
+#     [1000,1000,0,0],
+#     [0,0,0,1000],
+#     [0,0,0,1000],
+#     [0,0,0,1000],
+#     ])
+extracted_point_spread_meshes= []
+extract_point_spread_meshes(image)
+for point_mash in extracted_point_spread_meshes:
+    point_mash.fit_curve()

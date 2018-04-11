@@ -11,3 +11,9 @@ class PointSpreadMesh(object):
 
     def get_point_crosses(self):
         raise NonImplementedError
+
+    def gaus(x,a,x0,sigma):
+        return a*exp(-(x-x0)**2/(2*sigma**2))
+
+    def fit_curve():
+        raise NonImplementedError
