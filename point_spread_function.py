@@ -22,7 +22,7 @@ def extract_point_spread_meshes(image):
     threshold = np.mean(np.array([np.max(image), np.median(image)])) * 1/2
 
     mask = image > threshold
-    # show_image([image,mask], ['image','maska'])
+    show_image([image,mask], ['image','maska'])
     points = list()
 
     for y, row in enumerate(mask):
