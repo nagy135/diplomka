@@ -34,7 +34,7 @@ def extract_point_spread_meshes(image):
     print('{} point meshes detected'.format(len(joined_points)))
     point_meshes = []
     for point_mesh in joined_points:
-        point_meshes.append(PointSpreadMesh(point_mesh))
+        point_meshes.append(PointSpreadMesh(point_mesh, image))
     global extracted_point_spread_meshes
     extracted_point_spread_meshes = point_meshes
 
@@ -83,4 +83,5 @@ image = read_fits_file('M27_R_60s-001.fit')
 extracted_point_spread_meshes= []
 extract_point_spread_meshes(image)
 for point_mash in extracted_point_spread_meshes:
-    point_mash.fit_curve()
+    params = point_mash.fit_curve()
+    print(params)

@@ -2,20 +2,16 @@ import numpy as np
 from scipy.optimize import curve_fit
 from scipy import asarray as ar,exp
 from scipy import optimize
+from plot3d import *
 
 
 class PointSpreadMesh(object):
 
-    def __init__(self, points):
+    def __init__(self, points, image):
         self.points = points
         self.biggest_intensity_point = None
-        self.horizontal_cross = list()
-        self.vertical_cross = list()
-        self.popt = None
-        self.pcov = None
-
-    def get_point_crosses(self):
-        raise NonImplementedError
+        self.squared_data = None
+        self.image = image
 
     def gaussian(self, height, center_x, center_y, width_x, width_y):
         """Returns a gaussian function with the given parameters"""
@@ -39,10 +35,31 @@ class PointSpreadMesh(object):
         height = data.max()
         return height, x, y, width_x, width_y
 
+    def fill_to_square(self):
+        min_x, max_x, min_y, max_y = None, None, None, None
+        for point in self.points:
+            if min_x is None or min_x > point[0]:
+                min_x = point[0]
+            if max_x is None or max_x < point[0]:
+                max_x = point[0]
+            if min_y is None or min_y > point[1]:
+                min_y = point[1]
+            if max_y is None or max_y < point[1]:
+                max_y = point[1]
+        size_x, size_y = (max_x - min_x + 1, max_y - min_y + 1)
+        square = np.zeros((size_y, size_x))
+        for point in self.points:
+            square[point[1]-min_y, point[0]-min_x] = self.image[point[1], point[0]]
+        return square
+
+
     def fit_curve(self):
         """Returns (height, x, y, width_x, width_y)
         the gaussian parameters of a 2D distribution found by a fit"""
-        data = self.fill_to_square(self.points)
+        if self.squared_data is None:
+            data = self.fill_to_square()
+        else:
+            data = self.squared_data
         params = self.moments(data)
         errorfunction = lambda p: np.ravel(self.gaussian(*p)(*np.indices(data.shape)) - data)
         p, success = optimize.leastsq(errorfunction, params)

@@ -25,6 +25,7 @@ def show_3d_data(data, label='No Name', method='plotly'):
         # ha.contourf(X, Y, data)
 
         plt.show()
+        return
     if method == 'plotly':
         data = [
             go.Surface(
