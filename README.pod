@@ -18,11 +18,17 @@ One of the tasks for the possible candidate will be to review the existing algor
 Development of an algorithm which will identify and extract positions of any features present on a single astronomical image acquired during the astronomical observations to space debris objects such as fragments, defunct satellites and upper stages. 
 
 =head1 RELEVANT LITERATURE
+
 =over
 
 =item B<E. Stoveken, T. Schildknecht, Algorithms for the Optical Detection of Space Debris Objects>
+
 Proceedings of the 4th European Conference on Space Debris (ESA SP-587). 18-20 April 2005, ESA/ESOC, Darmstadt, Germany. Editor: D. Danesy., p.637.
+
 =item B<V. Kouprianov, Distinguishing features of CCD astrometry of faint GEO objects>
+
 Advances in Space Research, Volume 41, Issue 7, 2008, Pages 1029-1038, ISSN 0273-1177, http://dx.doi.org/10.1016/j.asr.2007.04.033. (http://www.sciencedirect.com/science/article/pii/S0273117707003699)
+
 =item B<B. Flewelling, Computer Vision Techniques Applied to Space Object Detect>
+
 Track, ID, Characterize, Proceedings of the Advanced Maui Optical and Space Surveillance Technologies Conference, held in Wailea, Maui, Hawaii, September 9-12, 2014, Ed.: S. Ryan, The Maui Economic Development Board, id.E69.
