@@ -1,0 +1,94 @@
+\chapter{Prehľad problematiky}\label{chap:issues_overview}
+
+V tejto kapitole si popíšeme problémy, ktoré treba riešiť pri návrhu a implementácii modelu na simuláciu peny. 
+
+Problematiku tejto témy môžeme rozdeliť na dve logické časti a to problematika samotnej peny a problematika implementácie. Pri problematike peny musíme brať do úvahy najmä fyziku peny a jej elementov, naopak pri problematike implementácie sa budeme zaoberať výberom vhodných dátových štruktúr a vhodným návrhom architektúry samotnej aplikácie.
+
+\begin{enumerate}
+  \item Problematika modelu peny
+  \item Problematika implementácie
+\end{enumerate}
+
+\section{Problematika modelu peny}
+  
+Pena sa dá definovať aj ako zhluk množstva bublín, preto sa musíme pri rozoberaní problematiky peny sústrediť aj na problémy vzhľadom na samotné bubliny. Pri bublinách treba riešiť nasledovné problémy:
+
+\begin{itemize}
+\item tvar bublín
+\item zhlukovanie bublín
+\item sily pôsobiace na bublinu
+\item prasknutie bubliny
+\end{itemize}
+
+Pri pene ako celku treba riešiť nasledovné problémy:
+
+\begin{itemize}
+\item hustota peny
+\item renderovanie peny
+\end{itemize}  
+
+\subsection{Tvar bublín}
+
+Tvar bubliny je dynamický a závisí od veľkosti bubliny a takisto je ovplyvňovaný silami pôsobiacimi na bublinu. Bublina má za ideálneho stavu guľovitý tvar, avšak vplyvom rôznych síl pôsobiacich na bublinu sa jej tvar mení na nepravidelný, niekedy až pripomínajúci fazuľu. Čím je bublina menšia, tým menšia je deformácia bubliny, nakoľko vnútorný tlak bubliny je väčší ako pri veľkých bublinách. Od veľkosti bubliny závisí takisto rýchlosť znovuobnovenia bubliny do pôvodného guľovitého tvaru. V prípade, že je bublina príliš veľká, praskne skôr ako sa stihne obnoviť do pôvodného tvaru. Problém tvaru bublín preto môžeme rozdeliť na nasledujúce problémy:
+
+\begin{itemize}
+\item akým spôsobom deformovať tvar bubliny
+\item zistiť závislosť rýchlosti obnovenia do pôvodného tvaru od veľkosti bubliny
+\item zistiť hranicu (veľkosti), kedy bublina praskne skôr ako sa stihne vrátiť do pôvodného tvaru
+\end{itemize}  
+
+\subsection{Zhlukovanie bublín}
+
+Zhlukovanie bublín je v dnešnej dobe už veľmi dobre zmapovaná oblasť. Platí, že spoločná stena dvoch bublín, ktoré sa navzájom dotýkajú, je zaoblená vždy dovnútra väčšej bubliny. Je to spôsobené tým, že vo väčšej bubline je menší tlak ako v menšej bubline a tak ja na spoločnú stenu bublín vyvíjaný väčší tlak zo strany menšej bubliny, čo spôsobuje zaoblenie steny do vnútra väčšej bubliny. Ďalej platia pre zhlukovanie bublín tri Plateau-ové pravidlá, ktoré jasne definujú podmienky pre zhlukovanie bublín.
+
+\subsection{Sily pôsobiace na bublinu}
+
+Na bublinu pôsobí sila, ktorá je súčtom viacerých síl. Medzi tieto sily patria: odpudivá sila dvoch bublín, príťažlivá sila dvoch bublín, odpor vzduchu, gravitácia, rýchlosť bubliny a iné. Dve bubliny sa navzájom priťahujú za pôsobenia príťažlivej sily medzi týmito bublinami. Akonáhle sa však dve bubliny dotknú, začne na ne pôsobiť odpudivá sila. Platí, že ak sa dve bubliny spoja, už sa nerozdelia. Pri tomto probléme treba preto riešiť nasledovné:
+
+\begin{itemize}
+\item určiť, ktoré sily budeme brať do úvahy
+\item určiť vhodné konštanty tak, aby sa dve bubliny po spojení viac nerozdelili
+\item zistiť o koľko posunúť bublinu v závislosti od vektora výslednej sily pôsobiacej na bublinu
+\end{itemize}  
+
+\subsection{Prasknutie bubliny}
+
+Na povrch bubliny pôsobí množstvo síl, ktoré sa snažia minimalizovať povrch bubliny. Tlak vo vnútri bubliny zabraňuje celkovému kolapsu tejto bubliny. Sily pôsobiace na bublinu ju deformujú a posúvajú, avšak pri určitých okolnostiach môžu spôsobiť jej rozpadnutie a teda prasknutie bubliny. Pri tomto probléme treba zistiť:
+
+\begin{itemize}
+\item za akých podmienok dochádza k rozpadnutiu bubliny
+\item ako prebieha toto rozpadnutie a čo sa pri ňom deje
+\end{itemize}   
+
+\subsection{Hustota peny}
+
+Hustotu peny si môžeme definovať ako podiel počtu bubliniek peny a priemernej vzdialenosti medzi stredami jednotlivých bubliniek peny. Čím je hustota väčšia, tým viac prienikov medzi bublinami vzniká a tým bude simulácia takejto peny výpočtovo náročnejšia. Preto si treba určiť:
+
+\begin{itemize}
+\item maximálnu únosnú hodnotu pre hustotu peny
+\item ktoré priesečníky bublín treba rátať, a ktoré možno vynechať
+\end{itemize}
+
+\subsection{Renderovanie peny}
+
+Renderovanie nie je podstatnou časťou tejto práce, avšak pri tomto probléme sa treba zamyslieť nad spôsobom, ktorý by aspoň z časti odzrkadľoval reálny vzhľad peny.
+
+\section{Problematika implementácie}
+
+V tejto časti sa budeme zaoberať problémami, ktoré musíme riešiť z hľadiska výpočtovej náročnosti, tak aby bol tento model schopný simulovať penu v reálnom čase. 
+\newpage \noindent Pri tejto problematike musíme riešiť nasledovné problémy:
+
+\begin{itemize}
+\item tvar a dátová reprezentácia bublín
+\item priesečníky bublín
+\end{itemize}
+
+\subsection{Tvar a dátová reprezentácia bublín}
+
+Od tvaru a reprezentácie bublín veľmi závisí aj výpočtová zložitosť celej simulácie. Pri tomto probléme sa treba v prvom rade rozhodnúť, či budeme bubliny zjednodušene reprezentovať ako gule, alebo nie. V prípade, že budú bubliny zjednodušené na tvar gule, výpočtová zložitosť pri rôznych operáciách ako napríklad prienik dvoch gúľ, alebo získanie ich spoločnej steny bude určite nižšia ako v prípade nepravidelného tvaru, avšak stratíme tým na reálnosti bublín a ich správania. Nakoľko však ľudské oko nie je dokonalé, je zbytočné, aby boli veľmi malé bubliny reprezentované inak ako gule, nakoľko pre ľudské oko je to nepatrný rozdiel. Avšak pri veľkých bublinách, ktoré nikdy nemajú pravidelný tvar a ani ho nikdy nedosiahnu, by zjednodušená reprezentácia pomocou gule vyzerala dosť nepresne. Preto si treba určiť, či chceme simulovať penu obsahujúcu aj veľké bubliny nepravidelného tvaru a v prípade, že áno, bude treba zistiť hranicu veľkosti, od ktorej reprezentovať bubliny ako nepravidelný tvar.
+
+Čo sa týka dátovej štruktúry bublín, najlepším riešením je asi použitie meshu.
+
+\subsection{Priesečníky bublín}
+
+Spoločná stena dvoch bublín (ďalej priesečník bublín) je zaoblená smerom do vnútra väčšej bubliny. Treba sa preto rozhodnúť, či chceme aby tieto priesečníky odzrkadľovali reálny obraz a boli zaoblené, alebo ich budeme zjednodušene reprezentovať ako roviny. Opäť to závisí od veľkosti dotýkajúcich sa bublín, pretože pri väčších bublinách je tento rozdiel badateľný a simulácii uberá na jej reálnosti. Na druhej strane však reprezentácia priesečníkov ako rovín značne zníži výpočtovú zložitosť simulácie.

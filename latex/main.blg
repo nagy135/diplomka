@@ -1,0 +1,50 @@
+This is BibTeX, Version 0.99dThe top-level auxiliary file: main.aux
+The style file: alpha.bst
+Database file #1: references.bib
+I was expecting a `,' or a `}'---line 107 of file references.bib
+ :  
+ :  TITLE = {Steady-state drainage of an aqueous foam.},
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+A bad cross reference---entry "sunkel2004"
+refers to entry "conf/vmv/2004", which doesn't exist
+A bad cross reference---entry "mihalef2006"
+refers to entry "conf/sca/2006", which doesn't exist
+A bad cross reference---entry "zheng2006"
+refers to entry "conf/sca/2006", which doesn't exist
+A bad cross reference---entry "thurey2007"
+refers to entry "conf/sca/2007", which doesn't exist
+Name 1 in "Weaire, and Pittet, and Hutzler, and Pardal," has a comma at the end for entry weaire1993
+while executing---line 1185 of file alpha.bst
+Name 2 in "Weaire, and Pittet, and Hutzler, and Pardal," has a comma at the end for entry weaire1993
+while executing---line 1185 of file alpha.bst
+Name 3 in "Weaire, and Pittet, and Hutzler, and Pardal," has a comma at the end for entry weaire1993
+while executing---line 1185 of file alpha.bst
+Name 4 in "Weaire, and Pittet, and Hutzler, and Pardal," has a comma at the end for entry weaire1993
+while executing---line 1185 of file alpha.bst
+Name 4 in "Weaire, and Pittet, and Hutzler, and Pardal," has a comma at the end for entry weaire1993
+while executing---line 1185 of file alpha.bst
+Name 1 in "Weaire, and Pittet, and Hutzler, and Pardal," has a comma at the end for entry weaire1993
+while executing---line 1185 of file alpha.bst
+Name 2 in "Weaire, and Pittet, and Hutzler, and Pardal," has a comma at the end for entry weaire1993
+while executing---line 1185 of file alpha.bst
+Name 3 in "Weaire, and Pittet, and Hutzler, and Pardal," has a comma at the end for entry weaire1993
+while executing---line 1185 of file alpha.bst
+Name 4 in "Weaire, and Pittet, and Hutzler, and Pardal," has a comma at the end for entry weaire1993
+while executing---line 1185 of file alpha.bst
+Warning--to sort, need author or key in opengl
+Warning--to sort, need author or key in glfw
+Warning--to sort, need author or key in tnt
+Warning--to sort, need author or key in viennacl
+Name 1 in "Weaire, and Pittet, and Hutzler, and Pardal," has a comma at the end for entry weaire1993
+while executing---line 1250 of file alpha.bst
+Name 2 in "Weaire, and Pittet, and Hutzler, and Pardal," has a comma at the end for entry weaire1993
+while executing---line 1250 of file alpha.bst
+Name 3 in "Weaire, and Pittet, and Hutzler, and Pardal," has a comma at the end for entry weaire1993
+while executing---line 1250 of file alpha.bst
+Name 4 in "Weaire, and Pittet, and Hutzler, and Pardal," has a comma at the end for entry weaire1993
+while executing---line 1250 of file alpha.bst
+Warning--empty title in weaire1993
+Warning--empty journal in weaire1993
+Warning--empty year in weaire1993
+(There were 18 error messages)

@@ -1,0 +1,99 @@
+\chapter{Implementácia}\label{chap:implementation}
+
+Náš model sme sa rozhodli implementovať ako interaktívnu aplikáciu napísanú v jazyku C++. Na vykresľovanie bublín sme sa rozhodli použiť grafickú knižnicu OpenGL \cite{opengl}, vďaka ktorej je náš kód multiplatformový. Modifikácia geometrie jednotlivých bublín peny je riešená pomocou tzv. vertex shadra, čo je program zbiehajúci na grafickej karte a na tento účel sme použili programovací jazyk GLSL. Na prácu s oknovým systémom operačného systému sme použili knižnicu na spravovanie okien GLFW \cite{glfw}, ktorá je takisto multiplatformová. Pri simulácii peny sme na riešenie systému lineárnych rovníc najprv použili knižnicu TNT (Template Numeral Toolkit) \cite{tnt}. Na riešenie systému lineárnych rovníc používala tzv. Choleského dekompozíciu, čo je však pri väčších maticiach dosť pomalé. Preto sme sa nakoniec rozhodli použiť oveľa robustnejšiu knižnicu s názvom ViennaCL \cite{viennacl}. Táto knižnica ponúka kolekciu rozhraní a implementácií numerických objektov a je vhodná na vedecké výpočty v prostredí C++. Ďalej tiež ponúka základné dátové štruktúry pre numerické výpočty, ako napr. matice alebo vektory a ponúka taktiež viacero rôznych metód na riešenie systému lineárnych rovníc. Jej obrovskou výhodou je, že dokáže tieto výpočty paralelizovať a počítať na grafickej karte.
+
+\section{Triedy modelu}
+	
+Z hľadiska tried je náš program rozdelený na dve hlavné triedy:
+\begin{itemize}
+	\item Trieda Foam
+	\item Trieda Bubble
+\end{itemize}
+
+\subsection{Trieda Foam}
+
+Trieda Foam (po slovensky pena) je hlavnou triedou celého programu. Nastavenia peny a síl pôsobiacich v tejto pene sú kontrolované touto triedou. Asi najdôležitejšou členskou premennou tejto triedy je pole bubbles, ktoré obsahuje všetky bubliny tejto triedy. Ďalej táto trieda obsahuje všetky funkcie slúžiace na naplnenie a výpočet systému lineárnych rovníc, ktorého vyriešením dostávame rýchlosti bublín v čase $t + 1$. Nasledujúce tabuľky obsahujú zoznam a popis niektorých členských premenných a funkcií tejto triedy.
+
+\begin{table}[H]
+	\centering
+	\caption{Tabuľka členských premenných.}
+	\setlength{\extrarowheight}{2pt}
+	\begin{tabularx}{\textwidth}{|X|X|}
+		\hline
+		\textbf{Členská premenná}               & \textbf{Popis}                                                                          \\ \hline
+		vector<Bubble> bubbles          & pole obsahujúce všetky bubliny peny                                            \\ \hline
+		\mbox{vector<Bubble> sceneBubbleQueue} & zásobník bublín pri pridávaní bublín do systému pomocou klávesovej skratky A \\ \hline
+		float liquid\_volume                    & konštanta definujúca objem kvapaliny v pene                                    \\ \hline
+		GLfloat stiffnessCoefficient            & konštanta definujúca tvrdosť pružín pružinového systému                        \\ \hline
+		GLfloat c\_vis                          & tlmiaca konštanta                                                              \\ \hline
+		GLfloat c\_lap                          & tlmiaca konštanta                                                              \\ \hline
+		bool gravitation                        & premenná indikujúca zapnutie / vypnutie gravitačnej sily v modeli              \\ \hline
+		GLhandleARB GLSLprog                    & GLSL program zbiehajúci na grafickej karte \\ \hline
+	\end{tabularx}
+\end{table}
+
+\begin{table}[H]
+	\centering
+	\caption{Tabuľka niektorých funkcií triedy.}
+	\setlength{\extrarowheight}{10pt}
+	\begin{tabularx}{\textwidth}{|X|X|}
+		\hline
+		\textbf{Funkcia}                        & \textbf{Popis} \\ \hline
+		void simulateStep(delta\_t)                     & funkcia, ktorá má na starosti výpočet simulácie v časovom kroku delta\_t \\ \hline
+		void fillMassMatrix(\newline\&M, \&M2, \&bubble, delta\_t)                   & funkcia pre naplnenie matice váh \\ \hline
+		void fillVelocities(\&v, \&bubble)                   & funkcia pre naplnenie vektora \newline rýchlostí \\ \hline
+		void fillForces(\&f, \&bubble)                       & funkcia pre naplnenie vektora síl \\ \hline
+		void \newline \mbox{accumulateBubbleForce(\&bubble)}            & funkcia, ktorá na začiatku simulácie naakumuluje všetky sily pôsobiace na jednotlivé bubliny \\ \hline
+		void render(selectedBubble, wire)                           & funkcia, ktorá má na starosti vizualizáciu peny \\ \hline
+		void setBubblesNeighborhood()           & táto funkcia má na starosti určenie susedov jednotlivých bublín peny \\ \hline
+		void \newline setNewVelocitiesAndPositions(\newline\&velocities, delta\_t)     & táto funkcia aktualizuje nové pozície a rýchlosti bublín v pene\\ \hline
+		void sortBubbles(camera\_pos)                      & funkcia slúžiaca na zoradenie bublín od najvzdialenejšej bubliny (od kamery) po najbližšiu \\ \hline
+		Array2D<GLfloat> \newline computeNewVelocities(M, F) & táto funkcia využíva knižnicu ViennaCL \cite{viennacl} na výpočet systému lineárnych rovníc \\ \hline
+		GLfloat getRestingLength(r1, r2)              & funkcia, ktorá počíta pokojovú dĺžku pružiny na základe polomerov dvoch bublín\\ \hline
+	\end{tabularx}
+\end{table}
+
+\subsubsection{Funkcia na výpočet simulácie v čase $\Delta t$}
+
+Ako vidno z návrhu tohto modelu, pri výpočte systému lineárnych rovníc zo vzorca \reference{eq:linear_equation_system} sa pri výpočte používajú tri matice veľkosti $3n \times 3n$, čo by pri väčšom počte bublín mohla byť veľká záťaž na pamäť. Keďže jednotlivé podmatice veľkosti $3 \times 3$ viem napĺňať nezávisle od seba, rozhodli sme sa aspoň čiastočne optimalizovať tento výpočet tým, že používame len dve matice. Jedna matica slúži ako matica váh $M$ (na pravej strane tejto rovnice) a druhá matica slúži ako matica $A = M - \Delta t\partial f^{t}/\partial v - \Delta t^{2}\partial f^{t}/\partial p$. Takto v postupnom cykle prechádzame všetky bubliny peny a postupne napĺňame tieto dve matice. Následne posunieme maticu $A$ a vektor $b$ funkcii $ComputeNewVelocities(A, b)$, ktorá za pomoci knižnice ViennaCL \cite{viennacl} vypočíta tento systém lineárnych rovníc a vráti rýchlosti bublín v čase $t + 1$. Na základe nich potom funkcia $SetNewVelocitiesAndPositions(v^{t+1}, \Delta t)$ vypočíta podľa vzorca \reference{eq:compute_positions_t_plus_1} pozície v čase t + 1 a priradí bublinám nové pozície a rýchlosti.
+
+\begin{algorithm}
+	\caption{Funkcia SimulateStep($\Delta t$) na výpočet jedného kroku simulácie.}
+	\label{alg:simulation}
+	\begin{algorithmic}
+		\STATE $SetBubblesNeighborhood()$
+		\FOR{$i = 0$ to $bubbles.size()$}
+			\STATE $FillMassMatrix(\&A, \&M, bubbles[i], \Delta t)$
+			\STATE $FillVelocities(\&v, bubbles[i])$
+			\STATE $AccumulateBubbleForce(bubble[i])$
+			\STATE $FillForces(\&f, bubble[i])$
+		\ENDFOR
+		\STATE $b = M \ast v + \Delta t \ast f$
+		\STATE $v^{t+1} = ComputeNewVelocities(A, b)$
+		\STATE $SetNewVelocitiesAndPositions(v^{t+1}, \Delta t)$
+	\end{algorithmic}
+\end{algorithm}
+
+\subsection{Trieda Bubble}
+
+Jednotlivé bubliny peny v našom modeli sú inštanciami triedy Bubble (po slovensky bublina). Členské premenné tejto triedy definujú vlastnosti bubliny ako sú rýchlosť, pozícia, polomer alebo sila pôsobiaca na bublinu. Funkcie tejto triedy slúžia zväčša na získanie, resp. nastavenie konkrétnych členských premenných tejto triedy. Nasledujúca tabuľka obsahuje zoznam niektorých členských premenných tejto triedy.
+
+\begin{table}[H]
+	\centering
+	\caption{Tabuľka členských premenných.}
+	\setlength{\extrarowheight}{2pt}
+	\begin{tabularx}{\textwidth}{|X|X|}
+		\hline
+		\textbf{Členská premenná}               & \textbf{Popis}                                                                          \\ \hline
+		GLfloat radius          & polomer bubliny \\ \hline
+		vec3 position & pozícia bubliny v priestore \\ \hline
+		vec3 velocity                    & vektor rýchlosti bubliny \\ \hline
+		vec3 force            & vektor sily pôsobiacej na bublinu \\ \hline
+		bool smoky                          & premenná indikujúca, či sa v danej bubline nachádza dym alebo nie \\ \hline
+		vector<GLfloat> vertices                          & vrcholy bubliny \\ \hline
+		vector<GLfloat> normals                        & normály vrcholov bubliny \\ \hline
+		vector<GLfloat> indicies                        & indexy vrcholov pre facy bubliny \\ \hline
+		GLhandleARB GLSLprog                    & GLSL program zbiehajúci na grafickej karte \\ \hline
+	\end{tabularx}
+\end{table}
+

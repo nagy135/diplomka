@@ -1,0 +1,49 @@
+\babel@toc {slovak}{}
+\contentsline {chapter}{\numberline {1}\IeC {\'U}vod}{1}{chapter.1}
+\contentsline {chapter}{\numberline {2}Motiv\IeC {\'a}cia}{3}{chapter.2}
+\contentsline {chapter}{\numberline {3}Preh\IeC {\v l}ad problematiky}{4}{chapter.3}
+\contentsline {section}{\numberline {3.1}Problematika modelu peny}{4}{section.3.1}
+\contentsline {subsection}{\numberline {3.1.1}Tvar bubl\IeC {\'\i }n}{5}{subsection.3.1.1}
+\contentsline {subsection}{\numberline {3.1.2}Zhlukovanie bubl\IeC {\'\i }n}{6}{subsection.3.1.2}
+\contentsline {subsection}{\numberline {3.1.3}Sily p\IeC {\^o}sobiace na bublinu}{6}{subsection.3.1.3}
+\contentsline {subsection}{\numberline {3.1.4}Prasknutie bubliny}{6}{subsection.3.1.4}
+\contentsline {subsection}{\numberline {3.1.5}Hustota peny}{7}{subsection.3.1.5}
+\contentsline {subsection}{\numberline {3.1.6}Renderovanie peny}{7}{subsection.3.1.6}
+\contentsline {section}{\numberline {3.2}Problematika implement\IeC {\'a}cie}{7}{section.3.2}
+\contentsline {subsection}{\numberline {3.2.1}Tvar a d\IeC {\'a}tov\IeC {\'a} reprezent\IeC {\'a}cia bubl\IeC {\'\i }n}{8}{subsection.3.2.1}
+\contentsline {subsection}{\numberline {3.2.2}Priese\IeC {\v c}n\IeC {\'\i }ky bubl\IeC {\'\i }n}{8}{subsection.3.2.2}
+\contentsline {chapter}{\numberline {4}Predch\IeC {\'a}dzaj\IeC {\'u}ce rie\IeC {\v s}enia}{10}{chapter.4}
+\contentsline {section}{\numberline {4.1}Animation of Soap Bubble Dynamics, Cluster Formation and Collision \cite {durikovic2001}}{13}{section.4.1}
+\contentsline {subsection}{\numberline {4.1.1}Bubliny}{13}{subsection.4.1.1}
+\contentsline {subsection}{\numberline {4.1.2}Zoskupenie dvoch bubl\IeC {\'\i }n}{14}{subsection.4.1.2}
+\contentsline {subsection}{\numberline {4.1.3}Zoskupenie troch bubl\IeC {\'\i }n}{14}{subsection.4.1.3}
+\contentsline {subsection}{\numberline {4.1.4}Dynamika}{15}{subsection.4.1.4}
+\contentsline {subsection}{\numberline {4.1.5}P\IeC {\^o}sobiace sily}{15}{subsection.4.1.5}
+\contentsline {subsection}{\numberline {4.1.6}Diskusia}{16}{subsection.4.1.6}
+\contentsline {section}{\numberline {4.2}Rendering and Simulation of Liquid Foams \cite {sunkel2004}}{17}{section.4.2}
+\contentsline {subsection}{\numberline {4.2.1}Bubliny}{17}{subsection.4.2.1}
+\contentsline {subsection}{\numberline {4.2.2}Simul\IeC {\'a}cia}{18}{subsection.4.2.2}
+\contentsline {subsection}{\numberline {4.2.3}Programy zbiehaj\IeC {\'u}ce na grafickej karte}{19}{subsection.4.2.3}
+\contentsline {subsection}{\numberline {4.2.4}Diskusia}{20}{subsection.4.2.4}
+\contentsline {section}{\numberline {4.3}Animating Bubble Interactions in a Liquid Foam \cite {busaryev2012}}{21}{section.4.3}
+\contentsline {subsection}{\numberline {4.3.1}Pena a bubliny}{22}{subsection.4.3.1}
+\contentsline {subsection}{\numberline {4.3.2}Dynamika peny}{22}{subsection.4.3.2}
+\contentsline {subsection}{\numberline {4.3.3}Simul\IeC {\'a}cia peny}{23}{subsection.4.3.3}
+\contentsline {subsection}{\numberline {4.3.4}Diskusia}{24}{subsection.4.3.4}
+\contentsline {chapter}{\numberline {5}N\IeC {\'a}vrh modelu}{25}{chapter.5}
+\contentsline {section}{\numberline {5.1}Pru\IeC {\v z}inov\IeC {\'y} syst\IeC {\'e}m}{25}{section.5.1}
+\contentsline {section}{\numberline {5.2}Reprezent\IeC {\'a}cia peny}{26}{section.5.2}
+\contentsline {section}{\numberline {5.3}Sily p\IeC {\^o}sobiace na bubliny peny}{27}{section.5.3}
+\contentsline {subsubsection}{Laplaceova matica}{29}{section*.20}
+\contentsline {section}{\numberline {5.4}Simul\IeC {\'a}cia}{30}{section.5.4}
+\contentsline {subsubsection}{Jacobianova matica vzh\IeC {\v l}adom k r\IeC {\'y}chlostiam}{33}{section*.23}
+\contentsline {subsubsection}{Jacobianova matica vzh\IeC {\v l}adom k poz\IeC {\'\i }ci\IeC {\'a}m}{34}{section*.24}
+\contentsline {section}{\numberline {5.5}Vizualiz\IeC {\'a}cia}{34}{section.5.5}
+\contentsline {chapter}{\numberline {6}Implement\IeC {\'a}cia}{37}{chapter.6}
+\contentsline {section}{\numberline {6.1}Triedy modelu}{38}{section.6.1}
+\contentsline {subsection}{\numberline {6.1.1}Trieda Foam}{38}{subsection.6.1.1}
+\contentsline {subsubsection}{Funkcia na v\IeC {\'y}po\IeC {\v c}et simul\IeC {\'a}cie v \IeC {\v c}ase $\Delta t$}{41}{section*.28}
+\contentsline {subsection}{\numberline {6.1.2}Trieda Bubble}{42}{subsection.6.1.2}
+\contentsline {chapter}{\numberline {7}V\IeC {\'y}sledky}{43}{chapter.7}
+\contentsline {section}{\numberline {7.1}V\IeC {\'y}sledn\IeC {\'e} anim\IeC {\'a}cie}{46}{section.7.1}
+\contentsline {chapter}{\numberline {8}Z\IeC {\'a}ver}{50}{chapter.8}

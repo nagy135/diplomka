@@ -1,0 +1,44 @@
+\BOOKMARK [0][-]{chapter.1}{\332vod}{}% 1
+\BOOKMARK [0][-]{chapter.2}{Motiv\341cia}{}% 2
+\BOOKMARK [0][-]{chapter.3}{Prehlad problematiky}{}% 3
+\BOOKMARK [1][-]{section.3.1}{Problematika modelu peny}{chapter.3}% 4
+\BOOKMARK [2][-]{subsection.3.1.1}{Tvar bubl\355n}{section.3.1}% 5
+\BOOKMARK [2][-]{subsection.3.1.2}{Zhlukovanie bubl\355n}{section.3.1}% 6
+\BOOKMARK [2][-]{subsection.3.1.3}{Sily p\364sobiace na bublinu}{section.3.1}% 7
+\BOOKMARK [2][-]{subsection.3.1.4}{Prasknutie bubliny}{section.3.1}% 8
+\BOOKMARK [2][-]{subsection.3.1.5}{Hustota peny}{section.3.1}% 9
+\BOOKMARK [2][-]{subsection.3.1.6}{Renderovanie peny}{section.3.1}% 10
+\BOOKMARK [1][-]{section.3.2}{Problematika implement\341cie}{chapter.3}% 11
+\BOOKMARK [2][-]{subsection.3.2.1}{Tvar a d\341tov\341 reprezent\341cia bubl\355n}{section.3.2}% 12
+\BOOKMARK [2][-]{subsection.3.2.2}{Priesecn\355ky bubl\355n}{section.3.2}% 13
+\BOOKMARK [0][-]{chapter.4}{Predch\341dzaj\372ce rie\235enia}{}% 14
+\BOOKMARK [1][-]{section.4.1}{Animation of Soap Bubble Dynamics, Cluster Formation and Collision durikovic2001}{chapter.4}% 15
+\BOOKMARK [2][-]{subsection.4.1.1}{Bubliny}{section.4.1}% 16
+\BOOKMARK [2][-]{subsection.4.1.2}{Zoskupenie dvoch bubl\355n}{section.4.1}% 17
+\BOOKMARK [2][-]{subsection.4.1.3}{Zoskupenie troch bubl\355n}{section.4.1}% 18
+\BOOKMARK [2][-]{subsection.4.1.4}{Dynamika}{section.4.1}% 19
+\BOOKMARK [2][-]{subsection.4.1.5}{P\364sobiace sily}{section.4.1}% 20
+\BOOKMARK [2][-]{subsection.4.1.6}{Diskusia}{section.4.1}% 21
+\BOOKMARK [1][-]{section.4.2}{Rendering and Simulation of Liquid Foams sunkel2004}{chapter.4}% 22
+\BOOKMARK [2][-]{subsection.4.2.1}{Bubliny}{section.4.2}% 23
+\BOOKMARK [2][-]{subsection.4.2.2}{Simul\341cia}{section.4.2}% 24
+\BOOKMARK [2][-]{subsection.4.2.3}{Programy zbiehaj\372ce na grafickej karte}{section.4.2}% 25
+\BOOKMARK [2][-]{subsection.4.2.4}{Diskusia}{section.4.2}% 26
+\BOOKMARK [1][-]{section.4.3}{Animating Bubble Interactions in a Liquid Foam busaryev2012}{chapter.4}% 27
+\BOOKMARK [2][-]{subsection.4.3.1}{Pena a bubliny}{section.4.3}% 28
+\BOOKMARK [2][-]{subsection.4.3.2}{Dynamika peny}{section.4.3}% 29
+\BOOKMARK [2][-]{subsection.4.3.3}{Simul\341cia peny}{section.4.3}% 30
+\BOOKMARK [2][-]{subsection.4.3.4}{Diskusia}{section.4.3}% 31
+\BOOKMARK [0][-]{chapter.5}{N\341vrh modelu}{}% 32
+\BOOKMARK [1][-]{section.5.1}{Pru\236inov\375 syst\351m}{chapter.5}% 33
+\BOOKMARK [1][-]{section.5.2}{Reprezent\341cia peny}{chapter.5}% 34
+\BOOKMARK [1][-]{section.5.3}{Sily p\364sobiace na bubliny peny}{chapter.5}% 35
+\BOOKMARK [1][-]{section.5.4}{Simul\341cia}{chapter.5}% 36
+\BOOKMARK [1][-]{section.5.5}{Vizualiz\341cia}{chapter.5}% 37
+\BOOKMARK [0][-]{chapter.6}{Implement\341cia}{}% 38
+\BOOKMARK [1][-]{section.6.1}{Triedy modelu}{chapter.6}% 39
+\BOOKMARK [2][-]{subsection.6.1.1}{Trieda Foam}{section.6.1}% 40
+\BOOKMARK [2][-]{subsection.6.1.2}{Trieda Bubble}{section.6.1}% 41
+\BOOKMARK [0][-]{chapter.7}{V\375sledky}{}% 42
+\BOOKMARK [1][-]{section.7.1}{V\375sledn\351 anim\341cie}{chapter.7}% 43
+\BOOKMARK [0][-]{chapter.8}{Z\341ver}{}% 44

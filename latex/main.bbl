@@ -1,0 +1,156 @@
+\newcommand{\etalchar}[1]{$^{#1}$}
+\begin{thebibliography}{MUM{\etalchar{+}}06}
+
+\bibitem[BDWR12]{busaryev2012}
+Oleksiy Busaryev, Tamal~K. Dey, Huamin Wang, and Zhong Ren.
+\newblock Animating bubble interactions in a liquid foam.
+\newblock {\em ACM Trans. Graph.}, 31(4):63, 2012.
+
+\bibitem[Bra92]{brakke1992}
+Kenneth~A. Brakke.
+\newblock The surface evolver.
+\newblock {\em Experimental Mathematics}, 1(2):141--165, 1992.
+
+\bibitem[CK02]{choiko2002}
+Kwang-Jin Choi and Hyeong-Seok Ko.
+\newblock Stable but responsive cloth.
+\newblock {\em ACM Trans. Graph.}, 21(3):604--611, 2002.
+
+\bibitem[CPPK07]{cleary2007}
+Paul~W. Cleary, Soon~Hyoung Pyo, Mahesh Prakash, and Bon~Ki Koo.
+\newblock Bubbling and frothing liquids.
+\newblock {\em ACM Trans. Graph.}, 26(3):97, 2007.
+
+\bibitem[Dur95]{durian1995}
+D.~J. Durian.
+\newblock Foam mechanics at the bubble scale.
+\newblock {\em Phys. Rev. Lett.}, 75:4780--4783, Dec 1995.
+
+\bibitem[GH04]{greenwood2004}
+S.~T. Greenwood and D.~H. House.
+\newblock Better with bubbles: Enhancing the visual realism of simulated fluid.
+\newblock In {\em Proceedings of the 2004 ACM SIGGRAPH/Eurographics Symposium
+  on Computer Animation}, SCA '04, pages 287--296, Aire-la-Ville, Switzerland,
+  Switzerland, 2004. Eurographics Association.
+
+\bibitem[glf]{glfw}
+{GLFW}.
+\newblock \url{http://www.glfw.org/}.
+\newblock Navštívené: 2. máj 2014.
+
+\bibitem[HK03]{hong2003}
+Jeong-Mo Hong and Chang-Hun Kim.
+\newblock Animation of bubbles in liquid .
+\newblock {\em Comput. Graph. Forum}, 22(3):253--262, 2003.
+
+\bibitem[HKM05]{herzhaft2005}
+Benjamin Herzhaft, Sarkis Kakadjian, and Michel Moan.
+\newblock Measurement and modeling of the flow behavior of aqueous foams using
+  a recirculating pipe rheometer.
+\newblock {\em Colloids and Surfaces A: Physicochemical and Engineering
+  Aspects}, 263(1–3):153 -- 164, 2005.
+\newblock A collection of papers presented at the 5th European Conference on
+  Foams, Emulsions, and Applications, \{EUFOAM\} 2004, University of
+  Marne-la-Vallee, Champs sur Marne (France), 5-8 July, 2004.
+
+\bibitem[HLYK08]{hong2008}
+Jeong-Mo Hong, Ho-Young Lee, Jong-Chul Yoon, and Chang-Hun Kim.
+\newblock Bubbles alive.
+\newblock {\em ACM Trans. Graph.}, 27(3), 2008.
+
+\bibitem[KLL{\etalchar{+}}07]{kim2007}
+ByungMoon Kim, Yingjie Liu, Ignacio Llamas, Xiangmin Jiao, and Jarek Rossignac.
+\newblock Simulation of bubbles in foam with the volume control method.
+\newblock {\em ACM Trans. Graph.}, 26(3):98, 2007.
+
+\bibitem[KRvS03]{kraynik2003}
+Andrew~M. Kraynik, Douglas~A. Reinelt, and Frank van Swol.
+\newblock Structure of random monodisperse foam.
+\newblock {\em Phys. Rev. E}, 67:031403, Mar 2003.
+
+\bibitem[KRvS04]{kraynik2004}
+Andrew~M. Kraynik, Douglas~A. Reinelt, and Frank van Swol.
+\newblock Structure of random foam.
+\newblock {\em Phys. Rev. Lett.}, 93:208301, Nov 2004.
+
+\bibitem[KVG02]{kueck2002}
+Hendrik Kück, Christian Vogelgsang, and Günther Greiner.
+\newblock Simulation and rendering of liquid foams.
+\newblock In {\em Graphics Interface}, pages 81--88, 2002.
+
+\bibitem[MUM{\etalchar{+}}06]{mihalef2006}
+Viorel Mihalef, B.~Unlusu, Dimitris~N. Metaxas, Mark Sussman, and M.~Yousuff
+  Hussaini.
+\newblock Physics based boiling simulation.
+\newblock In Carol O'Sullivan and Frederic~H. Pighin, editors, {\em Symposium
+  on Computer Animation}, pages 317--324. Eurographics Association, 2006.
+
+\bibitem[ope]{opengl}
+Open{GL}.
+\newblock \url{http://www.opengl.org/}.
+\newblock Navštívené: 2. máj 2014.
+
+\bibitem[PGB08]{piazza2008}
+L.~Piazza, J.~Gigli, and A.~Bulbarello.
+\newblock Interfacial rheology study of espresso coffee foam structure and
+  properties.
+\newblock {\em Journal of Food Engineering}, 84(3):420 -- 429, 2008.
+
+\bibitem[Pla73]{plateau1873}
+J.A.F. Plateau.
+\newblock {\em Statique exp{\'e}rimentale et th{\'e}orique des liquides soumis
+  aux seules forces mol{\'e}culaires}.
+\newblock Number zv. 1 in Statique exp{\'e}rimentale et th{\'e}orique des
+  liquides soumis aux seules forces mol{\'e}culaires. Gauthier-Villars, 1873.
+
+\bibitem[RSA12]{redenbach2012}
+C.~Redenbach, I.~Shklyar, and H.~Andrä.
+\newblock Laguerre tessellations for elastic stiffness simulations of closed
+  foams with strongly varying cell sizes.
+\newblock {\em International Journal of Engineering Science}, 50:70--78, 2012.
+
+\bibitem[SKS04]{sunkel2004}
+Martin Sunkel, Jan Kautz, and Hans-Peter Seidel.
+\newblock Rendering and simulation of liquid foams.
+\newblock In Bernd Girod, Marcus~A. Magnor, and Hans-Peter Seidel, editors,
+  {\em VMV}, pages 263--269. Aka GmbH, 2004.
+
+\bibitem[{Tay}76]{taylor1976}
+Jean~E. {Taylor}.
+\newblock {The structure of singularities in soap-bubble-like and
+  soap-film-like minimal surfaces.}
+\newblock {\em {Ann. Math. (2)}}, 103:489--539, 1976.
+
+\bibitem[tnt]{tnt}
+{TNT}.
+\newblock \url{http://math.nist.gov/tnt/}.
+\newblock Navštívené: 2. máj 2014.
+
+\bibitem[TSS{\etalchar{+}}07]{thurey2007}
+Nils Thürey, Filip Sadlo, Simon Schirm, Matthias Müller-Fischer, and
+  Markus~H. Gross.
+\newblock Real-time simulations of bubbles and foam within a shallow water
+  framework.
+\newblock In Michael Gleicher and Daniel Thalmann, editors, {\em Symposium on
+  Computer Animation}, pages 191--198. Eurographics Association, 2007.
+
+\bibitem[Ďu01]{durikovic2001}
+Roman Ďurikovič.
+\newblock Animation of soap bubble dynamics, cluster formation and collision.
+\newblock {\em Comput. Graph. Forum}, 20(3):67--76, 2001.
+
+\bibitem[vie]{viennacl}
+Vienna{CL}.
+\newblock \url{http://viennacl.sourceforge.net/index.html}.
+\newblock Navštívené: 2. máj 2014.
+
+\bibitem[WPHP]{weaire1993}
+Weaire, Pittet, Hutzler, and Pardal.
+
+\bibitem[ZYP06]{zheng2006}
+Wen Zheng, Jun-Hai Yong, and Jean-Claude Paul.
+\newblock Simulation of bubbles.
+\newblock In Carol O'Sullivan and Frederic~H. Pighin, editors, {\em Symposium
+  on Computer Animation}, pages 325--333. Eurographics Association, 2006.
+
+\end{thebibliography}

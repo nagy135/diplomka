@@ -14,8 +14,6 @@ from fits_control import read_fits_file, edit_fits_data, show_image
 
 from plot3d import show_3d_data
 
-
-
 def create_artificial_background(image):
     background = np.zeros(image.shape)
     width = image.shape[0] //2
@@ -55,7 +53,7 @@ def iterative_sigma_clipping(original_image, preprocessed_image, curr_iter, last
         return original_image - preprocessed_image
     else:
         standard_deviation = np.std(last_iter_background)
-        mean_deviation = np.median(last_iter_background)
+        mean_deviation = np.mean(last_iter_background)
         print('previous mean was {}'.format(str(mean_deviation)))
         print('previous sigma was {}'.format(str(standard_deviation)))
 
@@ -63,7 +61,7 @@ def iterative_sigma_clipping(original_image, preprocessed_image, curr_iter, last
         for num_col in range(last_iter_background.shape[0]):
             for num_row in range(last_iter_background.shape[1]):
                 term = np.absolute(last_iter_background[num_col,num_row] - mean_deviation)
-                if term < 3*standard_deviation:
+                if term < 2*standard_deviation:
                     new_iter_background[num_col,num_row] = last_iter_background[num_col,num_row]
                 else:
                     new_iter_background[num_col,num_row] = mean_deviation
@@ -71,7 +69,7 @@ def iterative_sigma_clipping(original_image, preprocessed_image, curr_iter, last
 
 
 
-def perform_sigma_clipping(original_image, number_of_iterations=9):
+def perform_sigma_clipping(original_image, number_of_iterations=3):
     preprocessed_image = image_preprocess(original_image)
     assert original_image.shape == preprocessed_image.shape
 
@@ -124,14 +122,17 @@ def sigma_clipper( image, num_tiles_width = 1, num_tiles_height = 1 ):
             curr_x = 0
     else:
         final = perform_sigma_clipping(image)
-    return final
+    return convolve(final, 3)
 
-image = read_fits_file('STREAK_test_1-023.fit')
-print('Mean before : {}'.format(np.mean(image)))
-print('Max before : {}'.format(np.max(image)))
-print('Min before : {}'.format(np.min(image)))
-print('Median before : {}'.format(np.median(image)))
-print(image)
+image = read_fits_file('generated/Comb_4/Comb/Comb_4.fits')
+# image = read_fits_file('M27_R_60s-001.fit')
+show_image(image, 'image')
+# image = np.load('data/background_map.npy')
+# print('Mean before : {}'.format(np.mean(image)))
+# print('Max before : {}'.format(np.max(image)))
+# print('Min before : {}'.format(np.min(image)))
+# print('Median before : {}'.format(np.median(image)))
+# print(image)
 
 # show_hist(image)
 
@@ -147,6 +148,8 @@ print(image)
 extracted_background = sigma_clipper(image)
 extracted_background = extracted_background.astype('uint16')
 result = image-extracted_background
+# show_image([image,extracted_background,result],['image','bg', 'result'])
+show_3d_data(result, method='matplotlib')
 # print(np.max(image))
 # print(np.min(image))
 # print(np.max(extracted_background))
@@ -159,14 +162,13 @@ result = image-extracted_background
 # show_image(result, 'extracted')
 # edit_fits_data('M27_R_60s-001.fit', image, 'original_image.fit')
 # edit_fits_data('M27_R_60s-001.fit', extracted_background, 'extracted_bg.fit')
-edit_fits_data('STREAK_test_1-023.fit', extracted_background, 'linear_bg_3_edited_median.fit')
-edit_fits_data('STREAK_test_1-023.fit', result, 'linear_result_3_edited_median.fit')
+# edit_fits_data('STREAK_test_1-023.fit', extracted_background, 'linear_bg_3_edited_median.fit')
+# edit_fits_data('STREAK_test_1-023.fit', result, 'linear_result_3_edited_median.fit')
 # minimum = 1600
 # maximum = 3000
 # result[minimum>result] = minimum
 # result[maximum<result] = maximum
 # image[minimum>image] = minimum
 # image[maximum<image] = maximum
-# show_image([image,extracted_background,result],['image','bg', 'result'])
 # show_image([image,extracted_background, result], ['before','after', 'extracted'])
 # show_image(image-extracted_background, 'after extraction')
