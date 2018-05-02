@@ -23,6 +23,30 @@ Development of an algorithm which will identify and extract positions of any fea
 
 =back
 
+=head1 PROGRESS
+
+=over
+
+=item B<Study relevant literature>
+
+All the relevant literature used will be stockpiled in the next chapter as well as in the 'docs' folder
+
+=item B<Choose programming language and APIs>
+
+Language of my choice is python. Python provides all the necessary APIs to work with astronomic data (in form of fit/fits files) and much more
+
+=item B<Background estimation and extraction>
+
+One of the major tasks of the thesis. Prototype of iterative sigma clipping method is present in this repo. (background_extraction.py)
+
+=item B<Point Spread Function>
+
+Currently working on this major task. Prototype is already in the repo (point_spread_function.py), but it has still a lot of work to do
+
+=item
+
+=back
+
 =head1 RELEVANT LITERATURE
 
 =over
