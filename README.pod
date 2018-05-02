@@ -43,8 +43,6 @@ One of the major tasks of the thesis. Prototype of iterative sigma clipping meth
 
 Currently working on this major task. Prototype is already in the repo (point_spread_function.py), but it has still a lot of work to do
 
-=item
-
 =back
 
 =head1 RELEVANT LITERATURE
