@@ -1,0 +1,14 @@
+\newcommand{\etalchar}[1]{$^{#1}$}
+\begin{thebibliography}{MUM{\etalchar{+}}06}
+
+\bibitem[]{KouprianovCCD}
+Vladimir Kouprianov et. al.\\
+\newblock Distinguishing features of CCD astrometry of faint GEO objects\\
+\newblock {\em a COSPAR}, 11 April 2007.
+
+\bibitem[]{StreakDetect}
+Jenni Virtanen et. al.\\
+\newblock Streak detection and analysis pipeline for space-debris optical images\\
+\newblock {\em a COSPAR}, 25 September 2015
+
+\end{thebibliography}
