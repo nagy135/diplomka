@@ -73,13 +73,14 @@ theme:
 + Convolution with large median kernel (at least 25% of the size of image)
 + Sigma clipping
 
-# Sky background estimation/subtraction
-
-![Galaxy image from AGO 70cm telescope](galaxy.png){#id .class height=60% }
 
 # Sky background estimation/subtraction
 
 ![original image(a), background(b), result median filtering(c), sigma clipping(d)](background.png){#id .class height=60% }
+
+# Sky background estimation/subtraction
+
+![Dumbell nebula M27, AGO 70cm telescope](nebula.png){#id .class height=60% }
 
 # Object identification
 
@@ -92,13 +93,24 @@ theme:
 + PSF fitting
 + Edge detection
 
+# PSF fitting - trail
+
+![Trail shown from 3d perspective](streak.png){#id .class height=60% }
+
 # PSF fitting
 
 ![PSF fitting equations](psf.png){#id .class height=90% }
 
-# PSF fitting - trail
+# Tools
 
-![Trail shown from 3d perspective](streak.png){#id .class height=60% }
+## Python
+
++ Numpy
++ Astropy (fits files)
++ Scipy (convolve, fitting)
++ Matplotlib
++ Plotly
+
 
 
 # Credits
