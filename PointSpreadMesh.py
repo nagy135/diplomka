@@ -62,7 +62,10 @@ class PointSpreadMesh(object):
             data = self.squared_data
         params = self.moments(data)
         errorfunction = lambda p: np.ravel(self.gaussian(*p)(*np.indices(data.shape)) - data)
-        p, success = optimize.leastsq(errorfunction, params)
+        try:
+            p, success = optimize.leastsq(errorfunction, params)
+        except TypeError:
+            return 'Error during fitting'
         return p
 
 if __name__ == '__main__':

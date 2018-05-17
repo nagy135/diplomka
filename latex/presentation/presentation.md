@@ -69,6 +69,11 @@ theme:
 
 # Sky background estimation/subtraction
 
+## Reasons/Causes
++ Moon light (global linear gradient)
++ Stars, Nebulas, Galaxies (local nonlinear gradients)
++ Hardware related reflexions
+
 ## Methods
 + Convolution with large median kernel (at least 25% of the size of image)
 + Sigma clipping
@@ -81,6 +86,10 @@ theme:
 # Sky background estimation/subtraction
 
 ![Dumbell nebula M27, AGO 70cm telescope](nebula.png){#id .class height=60% }
+
+# Sky background estimation results
+
+![original image(left), estimated background(right)](results.png){#id .class height=60% }
 
 # Object identification
 
@@ -111,7 +120,11 @@ theme:
 + Matplotlib
 + Plotly
 
+## AstroImageJ
 
+# Workflow
+
+![Python + AstroImageJ](workflow.png){#id .class height=90% }
 
 # Credits
 

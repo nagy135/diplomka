@@ -19,11 +19,11 @@ def read_fits_file(fits_file):
     return data
 
 def edit_fits_data(fits_file, new_data, new_file_name):
-    if os.path.isfile('data/' + new_file_name):
-        os.remove('data/' + new_file_name)
+    if os.path.isfile('data/exported/' + new_file_name):
+        os.remove('data/exported/' + new_file_name)
     data_and_headers = fits.open('data/' + fits_file)
     data_and_headers[0].data = new_data
-    data_and_headers[0].writeto('data/' + new_file_name)
+    data_and_headers[0].writeto('data/exported/' + new_file_name)
     return
 
 def show_image( image, name):

@@ -2,6 +2,7 @@ import random
 import numpy as np
 import copy
 import cv2
+import os
 from astropy.io import fits
 from astropy.utils.data import download_file
 import matplotlib.pyplot as plt
@@ -53,7 +54,7 @@ def iterative_sigma_clipping(original_image, preprocessed_image, curr_iter, last
         return original_image - preprocessed_image
     else:
         standard_deviation = np.std(last_iter_background)
-        mean_deviation = np.mean(last_iter_background)
+        mean_deviation = np.median(last_iter_background)
         print('previous mean was {}'.format(str(mean_deviation)))
         print('previous sigma was {}'.format(str(standard_deviation)))
 
@@ -69,7 +70,7 @@ def iterative_sigma_clipping(original_image, preprocessed_image, curr_iter, last
 
 
 
-def perform_sigma_clipping(original_image, number_of_iterations=3):
+def perform_sigma_clipping(original_image, number_of_iterations=7):
     preprocessed_image = image_preprocess(original_image)
     assert original_image.shape == preprocessed_image.shape
 
@@ -90,8 +91,8 @@ def image_preprocess(image):
     # image = np.full(image.shape, 500)
     image = imresize(image, 0.1, interp='bicubic')
     image = imresize(image, initial_shape,interp='bicubic')
-    image = medfilt2d(image, 3)
-    image = convolve(image, 3)
+    image = medfilt2d(image, 15)
+    image = convolve(image, 15)
     # image = image + random.randint(5,500)
     return image
 
@@ -122,53 +123,51 @@ def sigma_clipper( image, num_tiles_width = 1, num_tiles_height = 1 ):
             curr_x = 0
     else:
         final = perform_sigma_clipping(image)
-    return convolve(final, 3)
+    result =  convolve(final, 5)
+    return result[2:-2, 2:-2]
 
-image = read_fits_file('generated/Comb_4/Comb/Comb_4.fits')
-# image = read_fits_file('M27_R_60s-001.fit')
-show_image(image, 'image')
-# image = np.load('data/background_map.npy')
-# print('Mean before : {}'.format(np.mean(image)))
-# print('Max before : {}'.format(np.max(image)))
-# print('Min before : {}'.format(np.min(image)))
-# print('Median before : {}'.format(np.median(image)))
-# print(image)
+def fix_sizes(a1, a2):
+    if a1.shape == a2.shape:
+        return a1,a2
+    if a1.shape[0] > a2.shape[0] and a1.shape[1] > a2.shape[1]:
+        bigger = a1
+        smaller = a2
+    else:
+        bigger = a2
+        smaller = a1
+    difference = (bigger.shape[0] - smaller.shape[0],bigger.shape[1] - smaller.shape[1])
+    first = difference[0] // 2
+    second = difference[1] // 2
+    print('Fixing sizes of outputs with shapes {} and {}'.format(str(bigger.shape), str(smaller.shape)))
+    print('Crop {} from edges in 1 dimension and {} in second'.format(str(first), str(second)))
+    if bigger is a1:
+        return a1[first:-first, second:-second], a2
+    else:
+        return a1, a2[first:-first, second:-second]
 
-# show_hist(image)
+for i in range(5,6):
+    input_file = 'generated/Comb_' + str(i) + '/Comb/Comb_' + str(i) + '.fits'
+    image = read_fits_file(input_file)
 
-# image_contaminated = create_artificial_background(image)
-# background_map = np.load('data/background_map.npy')
-# copy_image = image
-# image = image+image_contaminated
 
-# image = np.arange(100).reshape((10,10))
+    file_name, extension = os.path.basename(input_file).split('.')
+    extracted_background = sigma_clipper(image, 10, 10)
+    # extracted_background = sigma_clipper(image)
+    show_3d_data(image, method='matplotlib')
+    show_3d_data(extracted_background, method='matplotlib')
 
-# extracted_background = sigma_clipper(image, 10, 10)
-# extracted_background = sigma_clipper(image)
-extracted_background = sigma_clipper(image)
-extracted_background = extracted_background.astype('uint16')
-result = image-extracted_background
-# show_image([image,extracted_background,result],['image','bg', 'result'])
-show_3d_data(result, method='matplotlib')
-# print(np.max(image))
-# print(np.min(image))
-# print(np.max(extracted_background))
-# print(np.min(extracted_background))
-# print(np.max(result))
-# print(np.min(result))
-# print(image.dtype)
-# print(extracted_background.dtype)
-# print(result.dtype)
-# show_image(result, 'extracted')
-# edit_fits_data('M27_R_60s-001.fit', image, 'original_image.fit')
-# edit_fits_data('M27_R_60s-001.fit', extracted_background, 'extracted_bg.fit')
-# edit_fits_data('STREAK_test_1-023.fit', extracted_background, 'linear_bg_3_edited_median.fit')
-# edit_fits_data('STREAK_test_1-023.fit', result, 'linear_result_3_edited_median.fit')
-# minimum = 1600
-# maximum = 3000
-# result[minimum>result] = minimum
-# result[maximum<result] = maximum
-# image[minimum>image] = minimum
-# image[maximum<image] = maximum
-# show_image([image,extracted_background, result], ['before','after', 'extracted'])
-# show_image(image-extracted_background, 'after extraction')
+    edit_fits_data(input_file, extracted_background, file_name+'bg_7it1010.'+extension)
+    # extracted_background = sigma_clipper(extracted_background)
+    # show_3d_data(extracted_background, method='matplotlib')
+    # edit_fits_data(input_file, extracted_background, file_name+'bg2.'+extension)
+
+    # extracted_background = extracted_background.astype('uint32')
+
+    # image, extracted_background = fix_sizes(image, extracted_background)
+    # result = image-extracted_background
+
+    # # show_3d_data(result, method='matplotlib')
+
+    # file_name, extension = os.path.basename(input_file).split('.')
+    # edit_fits_data(input_file, extracted_background, file_name+'bg.'+extension)
+    # edit_fits_data(input_file, result, file_name+'result.'+extension)
