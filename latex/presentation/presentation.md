@@ -6,7 +6,7 @@ subtitle:
 author:
 - Viktor Nagy
 theme:
-- Copenhagen
+- Warsaw
 ---
 
 # Space Debris
@@ -57,7 +57,7 @@ theme:
 # Steps
 
 + Image capture
-+ Image reduction 
++ Image reduction
 + Sky background estimation
 + Sky background extraction
 + Star object identification and extraction (image segmentation)

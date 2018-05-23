@@ -151,8 +151,8 @@ for i in range(5,6):
 
 
     file_name, extension = os.path.basename(input_file).split('.')
-    extracted_background = sigma_clipper(image, 10, 10)
-    # extracted_background = sigma_clipper(image)
+    # extracted_background = sigma_clipper(image, 10, 10)
+    extracted_background = sigma_clipper(image)
     show_3d_data(image, method='matplotlib')
     show_3d_data(extracted_background, method='matplotlib')
 
