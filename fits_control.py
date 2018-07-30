@@ -11,19 +11,22 @@ from scipy.misc import imresize
 import scipy.stats as st
 from scipy.signal import medfilt2d
 
-def read_fits_file(fits_file):
-    data_and_headers = fits.open('data/' + fits_file)
+def read_fits_file(fits_file, subfolder=''):
+    data_and_headers = fits.open(subfolder + fits_file)
     data = data_and_headers[0].data
     print('Astonomical image with shape {} loaded'.format(data.shape))
     data_and_headers.close()
     return data
 
-def edit_fits_data(fits_file, new_data, new_file_name):
-    if os.path.isfile('data/exported/' + new_file_name):
-        os.remove('data/exported/' + new_file_name)
-    data_and_headers = fits.open('data/' + fits_file)
+def edit_fits_data(fits_file, new_data, new_file_name, subfolder="", input_subfolder="", comment=""):
+    if os.path.isfile(os.getcwd() + '/' + new_file_name):
+        os.remove(os.getcwd() + '/' + new_file_name)
+    data_and_headers = fits.open(input_subfolder + fits_file)
     data_and_headers[0].data = new_data
-    data_and_headers[0].writeto('data/exported/' + new_file_name)
+    if comment != "":
+        header = data_and_headers[0].header
+        header['Comment'] = comment
+    data_and_headers[0].writeto(os.getcwd() + '/' + new_file_name)
     return
 
 def show_image( image, name):
@@ -38,4 +41,3 @@ def show_image( image, name):
         plt.imshow(image, cmap='gray')
         plt.title(name), plt.xticks([]), plt.yticks([])
         plt.show()
-
