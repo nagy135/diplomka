@@ -1,0 +1,20 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_OUTPUT_MODE	u-ctags	/u-ctags or e-ctags/
+!_TAG_PROGRAM_AUTHOR	Universal Ctags Team	//
+!_TAG_PROGRAM_NAME	Universal Ctags	/Derived from Exuberant Ctags/
+!_TAG_PROGRAM_URL	https://ctags.io/	/official site/
+!_TAG_PROGRAM_VERSION	0.0.0	/45968eff/
+Abstract	main.tex	/^\\chapter*{Abstract}\\label{chap:abstract_en}$/;"	c
+Abstrakt	main.tex	/^\\chapter*{Abstrakt}\\label{chap:abstract_sk}$/;"	c
+Chapter 1	main.tex	/^\\chapter{Chapter 1}$/;"	c
+Chapter 2	main.tex	/^\\chapter{Chapter 2}$/;"	c
+Introduction to problematic	main.tex	/^\\section{Introduction to problematic}$/;"	s	chapter:Chapter 2
+Motivation	main.tex	/^\\section{Motivation}$/;"	s	chapter:Chapter 1
+Poďakovanie	main.tex	/^\\chapter*{Poďakovanie}\\label{chap:thank_you}$/;"	c
+chap:abstract_en	main.tex	/^\\chapter*{Abstract}\\label{chap:abstract_en}$/;"	l
+chap:abstract_sk	main.tex	/^\\chapter*{Abstrakt}\\label{chap:abstract_sk}$/;"	l
+chap:thank_you	main.tex	/^\\chapter*{Poďakovanie}\\label{chap:thank_you}$/;"	l
+img:logo	main.tex	/^        \\label{img:logo}$/;"	l
+img:logo_dark	main.tex	/^\\label{img:logo_dark}$/;"	l
+img:zadanie	main.tex	/^\\label{img:zadanie}$/;"	l

@@ -1,20 +1,1175 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Arch Linux) (preloaded format=pdflatex 2018.4.10)  9 MAY 2018 18:47
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/Arch Linux) (preloaded format=pdflatex 2018.9.9)  1 DEC 2018 12:38
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
 **\documentclass[12pt, a4paper, oneside]{book}
-! Emergency stop.
-<*> \documentclass[12pt, a4paper, oneside]{book}
-                                                
-*** (job aborted, no legal \end found)
 
+*\usepackage[hidelinks]{hyperref}
+(/usr/share/texmf-dist/tex/latex/base/book.cls
+Document Class: book 2014/09/29 v1.4h Standard LaTeX document class
+(/usr/share/texmf-dist/tex/latex/base/bk12.clo
+File: bk12.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
+)
+\c@part=\count80
+\c@chapter=\count81
+\c@section=\count82
+\c@subsection=\count83
+\c@subsubsection=\count84
+\c@paragraph=\count85
+\c@subparagraph=\count86
+\c@figure=\count87
+\c@table=\count88
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+)
+*\usepackage[slovak]{babel}
+(/usr/share/texmf-dist/tex/latex/hyperref/hyperref.sty
+Package: hyperref 2018/02/06 v6.86b Hypertext links for LaTeX
+
+(/usr/share/texmf-dist/tex/generic/oberdiek/hobsub-hyperref.sty
+Package: hobsub-hyperref 2016/05/16 v1.14 Bundle oberdiek, subset hyperref (HO)
+
+
+(/usr/share/texmf-dist/tex/generic/oberdiek/hobsub-generic.sty
+Package: hobsub-generic 2016/05/16 v1.14 Bundle oberdiek, subset generic (HO)
+Package: hobsub 2016/05/16 v1.14 Construct package bundles (HO)
+Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
+Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
+Package: ifluatex 2016/05/16 v1.4 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+Package: ifvtex 2016/05/16 v1.6 Detect VTeX and its facilities (HO)
+Package ifvtex Info: VTeX not detected.
+Package: intcalc 2016/05/16 v1.2 Expandable calculations with integers (HO)
+Package: ifpdf 2017/03/15 v3.2 Provides the ifpdf switch
+Package: etexcmds 2016/05/16 v1.6 Avoid name clashes with e-TeX commands (HO)
+Package etexcmds Info: Could not find \expanded.
+(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
+(etexcmds)             that some package has redefined \expanded.
+(etexcmds)             In the latter case, load this package earlier.
+Package: kvsetkeys 2016/05/16 v1.17 Key value parser (HO)
+Package: kvdefinekeys 2016/05/16 v1.4 Define keys (HO)
+Package: pdftexcmds 2018/01/30 v0.27 Utility functions of pdfTeX for LuaTeX (HO
+)
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+Package: pdfescape 2016/05/16 v1.14 Implements pdfTeX's escape features (HO)
+Package: bigintcalc 2016/05/16 v1.4 Expandable calculations on big integers (HO
+)
+Package: bitset 2016/05/16 v1.2 Handle bit-vector datatype (HO)
+Package: uniquecounter 2016/05/16 v1.3 Provide unlimited unique counter (HO)
+)
+Package hobsub Info: Skipping package `hobsub' (already loaded).
+Package: letltxmacro 2016/05/16 v1.5 Let assignment for LaTeX macros (HO)
+Package: hopatch 2016/05/16 v1.3 Wrapper for package hooks (HO)
+Package: xcolor-patch 2016/05/16 xcolor patch
+Package: atveryend 2016/05/16 v1.9 Hooks at the very end of document (HO)
+Package atveryend Info: \enddocument detected (standard20110627).
+Package: atbegshi 2016/06/09 v1.18 At begin shipout hook (HO)
+Package: refcount 2016/05/16 v3.5 Data extraction from label references (HO)
+Package: hycolor 2016/05/16 v1.8 Color options for hyperref/bookmark (HO)
+)
+(/usr/share/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks14
+)
+(/usr/share/texmf-dist/tex/generic/ifxetex/ifxetex.sty
+Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
+)
+(/usr/share/texmf-dist/tex/latex/oberdiek/auxhook.sty
+Package: auxhook 2016/05/16 v1.4 Hooks for auxiliary files (HO)
+)
+(/usr/share/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
+)
+\@linkdim=\dimen103
+\Hy@linkcounter=\count89
+\Hy@pagecounter=\count90
+
+(/usr/share/texmf-dist/tex/latex/hyperref/pd1enc.def
+File: pd1enc.def 2018/02/06 v6.86b Hyperref: PDFDocEncoding definition (HO)
+Now handling font encoding PD1 ...
+... no UTF-8 mapping file for font encoding PD1
+)
+\Hy@SavedSpaceFactor=\count91
+
+(/usr/share/texmf-dist/tex/latex/latexconfig/hyperref.cfg
+File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive
+)
+Package hyperref Info: Hyper figures OFF on input line 4509.
+Package hyperref Info: Link nesting OFF on input line 4514.
+Package hyperref Info: Hyper index ON on input line 4517.
+Package hyperref Info: Plain pages OFF on input line 4524.
+Package hyperref Info: Backreferencing OFF on input line 4529.
+Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
+Package hyperref Info: Bookmarks ON on input line 4762.
+\c@Hy@tempcnt=\count92
+
+(/usr/share/texmf-dist/tex/latex/url/url.sty
+\Urlmuskip=\muskip10
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+LaTeX Info: Redefining \url on input line 5115.
+\XeTeXLinkMargin=\dimen104
+\Fld@menulength=\count93
+\Field@Width=\dimen105
+\Fld@charsize=\dimen106
+Package hyperref Info: Hyper figures OFF on input line 6369.
+Package hyperref Info: Link nesting OFF on input line 6374.
+Package hyperref Info: Hyper index ON on input line 6377.
+Package hyperref Info: backreferencing OFF on input line 6384.
+Package hyperref Info: Link coloring OFF on input line 6389.
+Package hyperref Info: Link coloring with OCG OFF on input line 6394.
+Package hyperref Info: PDF/A mode OFF on input line 6399.
+LaTeX Info: Redefining \ref on input line 6439.
+LaTeX Info: Redefining \pageref on input line 6443.
+\Hy@abspage=\count94
+\c@Item=\count95
+\c@Hfootnote=\count96
+)
+Package hyperref Info: Driver (autodetected): hpdftex.
+
+(/usr/share/texmf-dist/tex/latex/hyperref/hpdftex.def
+File: hpdftex.def 2018/02/06 v6.86b Hyperref driver for pdfTeX
+\Fld@listcount=\count97
+\c@bookmark@seq@number=\count98
+
+(/usr/share/texmf-dist/tex/latex/oberdiek/rerunfilecheck.sty
+Package: rerunfilecheck 2016/05/16 v1.8 Rerun checks for auxiliary files (HO)
+Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
+82.
+)
+\Hy@SectionHShift=\skip43
+)
+*\usepackage{epsfig}
+(/usr/share/texmf-dist/tex/generic/babel/babel.sty
+Package: babel 2018/09/02 3.23 The Babel package
+
+(/usr/share/texmf-dist/tex/generic/babel/switch.def
+File: switch.def 2018/09/02 3.23 Babel switching mechanism
+)
+(/usr/share/texmf-dist/tex/generic/babel-slovak/slovak.ldf
+Language: slovak 2008/07/06 v3.1a Slovak support from the babel system
+
+(/usr/share/texmf-dist/tex/generic/babel/babel.def
+File: babel.def 2018/09/02 3.23 Babel common definitions
+\babel@savecnt=\count99
+\U@D=\dimen107
+
+(/usr/share/texmf-dist/tex/generic/babel/txtbabel.def)
+\bbl@dirlevel=\count100
+)
+Package babel Info: Making ^ an active character on input line 123.
+Package babel Info: Making " an active character on input line 126.
+Package babel Info: Making ' an active character on input line 129.
+\cs@wordlen=\count101
+Package babel Info: Making - an active character on input line 294.
+))
+*\usepackage{epstopdf}
+(/usr/share/texmf-dist/tex/latex/graphics/epsfig.sty
+Package: epsfig 2017/06/25 v1.7b (e)psfig emulation (SPQR)
+
+(/usr/share/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2017/06/01 v1.1a Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2017/06/25 v1.2c Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+)
+(/usr/share/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 99.
+
+(/usr/share/texmf-dist/tex/latex/graphics-def/pdftex.def
+File: pdftex.def 2018/01/08 v1.0l Graphics/color driver for pdftex
+))
+\Gin@req@height=\dimen108
+\Gin@req@width=\dimen109
+)
+\epsfxsize=\dimen110
+\epsfysize=\dimen111
+)
+*\usepackage[chapter]{algorithm}
+(/usr/share/texmf-dist/tex/latex/oberdiek/epstopdf.sty
+Package: epstopdf 2016/05/15 v2.6 Conversion with epstopdf on the fly (HO)
+
+(/usr/share/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
+
+(/usr/share/texmf-dist/tex/latex/oberdiek/grfext.sty
+Package: grfext 2016/05/16 v1.2 Manage graphics extensions (HO)
+)
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+38.
+Package grfext Info: Graphics extension search list:
+(grfext)             [.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 456.
+
+(/usr/share/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+)))
+*\usepackage{algorithmic}
+(/usr/share/texmf-dist/tex/latex/algorithms/algorithm.sty
+Package: algorithm 2009/08/24 v0.1 Document Style `algorithm' - floating enviro
+nment
+
+(/usr/share/texmf-dist/tex/latex/float/float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count102
+\float@exts=\toks15
+\float@box=\box26
+\@float@everytoks=\toks16
+\@floatcapt=\box27
+)
+(/usr/share/texmf-dist/tex/latex/base/ifthen.sty
+Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
+)
+\@float@every@algorithm=\toks17
+\c@algorithm=\count103
+)
+*\usepackage{listings}
+(/usr/share/texmf-dist/tex/latex/algorithms/algorithmic.sty
+Package: algorithmic 2009/08/24 v0.1 Document Style `algorithmic'
+\c@ALC@unique=\count104
+\c@ALC@line=\count105
+\c@ALC@rem=\count106
+\c@ALC@depth=\count107
+\ALC@tlm=\skip44
+\algorithmicindent=\skip45
+)
+*\usepackage{amsmath}
+(/usr/share/texmf-dist/tex/latex/listings/listings.sty
+\lst@mode=\count108
+\lst@gtempboxa=\box28
+\lst@token=\toks18
+\lst@length=\count109
+\lst@currlwidth=\dimen112
+\lst@column=\count110
+\lst@pos=\count111
+\lst@lostspace=\dimen113
+\lst@width=\dimen114
+\lst@newlines=\count112
+\lst@lineno=\count113
+\lst@maxwidth=\dimen115
+
+(/usr/share/texmf-dist/tex/latex/listings/lstmisc.sty
+File: lstmisc.sty 2018/09/02 1.7 (Carsten Heinz)
+\c@lstnumber=\count114
+\lst@skipnumbers=\count115
+\lst@framebox=\box29
+)
+(/usr/share/texmf-dist/tex/latex/listings/listings.cfg
+File: listings.cfg 2018/09/02 1.7 listings configuration
+))
+Package: listings 2018/09/02 1.7 (Carsten Heinz)
+
+*\usepackage{amssymb}
+(/usr/share/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2017/09/02 v2.17a AMS math features
+\@mathmargin=\skip46
+
+For additional information on amsmath, use the `?' option.
+(/usr/share/texmf-dist/tex/latex/amsmath/amstext.sty
+Package: amstext 2000/06/29 v2.01 AMS text
+
+(/usr/share/texmf-dist/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks19
+\ex@=\dimen116
+))
+(/usr/share/texmf-dist/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen117
+)
+(/usr/share/texmf-dist/tex/latex/amsmath/amsopn.sty
+Package: amsopn 2016/03/08 v2.02 operator names
+)
+\inf@bad=\count116
+LaTeX Info: Redefining \frac on input line 213.
+\uproot@=\count117
+\leftroot@=\count118
+LaTeX Info: Redefining \overline on input line 375.
+\classnum@=\count119
+\DOTSCASE@=\count120
+LaTeX Info: Redefining \ldots on input line 472.
+LaTeX Info: Redefining \dots on input line 475.
+LaTeX Info: Redefining \cdots on input line 596.
+\Mathstrutbox@=\box30
+\strutbox@=\box31
+\big@size=\dimen118
+LaTeX Font Info:    Redeclaring font encoding OML on input line 712.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 713.
+\macc@depth=\count121
+\c@MaxMatrixCols=\count122
+\dotsspace@=\muskip11
+\c@parentequation=\count123
+\dspbrk@lvl=\count124
+\tag@help=\toks20
+\row@=\count125
+\column@=\count126
+\maxfields@=\count127
+\andhelp@=\toks21
+\eqnshift@=\dimen119
+\alignsep@=\dimen120
+\tagshift@=\dimen121
+\tagwidth@=\dimen122
+\totwidth@=\dimen123
+\lineht@=\dimen124
+\@envbody=\toks22
+\multlinegap=\skip47
+\multlinetaggap=\skip48
+\mathdisplay@stack=\toks23
+LaTeX Info: Redefining \[ on input line 2817.
+LaTeX Info: Redefining \] on input line 2818.
+)
+*\usepackage{graphicx}
+(/usr/share/texmf-dist/tex/latex/amsfonts/amssymb.sty
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+
+(/usr/share/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+))
+*\usepackage{multirow}
+
+*\usepackage{color}
+(/usr/share/texmf-dist/tex/latex/multirow/multirow.sty
+Package: multirow 2018/08/03 v2.3 Span multiple rows of a table
+\multirow@colwidth=\skip49
+\multirow@cntb=\count128
+\multirow@dima=\skip50
+\bigstrutjot=\dimen125
+)
+*\usepackage{url}
+(/usr/share/texmf-dist/tex/latex/graphics/color.sty
+Package: color 2016/07/10 v1.1e Standard LaTeX Color (DPC)
+
+(/usr/share/texmf-dist/tex/latex/graphics-cfg/color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package color Info: Driver file: pdftex.def on input line 147.
+)
+*\usepackage[utf8]{inputenc}
+
+*\usepackage[T1]{fontenc}
+(/usr/share/texmf-dist/tex/latex/base/inputenc.sty
+Package: inputenc 2018/04/06 v1.3b Input encoding file
+\inpenc@prehook=\toks24
+\inpenc@posthook=\toks25
+)
+*\usepackage{setspace}
+(/usr/share/texmf-dist/tex/latex/base/fontenc.sty
+Package: fontenc 2017/04/05 v2.0i Standard LaTeX package
+
+(/usr/share/texmf-dist/tex/latex/base/t1enc.def
+File: t1enc.def 2017/04/05 v2.0i Standard LaTeX file
+LaTeX Font Info:    Redeclaring font encoding T1 on input line 48.
+))
+*\usepackage{tabularx}
+(/usr/share/texmf-dist/tex/latex/setspace/setspace.sty
+Package: setspace 2011/12/19 v6.7a set line spacing
+)
+*\usepackage{textcomp}
+(/usr/share/texmf-dist/tex/latex/tools/tabularx.sty
+Package: tabularx 2016/02/03 v2.11b `tabularx' package (DPC)
+
+(/usr/share/texmf-dist/tex/latex/tools/array.sty
+Package: array 2018/04/30 v2.4h Tabular extension package (FMi)
+\col@sep=\dimen126
+\ar@mcellbox=\box32
+\extrarowheight=\dimen127
+\NC@list=\toks26
+\extratabsurround=\skip51
+\backup@length=\skip52
+\ar@cellbox=\box33
+)
+\TX@col@width=\dimen128
+\TX@old@table=\dimen129
+\TX@old@col=\dimen130
+\TX@target=\dimen131
+\TX@delta=\dimen132
+\TX@cols=\count129
+\TX@ftn=\toks27
+)
+*\usepackage{caption}
+(/usr/share/texmf-dist/tex/latex/base/textcomp.sty
+Package: textcomp 2017/04/05 v2.0i Standard LaTeX package
+Package textcomp Info: Sub-encoding information:
+(textcomp)               5 = only ISO-Adobe without \textcurrency
+(textcomp)               4 = 5 + \texteuro
+(textcomp)               3 = 4 + \textohm
+(textcomp)               2 = 3 + \textestimated + \textcurrency
+(textcomp)               1 = TS1 - \textcircled - \t
+(textcomp)               0 = TS1 (full)
+(textcomp)             Font families with sub-encoding setting implement
+(textcomp)             only a restricted character set as indicated.
+(textcomp)             Family '?' is the default used for unknown fonts.
+(textcomp)             See the documentation for details.
+Package textcomp Info: Setting ? sub-encoding to TS1/1 on input line 79.
+
+(/usr/share/texmf-dist/tex/latex/base/ts1enc.def
+File: ts1enc.def 2001/06/05 v3.0e (jk/car/fm) Standard LaTeX file
+Now handling font encoding TS1 ...
+... processing UTF-8 mapping file for font encoding TS1
+
+(/usr/share/texmf-dist/tex/latex/base/ts1enc.dfu
+File: ts1enc.dfu 2018/04/05 v1.2c UTF-8 support for inputenc
+   defining Unicode char U+00A2 (decimal 162)
+   defining Unicode char U+00A3 (decimal 163)
+   defining Unicode char U+00A4 (decimal 164)
+   defining Unicode char U+00A5 (decimal 165)
+   defining Unicode char U+00A6 (decimal 166)
+   defining Unicode char U+00A7 (decimal 167)
+   defining Unicode char U+00A8 (decimal 168)
+   defining Unicode char U+00A9 (decimal 169)
+   defining Unicode char U+00AA (decimal 170)
+   defining Unicode char U+00AC (decimal 172)
+   defining Unicode char U+00AE (decimal 174)
+   defining Unicode char U+00AF (decimal 175)
+   defining Unicode char U+00B0 (decimal 176)
+   defining Unicode char U+00B1 (decimal 177)
+   defining Unicode char U+00B2 (decimal 178)
+   defining Unicode char U+00B3 (decimal 179)
+   defining Unicode char U+00B4 (decimal 180)
+   defining Unicode char U+00B5 (decimal 181)
+   defining Unicode char U+00B6 (decimal 182)
+   defining Unicode char U+00B7 (decimal 183)
+   defining Unicode char U+00B9 (decimal 185)
+   defining Unicode char U+00BA (decimal 186)
+   defining Unicode char U+00BC (decimal 188)
+   defining Unicode char U+00BD (decimal 189)
+   defining Unicode char U+00BE (decimal 190)
+   defining Unicode char U+00D7 (decimal 215)
+   defining Unicode char U+00F7 (decimal 247)
+   defining Unicode char U+0192 (decimal 402)
+   defining Unicode char U+02C7 (decimal 711)
+   defining Unicode char U+02D8 (decimal 728)
+   defining Unicode char U+02DD (decimal 733)
+   defining Unicode char U+0E3F (decimal 3647)
+   defining Unicode char U+2016 (decimal 8214)
+   defining Unicode char U+2020 (decimal 8224)
+   defining Unicode char U+2021 (decimal 8225)
+   defining Unicode char U+2022 (decimal 8226)
+   defining Unicode char U+2030 (decimal 8240)
+   defining Unicode char U+2031 (decimal 8241)
+   defining Unicode char U+203B (decimal 8251)
+   defining Unicode char U+203D (decimal 8253)
+   defining Unicode char U+2044 (decimal 8260)
+   defining Unicode char U+204E (decimal 8270)
+   defining Unicode char U+2052 (decimal 8274)
+   defining Unicode char U+20A1 (decimal 8353)
+   defining Unicode char U+20A4 (decimal 8356)
+   defining Unicode char U+20A6 (decimal 8358)
+   defining Unicode char U+20A9 (decimal 8361)
+   defining Unicode char U+20AB (decimal 8363)
+   defining Unicode char U+20AC (decimal 8364)
+   defining Unicode char U+20B1 (decimal 8369)
+   defining Unicode char U+2103 (decimal 8451)
+   defining Unicode char U+2116 (decimal 8470)
+   defining Unicode char U+2117 (decimal 8471)
+   defining Unicode char U+211E (decimal 8478)
+   defining Unicode char U+2120 (decimal 8480)
+   defining Unicode char U+2122 (decimal 8482)
+   defining Unicode char U+2126 (decimal 8486)
+   defining Unicode char U+2127 (decimal 8487)
+   defining Unicode char U+212E (decimal 8494)
+   defining Unicode char U+2190 (decimal 8592)
+   defining Unicode char U+2191 (decimal 8593)
+   defining Unicode char U+2192 (decimal 8594)
+   defining Unicode char U+2193 (decimal 8595)
+   defining Unicode char U+2329 (decimal 9001)
+   defining Unicode char U+232A (decimal 9002)
+   defining Unicode char U+2422 (decimal 9250)
+   defining Unicode char U+25E6 (decimal 9702)
+   defining Unicode char U+25EF (decimal 9711)
+   defining Unicode char U+266A (decimal 9834)
+   defining Unicode char U+FEFF (decimal 65279)
+))
+LaTeX Info: Redefining \oldstylenums on input line 334.
+Package textcomp Info: Setting cmr sub-encoding to TS1/0 on input line 349.
+Package textcomp Info: Setting cmss sub-encoding to TS1/0 on input line 350.
+Package textcomp Info: Setting cmtt sub-encoding to TS1/0 on input line 351.
+Package textcomp Info: Setting cmvtt sub-encoding to TS1/0 on input line 352.
+Package textcomp Info: Setting cmbr sub-encoding to TS1/0 on input line 353.
+Package textcomp Info: Setting cmtl sub-encoding to TS1/0 on input line 354.
+Package textcomp Info: Setting ccr sub-encoding to TS1/0 on input line 355.
+Package textcomp Info: Setting ptm sub-encoding to TS1/4 on input line 356.
+Package textcomp Info: Setting pcr sub-encoding to TS1/4 on input line 357.
+Package textcomp Info: Setting phv sub-encoding to TS1/4 on input line 358.
+Package textcomp Info: Setting ppl sub-encoding to TS1/3 on input line 359.
+Package textcomp Info: Setting pag sub-encoding to TS1/4 on input line 360.
+Package textcomp Info: Setting pbk sub-encoding to TS1/4 on input line 361.
+Package textcomp Info: Setting pnc sub-encoding to TS1/4 on input line 362.
+Package textcomp Info: Setting pzc sub-encoding to TS1/4 on input line 363.
+Package textcomp Info: Setting bch sub-encoding to TS1/4 on input line 364.
+Package textcomp Info: Setting put sub-encoding to TS1/5 on input line 365.
+Package textcomp Info: Setting uag sub-encoding to TS1/5 on input line 366.
+Package textcomp Info: Setting ugq sub-encoding to TS1/5 on input line 367.
+Package textcomp Info: Setting ul8 sub-encoding to TS1/4 on input line 368.
+Package textcomp Info: Setting ul9 sub-encoding to TS1/4 on input line 369.
+Package textcomp Info: Setting augie sub-encoding to TS1/5 on input line 370.
+Package textcomp Info: Setting dayrom sub-encoding to TS1/3 on input line 371.
+Package textcomp Info: Setting dayroms sub-encoding to TS1/3 on input line 372.
+
+Package textcomp Info: Setting pxr sub-encoding to TS1/0 on input line 373.
+Package textcomp Info: Setting pxss sub-encoding to TS1/0 on input line 374.
+Package textcomp Info: Setting pxtt sub-encoding to TS1/0 on input line 375.
+Package textcomp Info: Setting txr sub-encoding to TS1/0 on input line 376.
+Package textcomp Info: Setting txss sub-encoding to TS1/0 on input line 377.
+Package textcomp Info: Setting txtt sub-encoding to TS1/0 on input line 378.
+Package textcomp Info: Setting lmr sub-encoding to TS1/0 on input line 379.
+Package textcomp Info: Setting lmdh sub-encoding to TS1/0 on input line 380.
+Package textcomp Info: Setting lmss sub-encoding to TS1/0 on input line 381.
+Package textcomp Info: Setting lmssq sub-encoding to TS1/0 on input line 382.
+Package textcomp Info: Setting lmvtt sub-encoding to TS1/0 on input line 383.
+Package textcomp Info: Setting lmtt sub-encoding to TS1/0 on input line 384.
+Package textcomp Info: Setting qhv sub-encoding to TS1/0 on input line 385.
+Package textcomp Info: Setting qag sub-encoding to TS1/0 on input line 386.
+Package textcomp Info: Setting qbk sub-encoding to TS1/0 on input line 387.
+Package textcomp Info: Setting qcr sub-encoding to TS1/0 on input line 388.
+Package textcomp Info: Setting qcs sub-encoding to TS1/0 on input line 389.
+Package textcomp Info: Setting qpl sub-encoding to TS1/0 on input line 390.
+Package textcomp Info: Setting qtm sub-encoding to TS1/0 on input line 391.
+Package textcomp Info: Setting qzc sub-encoding to TS1/0 on input line 392.
+Package textcomp Info: Setting qhvc sub-encoding to TS1/0 on input line 393.
+Package textcomp Info: Setting futs sub-encoding to TS1/4 on input line 394.
+Package textcomp Info: Setting futx sub-encoding to TS1/4 on input line 395.
+Package textcomp Info: Setting futj sub-encoding to TS1/4 on input line 396.
+Package textcomp Info: Setting hlh sub-encoding to TS1/3 on input line 397.
+Package textcomp Info: Setting hls sub-encoding to TS1/3 on input line 398.
+Package textcomp Info: Setting hlst sub-encoding to TS1/3 on input line 399.
+Package textcomp Info: Setting hlct sub-encoding to TS1/5 on input line 400.
+Package textcomp Info: Setting hlx sub-encoding to TS1/5 on input line 401.
+Package textcomp Info: Setting hlce sub-encoding to TS1/5 on input line 402.
+Package textcomp Info: Setting hlcn sub-encoding to TS1/5 on input line 403.
+Package textcomp Info: Setting hlcw sub-encoding to TS1/5 on input line 404.
+Package textcomp Info: Setting hlcf sub-encoding to TS1/5 on input line 405.
+Package textcomp Info: Setting pplx sub-encoding to TS1/3 on input line 406.
+Package textcomp Info: Setting pplj sub-encoding to TS1/3 on input line 407.
+Package textcomp Info: Setting ptmx sub-encoding to TS1/4 on input line 408.
+Package textcomp Info: Setting ptmj sub-encoding to TS1/4 on input line 409.
+)
+*\usepackage{natbib}
+(/usr/share/texmf-dist/tex/latex/caption/caption.sty
+Package: caption 2018/05/01 v3.3-147 Customizing captions (AR)
+
+(/usr/share/texmf-dist/tex/latex/caption/caption3.sty
+Package: caption3 2018/05/27 v1.8a caption3 kernel (AR)
+Package caption3 Info: TeX engine: e-TeX on input line 64.
+\captionmargin=\dimen133
+\captionmargin@=\dimen134
+\captionwidth=\dimen135
+\caption@tempdima=\dimen136
+\caption@indent=\dimen137
+\caption@parindent=\dimen138
+\caption@hangindent=\dimen139
+)
+\c@ContinuedFloat=\count130
+Package caption Info: float package is loaded.
+Package caption Info: hyperref package is loaded.
+Package caption Info: listings package is loaded.
+)
+*\usepackage{nopageno}
+(/usr/share/texmf-dist/tex/latex/natbib/natbib.sty
+Package: natbib 2010/09/13 8.31b (PWD, AO)
+\bibhang=\skip53
+\bibsep=\skip54
+LaTeX Info: Redefining \cite on input line 694.
+\c@NAT@ctr=\count131
+)
+*
+(/usr/share/texmf-dist/tex/latex/nopageno/nopageno.sty
+Package: nopageno 1989/01/01 no page numbers (DPC)
+)
+(Please type a command or say `\end')
+*
+(Please type a command or say `\end')
+*\setstretch{1.5}
+
+*%\renewcommand\baselinestretch{1.5} % riadkovanie jeden a pol
+
+*
+(Please type a command or say `\end')
+*% pekne pokope definujeme potrebne udaje
+
+*\newcommand\mftitle{Algorithm development for the segmentation of astronomical
+ images with unique features}
+
+*\newcommand\mfthesistype{Masters Thesis}
+
+*\newcommand\mfauthor{Bc. Viktor Nagy}
+
+*\newcommand\mfadvisor{prof. RNDr. Jiri Silha, PhD.}
+
+*\newcommand\mfplacedate{Bratislava, 2014}
+
+*\newcommand\mfuniversity{UNIVERZITA KOMENSKÉHO V BRATISLAVE}
+
+*\newcommand\mffaculty{FAKULTA MATEMATIKY, FYZIKY A INFORMATIKY}
+
+*\newcommand{\sub}[1]{$_{\text{#1}}$}
+
+*\newcommand{\reference}[1]{č.~\ref{#1}}
+
+*\newcommand{\imageHeight}{150px}
+
+*
+(Please type a command or say `\end')
+*\ifx\pdfoutput\undefined\relax\else\pdfinfo{ /Title (mftitle) /Author (\mfauth
+or) /Creator (PDFLaTeX) } \fi
+
+*
+(Please type a command or say `\end')
+*\begin{document}
+(./texput.aux
+
+LaTeX Warning: Label `img:zadanie' multiply defined.
+
+)
+\openout1 = `texput.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 0.
+LaTeX Font Info:    ... okay on input line 0.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 0.
+LaTeX Font Info:    ... okay on input line 0.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 0.
+LaTeX Font Info:    ... okay on input line 0.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 0.
+LaTeX Font Info:    ... okay on input line 0.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 0.
+LaTeX Font Info:    ... okay on input line 0.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 0.
+LaTeX Font Info:    ... okay on input line 0.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 0.
+LaTeX Font Info:    ... okay on input line 0.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 0.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 0.
+ (/usr/share/texmf-dist/tex/latex/base/ts1cmr.fd
+File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    ... okay on input line 0.
+\AtBeginShipoutBox=\box34
+Package hyperref Info: Link coloring OFF on input line 0.
+
+(/usr/share/texmf-dist/tex/latex/hyperref/nameref.sty
+Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
+
+(/usr/share/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
+Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
+)
+\c@section@level=\count132
+)
+LaTeX Info: Redefining \ref on input line 0.
+LaTeX Info: Redefining \pageref on input line 0.
+LaTeX Info: Redefining \nameref on input line 0.
+ (./texput.out) (./texput.out)
+\@outlinefile=\write3
+\openout3 = `texput.out'.
+
+ (/usr/share/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count133
+\scratchdimen=\dimen140
+\scratchbox=\box35
+\nofMPsegments=\count134
+\nofMParguments=\count135
+\everyMPshowfont=\toks28
+\MPscratchCnt=\count136
+\MPscratchDim=\dimen141
+\MPnumerator=\count137
+\makeMPintoPDFobject=\count138
+\everyMPtoPDFconversion=\toks29
+)
+\c@lstlisting=\count139
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: End \AtBeginDocument code.
+
+*
+(Please type a command or say `\end')
+*\frontmatter
+
+*
+(Please type a command or say `\end')
+*\thispagestyle{empty}
+
+*
+(Please type a command or say `\end')
+*\noindent
+
+*\begin{minipage}{\textwidth}
+
+*\begin{center}
+
+*\textbf{\mfuniversity \\
+
+*\mffaculty}
+
+*\end{center}
+
+*\end{minipage}
+LaTeX Font Info:    Try loading font information for U+msa on input line 0.
+(/usr/share/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Try loading font information for U+msb on input line 0.
+
+(/usr/share/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+*
+(Please type a command or say `\end')
+*\vfill
+
+*\begin{figure}[!hbt]
+
+*    \begin{center}
+
+*        \includegraphics{images/logo_fmph}
+<images/logo_fmph.png, id=4, 106.59825pt x 113.58435pt>
+File: images/logo_fmph.png Graphic file (type png)
+<use images/logo_fmph.png>
+Package pdftex.def Info: images/logo_fmph.png  used on input line 0.
+(pdftex.def)             Requested size: 106.59798pt x 113.58406pt.
+
+*        \label{img:logo}
+
+*    \end{center}
+
+*\end{figure}
+
+*\begin{center}
+
+*    \begin{minipage}{0.8\textwidth}
+
+*        \centerline{\textbf{\Large\MakeUppercase{Algorithm development for the
+ segmentation}}}
+
+*        \centerline{\textbf{\Large\MakeUppercase{of astronomical images with u
+nique features}}}
+
+*        \smallskip
+
+*        \centerline{\mfthesistype}
+
+*    \end{minipage}
+
+*\end{center}
+
+*\vfill
+
+*2014 \hfill
+
+*\mfauthor
+
+*\eject
+[1
+
+
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./images/logo_fmph.png>]
+*% koniec obalu
+
+*
+(Please type a command or say `\end')
+*\thispagestyle{empty}
+
+*
+(Please type a command or say `\end')
+*\noindent
+
+*\begin{minipage}{\textwidth}
+
+*\begin{center}
+
+*\textbf{\mfuniversity \\
+
+*\mffaculty}
+
+*\end{center}
+
+*\end{minipage}
+
+*
+(Please type a command or say `\end')
+*\vfill
+
+*\begin{figure}[!hbt]
+
+*\begin{center}
+
+*\includegraphics{images/logo_fmph_dark}
+<images/logo_fmph_dark.png, id=16, 106.59825pt x 113.58435pt>
+File: images/logo_fmph_dark.png Graphic file (type png)
+<use images/logo_fmph_dark.png>
+Package pdftex.def Info: images/logo_fmph_dark.png  used on input line 0.
+(pdftex.def)             Requested size: 106.59798pt x 113.58406pt.
+
+*\label{img:logo_dark}
+
+*\end{center}
+
+*\end{figure}
+
+*\begin{center}
+
+*\begin{minipage}{0.8\textwidth}
+
+*        \centerline{\textbf{\Large\MakeUppercase{Algorithm development for the
+ segmentation}}}
+
+*        \centerline{\textbf{\Large\MakeUppercase{of astronomical images with u
+nique features}}}
+
+*\smallskip
+
+*\centerline{\mfthesistype}
+
+*\end{minipage}
+
+*\end{center}
+
+*\vfill
+
+*\begin{tabular}{l l}
+
+*%Registration number: & 40a99bd8-3cb6-4534-9330-c7fd9b5e5ca4 \\
+
+*Študijný program: & Aplikovaná informatika\\
+
+*Študijný odbor: & 2511 Aplikovaná informatika\\
+
+*Školiace pracovisko: & Katedra aplikovanej informatiky\\
+
+*Školiteľ: & \mfadvisor
+
+*\end{tabular}
+
+*\vfill
+
+*\noindent
+
+*\mfplacedate \hfill
+
+*\mfauthor
+
+*\eject
+[2 <./images/logo_fmph_dark.png>]
+*% koniec titulneho listu
+
+*
+(Please type a command or say `\end')
+*%\thispagestyle{empty}
+
+*%\includegraphics[width=\textwidth]{images/zadanie}
+
+*%\vfill
+
+*%\eject
+
+*% koniec zadania
+
+*
+(Please type a command or say `\end')
+*
+(Please type a command or say `\end')
+*
+(Please type a command or say `\end')
+*\begin{figure}[H]
+
+*\vspace*{-3.5cm}
+
+*\begin{center}
+
+*\makebox[\textwidth]{\includegraphics[width=\paperwidth]{zadanie1.png}}
+<zadanie1.png, id=23, 1659.19875pt x 2347.77126pt>
+File: zadanie1.png Graphic file (type png)
+<use zadanie1.png>
+Package pdftex.def Info: zadanie1.png  used on input line 0.
+(pdftex.def)             Requested size: 597.50787pt x 845.4478pt.
+
+*\label{img:zadanie}
+
+*\end{center}
+
+*\end{figure}
+
+*
+
+Overfull \vbox (181.36316pt too high) has occurred while \output is active []
+
+
+[3 <./zadanie1.png>]
+(Please type a command or say `\end')
+*\begin{figure}[H]
+
+*\begin{center}
+
+*\makebox[\textwidth]{\includegraphics[width=\paperwidth]{zadanie2.png}}
+<zadanie2.png, id=30, 1659.19875pt x 2347.77126pt>
+File: zadanie2.png Graphic file (type png)
+<use zadanie2.png>
+Package pdftex.def Info: zadanie2.png  used on input line 0.
+(pdftex.def)             Requested size: 597.50787pt x 845.4478pt.
+
+*\label{img:zadanie}
+
+*\end{center}
+
+*\end{figure}
+
+*
+
+Overfull \vbox (280.9478pt too high) has occurred while \output is active []
+
+
+[4 <./zadanie2.png>]
+(Please type a command or say `\end')
+*
+(Please type a command or say `\end')
+*\noindent
+
+*\begin{minipage}{0.25\textwidth}~\end{minipage}
+
+*\begin{minipage}{0.75\textwidth}
+
+*Čestne prehlasujem, že túto diplomovú prácu som vypracoval samostatne len
+ s použitím uvedenej literatúry a za pomoci konzultácií u môjho školite�
+�a.
+
+*\newline \newline
+
+*\end{minipage}
+
+Underfull \hbox (badness 2600) detected at line 0
+[]\T1/cmr/m/n/12 �estne pre-hla-su-jem, �e t�to dip-lo-mov� pr�cu som
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 0
+
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 0
+
+ []
+
+
+*\vfill
+
+Overfull \hbox (2.61049pt too wide) detected at line 0
+$[]$ $[]$ 
+ []
+
+
+*~ \hfill {\hbox to 6cm{\dotfill}} \\
+
+*\mfplacedate \hfill \mfauthor
+
+*\vfill\eject
+[5]
+*% koniec prehlasenia
+
+*
+(Please type a command or say `\end')
+*\chapter*{Poďakovanie}\label{chap:thank_you}
+
+*\vfill\eject
+[6
+
+]
+*% koniec podakovania
+
+*
+(Please type a command or say `\end')
+*\chapter*{Abstrakt}\label{chap:abstract_sk}
+
+*Počas astronomických pozorovaní sa získavajú snímky nočnej oblohy, prev
+ažne jej kokrétnej časti, ktoré sa ukladajú do tzv. Flexible Image Transp
+ort System (FITS) formátu. Tieto snímky obsahujú signál rôzneho charakteru
+ od šumu spôsobeného elektrickým prúdom a vyčítavaním snímky zo CCD 
+kamier, cez pozadie oblohy až po skutočné objekty ako hviezdy alebo objekty
+ slnečnej sústavy (asteroidy, kométy, vesmírny odpad, atď.). Každý pixel
+ FITS snímky je charakterisktický svojou pozíciou na CCD kamere (x,y) a in
+tenzitou. Tieto údaje sa využívajú na výpočet polohy objektu na CCD sn�
+�mke a na jeho súhrnú intenzitu.
+
+*Na typických astronomických snímkach sa hviezdy javia ako statické body, 
+ktoré možno popísať tzv. rozptýlovou funkciou (z ang. Point Spread Functi
+on). To neplatí v prípade, keď sa uskutočnia pozorovania vesmírneho odpad
+u, ktorý sa pohybuje relatívne rýchlo vzhľadom k hviezdnemu pozadiu. V to
+mto prípade sa objekty javia ako predlžené čiary a nie ako body. Ak sa po�
+�as pozorovaní ďalekohľad pohybuje za objektom vesmírneho odpadu nastáva 
+situácia, že všetky hviezdy sa javia ako predlžené čiary s rovnakou dĺ�
+�kou a smerom, zatiaľ čo snímaný objekt sa javí ako bod.
+
+*Úlohou študenta/-ky bude naštudovať si literatúru venujúcu sa spracovani
+u astronomických FITS snímok, ktoré obsahujú objekty vesmírneho odpadu. N�
+�sledne študent/-ka navrhne najvhodnejší,a lebo aj vlastný algoritmus na 
+segmentáciu snímok, ktorý následne naprogramuje a otestuje. Počas segment
+ácie sa identifikujú všetky objekty na snímke a pre každý taký objekt 
+sa vyextrahuje jeho pozícia na CCD snímke (x,y) ako aj súhrná intenzita. T
+estovanie algoritmu bude uskutočnené na reálnych snímkach na ktorých sa 
+nachádza hviezdne pozadie ako aj vesmírny odpad. Výsledky sa porovnajú s p
+redpoveďami pozícii vesmírneho odpadu, ktoré budú študentovi dodané spol
+u s reálnymi snímkami získanými ďalekohľadmi na Astronomickom a geofyz
+ikálnom observatóriu v Modre, FMFI UK.
+
+*~\\
+
+*Kľúčové slová: debris detection, image processing
+
+*\vfill\eject
+[7
+
+] [8]
+*
+(Please type a command or say `\end')
+*\chapter*{Abstract}\label{chap:abstract_en}
+
+*During the astronomical observations images are acquired in so-called Flexible
+ Image Transport System (FITS) format. This images contain signal from various 
+sources, starting from electronic noise and readout noise, going trough sky bac
+kground signal to object images such as stars or asteroids. On an typical astro
+nomical image the stars and asteroids usually appear as point-like objects whic
+h can be described by the Point-Spread Function (PSF). This is not the case for
+ the observations of space debris objects such as fragmentation debris, defunct
+ satellites and upper stages. These objects move comparable faster than the sta
+rs in the background which leads to FITS images which have present trail-like o
+bjects. In case that sidereal tracking is used during the observations, stars a
+re being tracked by the telescope, the space debris object appears as an trail 
+and stars as points. In case that debris tracking is used the debris appears as
+ a point and stars as a trails with the same length and direction on the image.
+ One of the tasks for the possible candidate will be to review the existing alg
+orithms for the image segmentation procedures currently used in the astronomica
+l community for space debris observations. Depending on the review selected wil
+l the best algorithm which will be then written by the candidate in a testing e
+nvironment and then will be tested on the real observations acquired by the opt
+ical systems currently present at the Astronomical and geophysical observatory 
+in Modra. Algorithm will have to identify all image objects above defined thers
+hold (Signal-to-Noise Ratio, SNR, to be defined during the work), for each imag
+e object extracted will be the position on the CCD frame, as well the total int
+ensity. The algorithm efficiency will be investigated by comparing the results 
+with the ground-truth extracted for the known objects, such as space debris or 
+asteroids which will be delivered to the candidate.
+
+*
+[9
+
+]
+(Please type a command or say `\end')
+*
+(Please type a command or say `\end')
+*~\\
+
+*Keywords: debris detection, image processing
+
+*\vfill\eject
+[10]
+*% koniec abstraktov
+
+*
+(Please type a command or say `\end')
+*\tableofcontents
+(./texput.toc)
+\tf@toc=\write4
+\openout4 = `texput.toc'.
+
+
+*
+(Please type a command or say `\end')
+*\mainmatter
+[11
+
+]
+*
+(Please type a command or say `\end')
+*% treba este prejst dokument ci je kod spravne formatovany
+
+*% \input 01intro.tex
+
+*% \input 02motivation.tex
+
+*% \input 03issues_overview.tex
+
+*% \input 04previous_solutions.tex
+
+*% \input 05proposal.tex
+
+*% \input 06implementation.tex
+
+*% \input 07results.tex
+
+*% \input 08conclusion.tex
+
+*
+(Please type a command or say `\end')
+*\backmatter
+
+*
+(Please type a command or say `\end')
+*\nocite{*}
+
+*\bibliographystyle{alpha}
+
+*\bibliography{references}
+No file texput.bbl.
+
+*
+(Please type a command or say `\end')
+*\listoffigures
+(./texput.lof)
+\tf@lof=\write5
+\openout5 = `texput.lof'.
+
+
+*
+(Please type a command or say `\end')
+*\end{document}
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 0.
+[1
+
+
+
+]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 0.
+ (./texput.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 0.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 0.
+Package rerunfilecheck Info: File `texput.out' has not changed.
+(rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
+
+
+LaTeX Warning: There were multiply-defined labels.
+
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 0.
  
 Here is how much of TeX's memory you used:
- 2 strings out of 492982
- 106 string characters out of 6138579
- 54251 words of memory out of 5000000
- 3671 multiletter control sequences out of 15000+600000
- 3640 words of font info for 14 fonts, out of 8000000 for 9000
+ 10494 strings out of 492642
+ 150356 string characters out of 6135567
+ 253180 words of memory out of 5000000
+ 14203 multiletter control sequences out of 15000+600000
+ 12148 words of font info for 37 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 4i,0n,3p,46b,8s stack positions out of 5000i,500n,10000p,200000b,80000s
-!  ==> Fatal error occurred, no output PDF file produced!
+ 35i,7n,38p,1948b,340s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}</usr/share/tex
+mf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/share/texmf-dist/fonts/t
+ype1/public/cm-super/sfbx1728.pfb></usr/share/texmf-dist/fonts/type1/public/cm-
+super/sfbx2488.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm1200.
+pfb>
+Output written on texput.pdf (12 pages, 866414 bytes).
+PDF statistics:
+ 98 PDF objects out of 1000 (max. 8388607)
+ 71 compressed objects within 1 object stream
+ 22 named destinations out of 1000 (max. 500000)
+ 21 words of extra memory for PDF output out of 10000 (max. 10000000)
+

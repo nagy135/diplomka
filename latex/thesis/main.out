@@ -1,0 +1,15 @@
+\BOOKMARK [0][-]{chapter.1}{Motivation}{}% 1
+\BOOKMARK [0][-]{chapter.2}{Introduction}{}% 2
+\BOOKMARK [1][-]{section.2.1}{Space debris, definition}{chapter.2}% 3
+\BOOKMARK [1][-]{section.2.2}{The trend}{chapter.2}% 4
+\BOOKMARK [1][-]{section.2.3}{Spatial distribution}{chapter.2}% 5
+\BOOKMARK [2][-]{subsection.2.3.1}{Types of orbits}{section.2.3}% 6
+\BOOKMARK [1][-]{section.2.4}{Data collection}{chapter.2}% 7
+\BOOKMARK [2][-]{subsection.2.4.1}{FMPI AGO}{section.2.4}% 8
+\BOOKMARK [2][-]{subsection.2.4.2}{Tracking types, fits format}{section.2.4}% 9
+\BOOKMARK [0][-]{chapter.3}{Processing pipeline}{}% 10
+\BOOKMARK [1][-]{section.3.1}{Pipeline definition}{chapter.3}% 11
+\BOOKMARK [1][-]{section.3.2}{Sky background estimation and extraction}{chapter.3}% 12
+\BOOKMARK [2][-]{subsection.3.2.1}{Median filtering}{section.3.2}% 13
+\BOOKMARK [2][-]{subsection.3.2.2}{Sigma clipping}{section.3.2}% 14
+\BOOKMARK [2][-]{subsection.3.2.3}{Grid sigma clipping}{section.3.2}% 15

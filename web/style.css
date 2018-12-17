@@ -1,0 +1,13 @@
+.navbar-brand{
+    color: #777777!important;
+}
+li.nav-item.active > a{
+    color: #c22330 !important;
+}
+p.abstract{
+    text-align: justify
+}
+h2.title{
+    text-align: center;
+    margin-bottom: 1em;
+}

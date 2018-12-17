@@ -1,6 +1,11 @@
 \newcommand{\etalchar}[1]{$^{#1}$}
 \begin{thebibliography}{MUM{\etalchar{+}}06}
 
+\bibitem[]{SpaceDebris}
+Heiner Klinkrad\\
+\newblock Space Debris, Models and Risk Analysis\\
+\newblock 2006.
+
 \bibitem[]{KouprianovCCD}
 Vladimir Kouprianov et. al.\\
 \newblock Distinguishing features of CCD astrometry of faint GEO objects\\
@@ -10,5 +15,9 @@ Vladimir Kouprianov et. al.\\
 Jenni Virtanen et. al.\\
 \newblock Streak detection and analysis pipeline for space-debris optical images\\
 \newblock {\em a COSPAR}, 25 September 2015
+
+\bibitem[]{VeresFitting}
+Peter Vereš et. al.\\
+\newblock Improved Asteroid Astrometry and Photometry with Trail Fitting
 
 \end{thebibliography}

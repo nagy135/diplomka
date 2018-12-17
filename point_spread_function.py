@@ -15,11 +15,15 @@ from fits_control import read_fits_file, edit_fits_data, show_image
 from plot3d import show_3d_data
 from PointSpreadMesh import PointSpreadMesh
 
+from hist_threshold import histogram_threshold
+
 from decorators import print_function, time_function
 
 @print_function('Starting creation of PSF objects')
 def extract_point_spread_meshes(image):
     threshold = np.mean(np.array([np.max(image), np.median(image)])) * 1/2
+
+    image = histogram_threshold(image, threshold_sigma=2)
 
     mask = image > threshold
     show_image([image,mask], ['image','maska'])
@@ -67,21 +71,9 @@ def neighbor_check(first_point, second_point):
     return False
 
 
-image = read_fits_file('M27_R_60s-001.fit')
-# image = np.array([
-#     [0,0,0,0],
-#     [0,1000,1000,0],
-#     [0,1000,1000,0],
-#     [0,0,0,0],
-#     ])
-# image = np.array([
-#     [1000,1000,0,0],
-#     [0,0,0,1000],
-#     [0,0,0,1000],
-#     [0,0,0,1000],
-#     ])
+# image = read_fits_file('data/M27_R_60s-001.fit')
+image = read_fits_file('data/AGO_2017_PR25_R-005.fit')
 extracted_point_spread_meshes= []
 extract_point_spread_meshes(image)
 for point_mash in extracted_point_spread_meshes:
     params = point_mash.fit_curve()
-    print(params)

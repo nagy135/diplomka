@@ -17,8 +17,7 @@ class PointSpreadMesh(object):
         """Returns a gaussian function with the given parameters"""
         width_x = float(width_x)
         width_y = float(width_y)
-        return lambda x,y: height*np.exp(
-                    -(((center_x-x)/width_x)**2+((center_y-y)/width_y)**2)/2)
+        return lambda x,y: height*np.exp(-(((center_x-x)/width_x)**2+((center_y-y)/width_y)**2)/2)
 
     def moments(self, data):
         """Returns (height, x, y, width_x, width_y)
@@ -48,8 +47,15 @@ class PointSpreadMesh(object):
                 max_y = point[1]
         size_x, size_y = (max_x - min_x + 1, max_y - min_y + 1)
         square = np.zeros((size_y, size_x))
+        shaped_indices = np.zeros((size_y, size_x,2))
         for point in self.points:
             square[point[1]-min_y, point[0]-min_x] = self.image[point[1], point[0]]
+            shaped_indices[point[1]-min_y, point[0]-min_x] = np.array([point[1], point[0]])
+        for y in range(square.shape[0]):
+            for x in range(square.shape[1]):
+                if square[y][x] == .0:
+                    square[y][x] = self.image[min_y+y][min_x+x]
+        self.shaped_indices = shaped_indices
         return square
 
 
@@ -57,15 +63,19 @@ class PointSpreadMesh(object):
         """Returns (height, x, y, width_x, width_y)
         the gaussian parameters of a 2D distribution found by a fit"""
         if self.squared_data is None:
-            data = self.fill_to_square()
-        else:
-            data = self.squared_data
-        params = self.moments(data)
-        errorfunction = lambda p: np.ravel(self.gaussian(*p)(*np.indices(data.shape)) - data)
+            self.squared_data = self.fill_to_square()
+        params = self.moments(self.squared_data)
+        errorfunction = lambda p: np.ravel(self.gaussian(*p)(*np.indices(self.squared_data.shape)) - self.squared_data)
         try:
             p, success = optimize.leastsq(errorfunction, params)
-        except TypeError:
+        except TypeError as e:
             return 'Error during fitting'
+        print('#################################')
+        print(self.squared_data)
+        print(self.points)
+        print(p)
+        # print(self.gaussian(*p)(1,1))
+        self.params = p
         return p
 
 if __name__ == '__main__':

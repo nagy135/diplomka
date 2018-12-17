@@ -62,7 +62,7 @@ def iterative_sigma_clipping(original_image, preprocessed_image, curr_iter, last
         for num_col in range(last_iter_background.shape[0]):
             for num_row in range(last_iter_background.shape[1]):
                 term = np.absolute(last_iter_background[num_col,num_row] - mean_deviation)
-                if term < 2*standard_deviation:
+                if term < 3*standard_deviation:
                     new_iter_background[num_col,num_row] = last_iter_background[num_col,num_row]
                 else:
                     new_iter_background[num_col,num_row] = mean_deviation
@@ -70,7 +70,7 @@ def iterative_sigma_clipping(original_image, preprocessed_image, curr_iter, last
 
 
 
-def perform_sigma_clipping(original_image, number_of_iterations=7):
+def perform_sigma_clipping(original_image, number_of_iterations=4):
     preprocessed_image = image_preprocess(original_image)
     assert original_image.shape == preprocessed_image.shape
 
@@ -90,8 +90,8 @@ def image_preprocess(image):
     initial_shape = image.shape
     # image = np.full(image.shape, 500)
     image = imresize(image, 0.1, interp='bicubic')
-    image = imresize(image, initial_shape,interp='bicubic')
     image = medfilt2d(image, 15)
+    image = imresize(image, initial_shape,interp='bicubic')
     image = convolve(image, 15)
     # image = image + random.randint(5,500)
     return image
@@ -123,8 +123,9 @@ def sigma_clipper( image, num_tiles_width = 1, num_tiles_height = 1 ):
             curr_x = 0
     else:
         final = perform_sigma_clipping(image)
-    result =  convolve(final, 5)
-    return result[2:-2, 2:-2]
+    # result =  convolve(final, 15)
+    # return result[14:-14, 14:-14]
+    return cv2.blur(final,(35,35))
 
 def fix_sizes(a1, a2):
     if a1.shape == a2.shape:
@@ -146,17 +147,25 @@ def fix_sizes(a1, a2):
         return a1, a2[first:-first, second:-second]
 
 for i in range(5,6):
-    input_file = 'generated/Comb_' + str(i) + '/Comb/Comb_' + str(i) + '.fits'
+    input_file = 'data/generated/Comb_' + str(i) + '/Comb/Comb_' + str(i) + '.fits'
     image = read_fits_file(input_file)
 
+    original_background_input_file = 'data/generated/Comb_' + str(i) + '/Noise/Noise_' + str(i) + '.fits'
+    original_background = read_fits_file(original_background_input_file)
+    # show_3d_data(original_background, method='matplotlib')
 
     file_name, extension = os.path.basename(input_file).split('.')
-    # extracted_background = sigma_clipper(image, 10, 10)
-    extracted_background = sigma_clipper(image)
-    show_3d_data(image, method='matplotlib')
-    show_3d_data(extracted_background, method='matplotlib')
+    extracted_background = sigma_clipper(image, 50, 50)
+    # extracted_background = sigma_clipper(image)
+    # show_3d_data(image, method='matplotlib')
 
-    edit_fits_data(input_file, extracted_background, file_name+'bg_7it1010.'+extension)
+    difference_between_backgrounds = abs(original_background - extracted_background)
+    print(np.mean(difference_between_backgrounds))
+    assert False
+
+    edit_fits_data(input_file, extracted_background, file_name+'_35x35_bg.'+extension, 'MultiExport/')
+
+    edit_fits_data(input_file, difference_between_backgrounds, file_name+'_35x35_difference_bgs.'+extension, 'MultiExport/')
     # extracted_background = sigma_clipper(extracted_background)
     # show_3d_data(extracted_background, method='matplotlib')
     # edit_fits_data(input_file, extracted_background, file_name+'bg2.'+extension)
@@ -164,9 +173,13 @@ for i in range(5,6):
     # extracted_background = extracted_background.astype('uint32')
 
     # image, extracted_background = fix_sizes(image, extracted_background)
-    # result = image-extracted_background
+    result = image-extracted_background
+    # show_3d_data(extracted_background, method='matplotlib')
 
-    # # show_3d_data(result, method='matplotlib')
+    edit_fits_data(input_file, result, file_name+'_35x35_result.'+extension, 'MultiExport/')
+
+
+    # show_3d_data(result, method='matplotlib')
 
     # file_name, extension = os.path.basename(input_file).split('.')
     # edit_fits_data(input_file, extracted_background, file_name+'bg.'+extension)
