@@ -1,18 +1,18 @@
 \babel@toc {english}{}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {2.1}{\ignorespaces Evolution of debris count over time (ESA)\relax }}{4}{figure.caption.9}
-\contentsline {figure}{\numberline {2.2}{\ignorespaces Space debris distribution\relax }}{6}{figure.caption.10}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Types of orbits}}}{6}{subfigure.2.1}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Aproximate density}}}{6}{subfigure.2.2}
-\contentsline {figure}{\numberline {2.3}{\ignorespaces 70cm telescope in AGO modra\relax }}{7}{figure.caption.11}
-\contentsline {figure}{\numberline {2.4}{\ignorespaces Difference types of images with sidereal tracking (left) and object tracking (right)\relax }}{8}{figure.caption.12}
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Evolution of debris count over time (ESA, 2018)\relax }}{5}{figure.caption.9}% 
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Space debris distribution (FMPI CU)\relax }}{6}{figure.caption.10}% 
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Types of orbits}}}{6}{subfigure.2.1}% 
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Aproximate density}}}{6}{subfigure.2.2}% 
+\contentsline {figure}{\numberline {2.3}{\ignorespaces 70cm telescope in AGO modra (FMPI CU)\relax }}{7}{figure.caption.11}% 
+\contentsline {figure}{\numberline {2.4}{\ignorespaces Difference types of images with sidereal tracking (left) and object tracking (right). Courtesy of Ji\IeC {\v r}\IeC {\'\i } \IeC {\v S}ilha.\relax }}{8}{figure.caption.12}% 
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Map produced by initial estimation\relax }}{13}{figure.caption.14}
-\contentsline {figure}{\numberline {3.2}{\ignorespaces Final result with 3 iterations\relax }}{14}{figure.caption.16}
-\contentsline {figure}{\numberline {3.3}{\ignorespaces Comparison of different choice of number of iterations\relax }}{16}{figure.caption.18}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {3 iterations}}}{16}{subfigure.3.1}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {5 iterations}}}{16}{subfigure.3.2}
-\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {7 iterations}}}{16}{subfigure.3.3}
-\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {13 iterations}}}{16}{subfigure.3.4}
-\contentsline {figure}{\numberline {3.4}{\ignorespaces Grid steps, joining artefacts ($10 \times 1$ grid)\relax }}{19}{figure.caption.21}
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Map produced by initial estimation\relax }}{13}{figure.caption.14}% 
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Final result with 3 iterations\relax }}{14}{figure.caption.16}% 
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Comparison of different choice of number of iterations\relax }}{16}{figure.caption.18}% 
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {3 iterations}}}{16}{subfigure.3.1}% 
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {5 iterations}}}{16}{subfigure.3.2}% 
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {7 iterations}}}{16}{subfigure.3.3}% 
+\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {13 iterations}}}{16}{subfigure.3.4}% 
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Grid steps, joining artefacts ($10 \times 1$ grid)\relax }}{19}{figure.caption.21}% 

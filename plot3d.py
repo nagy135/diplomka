@@ -7,7 +7,7 @@ import plotly.graph_objs as go
 from time import gmtime, strftime
 plotly.tools.set_credentials_file(username='nagy135', api_key='IOvZhqK5c8nhuu5QLpdr')
 
-def show_3d_data(data, label='No Name', method='plotly'):
+def show_3d_data(data, label='No Name', method='matplotlib'):
     if label == "No Name":
         label = 'Plot : {}'.format(strftime("%Y-%m-%d %H:%M:%S", gmtime()))
     if method == 'matplotlib':
@@ -20,6 +20,7 @@ def show_3d_data(data, label='No Name', method='plotly'):
         ha = hf.add_subplot(111, projection='3d')
 
         X, Y = np.meshgrid(x, y)  # `plot_surface` expects `x` and `y` data to be 2D
+        ha.view_init(0,90)
         ha.plot_surface(X, Y, data)
         # ha.plot_wireframe(X, Y, data)
         # ha.contourf(X, Y, data)

@@ -58,14 +58,15 @@ theme:
 
 + Image capture
 + Image reduction
-+ Sky background estimation
-+ Sky background extraction
-+ Star object identification and extraction (image segmentation)
++ Sky background estimation/extraction
++ Objects search and centroiding
++ Star field identification
 + Astrometric reduction
-+ Star masking
-+ Object identification, Image segmentation
++ Star Masking
 + Tracklet building
-+ Tracklet conversion, tracklet the final product
++ Object identification
++ Data format transformation
++ Output data redistribution
 
 # Sky background estimation/subtraction
 
@@ -89,7 +90,8 @@ theme:
 
 # Sky background estimation results
 
-![original image(left), estimated background(right)](results.png){#id .class height=60% }
+![original image(left), estimated background(right)](8_image_rgb.png){#id .class height=60% }
+![original image(left), estimated background(right)](8_extracted_rgb.png){#id .class height=60% }
 
 # Object identification
 
@@ -98,9 +100,14 @@ theme:
 # Object identification
 
 ## Methods
-+ Barycenter positions
 + PSF fitting
 + Edge detection
++ Barycenter positions
+
+# PSF objects detected
+
+![Psf fitting results](point_mesh_2.png){#id .class height=65% }
+![Psf fitting results](point_mesh_3.png){#id .class height=65% }
 
 # PSF fitting - trail
 
@@ -108,7 +115,11 @@ theme:
 
 # PSF fitting
 
-![PSF fitting equations](psf.png){#id .class height=90% }
+![PSF fitting equations](streak_equation.png){#id .class height=90% }
+
+# Output
+
+![Final result, .cat file](cat.png){#id .class height=90% }
 
 # Tools
 
@@ -118,24 +129,19 @@ theme:
 + Astropy (fits files)
 + Scipy (convolve, fitting)
 + Matplotlib
++ OpenCV
 + Plotly
++ AstroImageJ
 
-## AstroImageJ
+# Sources
 
-# Workflow
-
-![Python + AstroImageJ](workflow.png){#id .class height=90% }
-
-# Credits
-
-+ V. Kouprianov, Distinguishing features of CCD astrometry of faint GEO objects\
-Advances in Space Research, Volume 41, Issue 7, 2008, \
-Pages 1029-1038, ISSN 0273-1177\
-http://www.sciencedirect.com/science/article/pii/S0273117707003699
-
-+ Jiří Šilha, PhD. Division of Astronomy and Astrophysics \
-Space Debris Research \
-Departmen of Astronomy, Physics of Earth and Meteorology, FMPI/CU
++ Heiner Klinkrad - Space Debris, Models and Risk Analysis
++ Vladimir Kouprianov et. al. - Distinguishing features of CCD astrometry of faint GEO objects
++ J. Šilha et. al. - Slovakian Optical Sensor for HAMR Objects Cataloguing and Research
++ Jenni Virtanen et. al. - Streak detection and analysis pipeline for space-debris optical images
++ Peter Vereš et. al. - Improved Asteroid Astrometry and Photometry with Trail Fitting
++ Oddelenie astronómie a Astrofyziky - Fakulta matematiky fyziky a informatiky, UK
++ Edith Stöveken et. al. - Algorithms for the Optical Detection of Space Debris Objects
 
 # The End
 

@@ -1,5 +1,7 @@
 .navbar-brand{
-    color: #777777!important;
+    color: #777777 !important;
+    padding-right: 1em;
+    border-right: 2px solid black;
 }
 li.nav-item.active > a{
     color: #c22330 !important;
@@ -13,4 +15,12 @@ h2.title{
 }
 h2 {
     margin-bottom: 1em;
+}
+.list-group{
+    margin-bottom: 1em !important;
+}
+.result_images > img {
+    position:relative;
+    width: 50%;
+    margin: 0 25% 1em 25%;
 }

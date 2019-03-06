@@ -1,14 +1,14 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/Arch Linux) (preloaded format=pdflatex 2018.12.15)  17 DEC 2018 08:13
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/Arch Linux) (preloaded format=pdflatex 2019.2.23)  6 MAR 2019 18:05
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
 **main.tex
 (./main.tex
-LaTeX2e <2018-04-01> patch level 5
+LaTeX2e <2018-12-01>
 (/usr/share/texmf-dist/tex/latex/base/book.cls
-Document Class: book 2014/09/29 v1.4h Standard LaTeX document class
+Document Class: book 2018/09/03 v1.4i Standard LaTeX document class
 (/usr/share/texmf-dist/tex/latex/base/bk12.clo
-File: bk12.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
+File: bk12.clo 2018/09/03 v1.4i Standard LaTeX file (size option)
 )
 \c@part=\count80
 \c@chapter=\count81
@@ -24,7 +24,7 @@ File: bk12.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
 \bibindent=\dimen102
 )
 (/usr/share/texmf-dist/tex/latex/hyperref/hyperref.sty
-Package: hyperref 2018/09/30 v6.88a Hypertext links for LaTeX
+Package: hyperref 2018/11/30 v6.88e Hypertext links for LaTeX
 
 (/usr/share/texmf-dist/tex/generic/oberdiek/hobsub-hyperref.sty
 Package: hobsub-hyperref 2016/05/16 v1.14 Bundle oberdiek, subset hyperref (HO)
@@ -88,7 +88,7 @@ Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
 \Hy@pagecounter=\count90
 
 (/usr/share/texmf-dist/tex/latex/hyperref/pd1enc.def
-File: pd1enc.def 2018/09/30 v6.88a Hyperref: PDFDocEncoding definition (HO)
+File: pd1enc.def 2018/11/30 v6.88e Hyperref: PDFDocEncoding definition (HO)
 Now handling font encoding PD1 ...
 ... no UTF-8 mapping file for font encoding PD1
 )
@@ -97,33 +97,33 @@ Now handling font encoding PD1 ...
 (/usr/share/texmf-dist/tex/latex/latexconfig/hyperref.cfg
 File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive
 )
-Package hyperref Info: Hyper figures OFF on input line 4535.
-Package hyperref Info: Link nesting OFF on input line 4540.
-Package hyperref Info: Hyper index ON on input line 4543.
-Package hyperref Info: Plain pages OFF on input line 4550.
-Package hyperref Info: Backreferencing OFF on input line 4555.
+Package hyperref Info: Hyper figures OFF on input line 4519.
+Package hyperref Info: Link nesting OFF on input line 4524.
+Package hyperref Info: Hyper index ON on input line 4527.
+Package hyperref Info: Plain pages OFF on input line 4534.
+Package hyperref Info: Backreferencing OFF on input line 4539.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
-Package hyperref Info: Bookmarks ON on input line 4788.
+Package hyperref Info: Bookmarks ON on input line 4772.
 \c@Hy@tempcnt=\count92
 
 (/usr/share/texmf-dist/tex/latex/url/url.sty
 \Urlmuskip=\muskip10
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
-LaTeX Info: Redefining \url on input line 5141.
+LaTeX Info: Redefining \url on input line 5125.
 \XeTeXLinkMargin=\dimen104
 \Fld@menulength=\count93
 \Field@Width=\dimen105
 \Fld@charsize=\dimen106
-Package hyperref Info: Hyper figures OFF on input line 6396.
-Package hyperref Info: Link nesting OFF on input line 6401.
-Package hyperref Info: Hyper index ON on input line 6404.
-Package hyperref Info: backreferencing OFF on input line 6411.
-Package hyperref Info: Link coloring OFF on input line 6416.
-Package hyperref Info: Link coloring with OCG OFF on input line 6421.
-Package hyperref Info: PDF/A mode OFF on input line 6426.
-LaTeX Info: Redefining \ref on input line 6466.
-LaTeX Info: Redefining \pageref on input line 6470.
+Package hyperref Info: Hyper figures OFF on input line 6380.
+Package hyperref Info: Link nesting OFF on input line 6385.
+Package hyperref Info: Hyper index ON on input line 6388.
+Package hyperref Info: backreferencing OFF on input line 6395.
+Package hyperref Info: Link coloring OFF on input line 6400.
+Package hyperref Info: Link coloring with OCG OFF on input line 6405.
+Package hyperref Info: PDF/A mode OFF on input line 6410.
+LaTeX Info: Redefining \ref on input line 6450.
+LaTeX Info: Redefining \pageref on input line 6454.
 \Hy@abspage=\count94
 \c@Item=\count95
 \c@Hfootnote=\count96
@@ -131,7 +131,7 @@ LaTeX Info: Redefining \pageref on input line 6470.
 Package hyperref Info: Driver (autodetected): hpdftex.
 
 (/usr/share/texmf-dist/tex/latex/hyperref/hpdftex.def
-File: hpdftex.def 2018/09/30 v6.88a Hyperref driver for pdfTeX
+File: hpdftex.def 2018/11/30 v6.88e Hyperref driver for pdfTeX
 \Fld@listcount=\count97
 \c@bookmark@seq@number=\count98
 
@@ -217,9 +217,9 @@ nment
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \c@float@type=\count101
 \float@exts=\toks15
-\float@box=\box26
+\float@box=\box27
 \@float@everytoks=\toks16
-\@floatcapt=\box27
+\@floatcapt=\box28
 )
 (/usr/share/texmf-dist/tex/latex/base/ifthen.sty
 Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
@@ -238,7 +238,7 @@ Package: algorithmic 2009/08/24 v0.1 Document Style `algorithmic'
 )
 (/usr/share/texmf-dist/tex/latex/listings/listings.sty
 \lst@mode=\count107
-\lst@gtempboxa=\box28
+\lst@gtempboxa=\box29
 \lst@token=\toks18
 \lst@length=\count108
 \lst@currlwidth=\dimen112
@@ -254,7 +254,7 @@ Package: algorithmic 2009/08/24 v0.1 Document Style `algorithmic'
 File: lstmisc.sty 2018/09/02 1.7 (Carsten Heinz)
 \c@lstnumber=\count113
 \lst@skipnumbers=\count114
-\lst@framebox=\box29
+\lst@framebox=\box30
 )
 (/usr/share/texmf-dist/tex/latex/listings/listings.cfg
 File: listings.cfg 2018/09/02 1.7 listings configuration
@@ -262,7 +262,7 @@ File: listings.cfg 2018/09/02 1.7 listings configuration
 Package: listings 2018/09/02 1.7 (Carsten Heinz)
 
 (/usr/share/texmf-dist/tex/latex/amsmath/amsmath.sty
-Package: amsmath 2017/09/02 v2.17a AMS math features
+Package: amsmath 2018/12/01 v2.17b AMS math features
 \@mathmargin=\skip46
 
 For additional information on amsmath, use the `?' option.
@@ -282,20 +282,20 @@ Package: amsbsy 1999/11/29 v1.2d Bold Symbols
 Package: amsopn 2016/03/08 v2.02 operator names
 )
 \inf@bad=\count115
-LaTeX Info: Redefining \frac on input line 213.
+LaTeX Info: Redefining \frac on input line 223.
 \uproot@=\count116
 \leftroot@=\count117
-LaTeX Info: Redefining \overline on input line 375.
+LaTeX Info: Redefining \overline on input line 385.
 \classnum@=\count118
 \DOTSCASE@=\count119
-LaTeX Info: Redefining \ldots on input line 472.
-LaTeX Info: Redefining \dots on input line 475.
-LaTeX Info: Redefining \cdots on input line 596.
-\Mathstrutbox@=\box30
-\strutbox@=\box31
+LaTeX Info: Redefining \ldots on input line 482.
+LaTeX Info: Redefining \dots on input line 485.
+LaTeX Info: Redefining \cdots on input line 606.
+\Mathstrutbox@=\box31
+\strutbox@=\box32
 \big@size=\dimen118
-LaTeX Font Info:    Redeclaring font encoding OML on input line 712.
-LaTeX Font Info:    Redeclaring font encoding OMS on input line 713.
+LaTeX Font Info:    Redeclaring font encoding OML on input line 729.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 730.
 \macc@depth=\count120
 \c@MaxMatrixCols=\count121
 \dotsspace@=\muskip11
@@ -316,8 +316,8 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 713.
 \multlinegap=\skip47
 \multlinetaggap=\skip48
 \mathdisplay@stack=\toks23
-LaTeX Info: Redefining \[ on input line 2817.
-LaTeX Info: Redefining \] on input line 2818.
+LaTeX Info: Redefining \[ on input line 2844.
+LaTeX Info: Redefining \] on input line 2845.
 )
 (/usr/share/texmf-dist/tex/latex/dirtytalk/dirtytalk.sty
 Package: dirtytalk 2010/11/21 A package making "quoting" easier
@@ -334,7 +334,7 @@ LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
 ))
 (/usr/share/texmf-dist/tex/latex/multirow/multirow.sty
-Package: multirow 2018/08/03 v2.3 Span multiple rows of a table
+Package: multirow 2019/01/01 v2.4 Span multiple rows of a table
 \multirow@colwidth=\skip49
 \multirow@cntb=\count128
 \multirow@dima=\skip50
@@ -349,15 +349,15 @@ File: color.cfg 2016/01/02 v1.6 sample color configuration
 Package color Info: Driver file: pdftex.def on input line 147.
 )
 (/usr/share/texmf-dist/tex/latex/base/inputenc.sty
-Package: inputenc 2018/04/06 v1.3b Input encoding file
+Package: inputenc 2018/08/11 v1.3c Input encoding file
 \inpenc@prehook=\toks24
 \inpenc@posthook=\toks25
 )
 (/usr/share/texmf-dist/tex/latex/base/fontenc.sty
-Package: fontenc 2017/04/05 v2.0i Standard LaTeX package
+Package: fontenc 2018/08/11 v2.0j Standard LaTeX package
 
 (/usr/share/texmf-dist/tex/latex/base/t1enc.def
-File: t1enc.def 2017/04/05 v2.0i Standard LaTeX file
+File: t1enc.def 2018/08/11 v2.0j Standard LaTeX file
 LaTeX Font Info:    Redeclaring font encoding T1 on input line 48.
 ))
 (/usr/share/texmf-dist/tex/latex/setspace/setspace.sty
@@ -367,14 +367,14 @@ Package: setspace 2011/12/19 v6.7a set line spacing
 Package: tabularx 2016/02/03 v2.11b `tabularx' package (DPC)
 
 (/usr/share/texmf-dist/tex/latex/tools/array.sty
-Package: array 2018/04/30 v2.4h Tabular extension package (FMi)
+Package: array 2018/12/30 v2.4k Tabular extension package (FMi)
 \col@sep=\dimen126
-\ar@mcellbox=\box32
+\ar@mcellbox=\box33
 \extrarowheight=\dimen127
 \NC@list=\toks26
 \extratabsurround=\skip51
 \backup@length=\skip52
-\ar@cellbox=\box33
+\ar@cellbox=\box34
 )
 \TX@col@width=\dimen128
 \TX@old@table=\dimen129
@@ -385,7 +385,7 @@ Package: array 2018/04/30 v2.4h Tabular extension package (FMi)
 \TX@ftn=\toks27
 )
 (/usr/share/texmf-dist/tex/latex/base/textcomp.sty
-Package: textcomp 2017/04/05 v2.0i Standard LaTeX package
+Package: textcomp 2018/08/11 v2.0j Standard LaTeX package
 Package textcomp Info: Sub-encoding information:
 (textcomp)               5 = only ISO-Adobe without \textcurrency
 (textcomp)               4 = 5 + \texteuro
@@ -405,7 +405,7 @@ Now handling font encoding TS1 ...
 ... processing UTF-8 mapping file for font encoding TS1
 
 (/usr/share/texmf-dist/tex/latex/base/ts1enc.dfu
-File: ts1enc.dfu 2018/04/05 v1.2c UTF-8 support for inputenc
+File: ts1enc.dfu 2018/10/05 v1.2f UTF-8 support for inputenc
    defining Unicode char U+00A2 (decimal 162)
    defining Unicode char U+00A3 (decimal 163)
    defining Unicode char U+00A4 (decimal 164)
@@ -616,7 +616,7 @@ LaTeX Font Info:    Try loading font information for TS1+cmr on input line 44.
 File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    ... okay on input line 44.
-\AtBeginShipoutBox=\box34
+\AtBeginShipoutBox=\box35
 Package hyperref Info: Link coloring OFF on input line 44.
 
 (/usr/share/texmf-dist/tex/latex/hyperref/nameref.sty
@@ -639,7 +639,7 @@ LaTeX Info: Redefining \nameref on input line 44.
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count141
 \scratchdimen=\dimen141
-\scratchbox=\box35
+\scratchbox=\box36
 \nofMPsegments=\count142
 \nofMParguments=\count143
 \everyMPshowfont=\toks28
@@ -662,7 +662,7 @@ LaTeX Font Info:    Try loading font information for U+msb on input line 56.
 (/usr/share/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-<images/logo_fmph.png, id=64, 106.59825pt x 113.58435pt>
+<images/logo_fmph.png, id=68, 106.59825pt x 113.58435pt>
 File: images/logo_fmph.png Graphic file (type png)
 <use images/logo_fmph.png>
 Package pdftex.def Info: images/logo_fmph.png  used on input line 61.
@@ -671,13 +671,13 @@ Package pdftex.def Info: images/logo_fmph.png  used on input line 61.
 
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./images/logo_fmph.png>]
-<images/logo_fmph_dark.png, id=76, 106.59825pt x 113.58435pt>
+<images/logo_fmph_dark.png, id=80, 106.59825pt x 113.58435pt>
 File: images/logo_fmph_dark.png Graphic file (type png)
 <use images/logo_fmph_dark.png>
 Package pdftex.def Info: images/logo_fmph_dark.png  used on input line 92.
 (pdftex.def)             Requested size: 106.59798pt x 113.58406pt.
  [2 <./images/logo_fmph_dark.png>]
-<zadanie1.png, id=83, 1659.19875pt x 2347.77126pt>
+<zadanie1.png, id=87, 1659.19875pt x 2347.77126pt>
 File: zadanie1.png Graphic file (type png)
 <use zadanie1.png>
 Package pdftex.def Info: zadanie1.png  used on input line 130.
@@ -687,7 +687,7 @@ Overfull \vbox (181.36316pt too high) has occurred while \output is active []
 
 
 [3 <./zadanie1.png>]
-<zadanie2.png, id=90, 1659.19875pt x 2347.77126pt>
+<zadanie2.png, id=94, 1659.19875pt x 2347.77126pt>
 File: zadanie2.png Graphic file (type png)
 <use zadanie2.png>
 Package pdftex.def Info: zadanie2.png  used on input line 137.
@@ -907,117 +907,148 @@ Underfull \hbox (badness 10000) in paragraph at lines 205--224
 [2
 
 ] [3]
-<images/debris_count.png, id=161, 722.7pt x 361.35pt>
+<images/debris_count.png, id=166, 722.7pt x 361.35pt>
 File: images/debris_count.png Graphic file (type png)
 <use images/debris_count.png>
-Package pdftex.def Info: images/debris_count.png  used on input line 230.
+Package pdftex.def Info: images/debris_count.png  used on input line 238.
 (pdftex.def)             Requested size: 433.62334pt x 216.81168pt.
 
-Overfull \hbox (43.62334pt too wide) in paragraph at lines 230--232
+Overfull \hbox (43.62334pt too wide) in paragraph at lines 238--240
  [] 
  []
 
-[4 <./images/debris_count.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 248--254
+[4]
+
+! LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.252 \\
+        
+? 
+
+! LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.253 T
+       he same law applies to geocentric motion as well meaning that any obj...
+
+? \setstretch{1.5}
+Type <return> to proceed, S to scroll future error messages,
+R to run without stopping, Q to run quietly,
+I to insert something, E to edit your file,
+1 or ... or 9 to ignore the next 1 to 9 tokens of input,
+H for help, X to quit.
+? %\renewcommand\baselinestretch{1.5} % riadkovanie jeden a pol
+Type <return> to proceed, S to scroll future error messages,
+R to run without stopping, Q to run quietly,
+I to insert something, E to edit your file,
+1 or ... or 9 to ignore the next 1 to 9 tokens of input,
+H for help, X to quit.
+? 
+
+Underfull \hbox (badness 10000) in paragraph at lines 253--256
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 248--254
+Underfull \hbox (badness 10000) in paragraph at lines 253--256
+
+ []
+
+[5 <./images/debris_count.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 266--275
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 248--254
+Underfull \hbox (badness 10000) in paragraph at lines 266--275
 
  []
 
-[5]
-<images/geo_leo.png, id=173, 204.765pt x 195.129pt>
+<images/geo_leo.png, id=178, 204.765pt x 195.129pt>
 File: images/geo_leo.png Graphic file (type png)
 <use images/geo_leo.png>
-Package pdftex.def Info: images/geo_leo.png  used on input line 266.
+Package pdftex.def Info: images/geo_leo.png  used on input line 278.
 (pdftex.def)             Requested size: 142.26378pt x 135.57703pt.
-<images/junk.png, id=174, 722.7pt x 481.8pt>
+<images/junk.png, id=179, 722.7pt x 481.8pt>
 File: images/junk.png Graphic file (type png)
 <use images/junk.png>
-Package pdftex.def Info: images/junk.png  used on input line 268.
+Package pdftex.def Info: images/junk.png  used on input line 280.
 (pdftex.def)             Requested size: 142.26378pt x 94.84384pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 272--279
-
- []
-
 [6 <./images/geo_leo.png> <./images/junk.png>]
-<images/telescope.png, id=185, 624.3325pt x 599.23875pt>
+<images/telescope.png, id=190, 624.3325pt x 599.23875pt>
 File: images/telescope.png Graphic file (type png)
 <use images/telescope.png>
-Package pdftex.def Info: images/telescope.png  used on input line 294.
-(pdftex.def)             Requested size: 374.60239pt x 359.54602pt.
+Package pdftex.def Info: images/telescope.png  used on input line 300.
+(pdftex.def)             Requested size: 218.51964pt x 209.7367pt.
  [7 <./images/telescope.png (PNG copy)>]
-<images/tracking.png, id=191, 485.6544pt x 226.446pt>
+<images/tracking.png, id=196, 485.6544pt x 226.446pt>
 File: images/tracking.png Graphic file (type png)
 <use images/tracking.png>
-Package pdftex.def Info: images/tracking.png  used on input line 319.
+Package pdftex.def Info: images/tracking.png  used on input line 323.
 (pdftex.def)             Requested size: 291.39488pt x 135.86864pt.
  [8 <./images/tracking.png>]
 Chapter 3.
 [9
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 347--366
+Underfull \hbox (badness 10000) in paragraph at lines 350--374
 
  []
 
-[10
-
-] [11] [12]
-<images/background_initial_guess.png, id=219, 159.7167pt x 158.7531pt>
+[10] [11] [12]
+<images/background_initial_guess.png, id=225, 159.7167pt x 158.7531pt>
 File: images/background_initial_guess.png Graphic file (type png)
 <use images/background_initial_guess.png>
 Package pdftex.def Info: images/background_initial_guess.png  used on input lin
-e 413.
+e 421.
 (pdftex.def)             Requested size: 207.63168pt x 206.37898pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 420--422
+Underfull \hbox (badness 10000) in paragraph at lines 428--430
 
  []
 
 [13 <./images/background_initial_guess.png>]
-<images/3_iter_sigma.png, id=228, 159.7167pt x 158.7531pt>
+<images/3_iter_sigma.png, id=236, 159.7167pt x 158.7531pt>
 File: images/3_iter_sigma.png Graphic file (type png)
 <use images/3_iter_sigma.png>
-Package pdftex.def Info: images/3_iter_sigma.png  used on input line 438.
+Package pdftex.def Info: images/3_iter_sigma.png  used on input line 446.
 (pdftex.def)             Requested size: 239.57446pt x 238.12904pt.
- [14 <./images/3_iter_sigma.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 447--456
+
+Underfull \hbox (badness 10000) in paragraph at lines 455--464
 
  []
 
-[15]
+[14 <./images/3_iter_sigma.png>] [15]
 File: images/3_iter_sigma.png Graphic file (type png)
 <use images/3_iter_sigma.png>
-Package pdftex.def Info: images/3_iter_sigma.png  used on input line 460.
+Package pdftex.def Info: images/3_iter_sigma.png  used on input line 468.
 (pdftex.def)             Requested size: 142.26378pt x 141.41576pt.
-<images/5_iter_sigma.png, id=245, 159.7167pt x 158.7531pt>
+<images/5_iter_sigma.png, id=250, 159.7167pt x 158.7531pt>
 File: images/5_iter_sigma.png Graphic file (type png)
 <use images/5_iter_sigma.png>
-Package pdftex.def Info: images/5_iter_sigma.png  used on input line 462.
+Package pdftex.def Info: images/5_iter_sigma.png  used on input line 470.
 (pdftex.def)             Requested size: 142.26378pt x 141.41576pt.
-<images/7_iter_sigma.png, id=246, 159.7167pt x 158.7531pt>
+<images/7_iter_sigma.png, id=251, 159.7167pt x 158.7531pt>
 File: images/7_iter_sigma.png Graphic file (type png)
 <use images/7_iter_sigma.png>
-Package pdftex.def Info: images/7_iter_sigma.png  used on input line 464.
+Package pdftex.def Info: images/7_iter_sigma.png  used on input line 472.
 (pdftex.def)             Requested size: 142.26378pt x 141.41576pt.
-<images/13_iter_sigma.png, id=247, 159.7167pt x 158.7531pt>
+<images/13_iter_sigma.png, id=252, 159.7167pt x 158.7531pt>
 File: images/13_iter_sigma.png Graphic file (type png)
 <use images/13_iter_sigma.png>
-Package pdftex.def Info: images/13_iter_sigma.png  used on input line 466.
+Package pdftex.def Info: images/13_iter_sigma.png  used on input line 474.
 (pdftex.def)             Requested size: 142.26378pt x 141.41576pt.
 
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 475.
+               Default added (so using `tbp') on input line 483.
 
 [16
 
@@ -1025,12 +1056,12 @@ LaTeX Warning: No positions in optional float specifier.
 a.png>] [17]
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 503.
+               Default added (so using `tbp') on input line 511.
 
-<images/grid_steps.png, id=266, 697.60625pt x 728.7225pt>
+<images/grid_steps.png, id=271, 697.60625pt x 728.7225pt>
 File: images/grid_steps.png Graphic file (type png)
 <use images/grid_steps.png>
-Package pdftex.def Info: images/grid_steps.png  used on input line 528.
+Package pdftex.def Info: images/grid_steps.png  used on input line 536.
 (pdftex.def)             Requested size: 348.80226pt x 364.36035pt.
 [18
 
@@ -1041,31 +1072,31 @@ Package pdftex.def Info: images/grid_steps.png  used on input line 528.
 \tf@lof=\write5
 \openout5 = `main.lof'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 545.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 554.
  [21
 
 ]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 545.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 554.
 
 (./main.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 545.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 545.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 554.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 554.
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 0375C8D494875C83A35702EB88E69125;972.
+(rerunfilecheck)             Checksum: 2614680AAD51139249D961E356A30E62;1049.
 
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 545.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 554.
  ) 
 Here is how much of TeX's memory you used:
- 10708 strings out of 492639
- 154498 string characters out of 6135496
- 256762 words of memory out of 5000000
- 14327 multiletter control sequences out of 15000+600000
+ 10713 strings out of 492616
+ 154549 string characters out of 6135177
+ 257130 words of memory out of 5000000
+ 14353 multiletter control sequences out of 15000+600000
  16243 words of font info for 43 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 36i,14n,49p,1957b,406s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 36i,14n,49p,1914b,406s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}{/usr/share/t
 exmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/share/texmf-dist/font
 s/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fonts/type1/public
@@ -1079,10 +1110,10 @@ usr/share/texmf-dist/fonts/type1/public/cm-super/sfbx2488.pfb></usr/share/texmf
 -dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/share/texmf-dist/fonts/typ
 e1/public/cm-super/sfrm1200.pfb></usr/share/texmf-dist/fonts/type1/public/cm-su
 per/sfti1200.pfb>
-Output written on main.pdf (32 pages, 3207049 bytes).
+Output written on main.pdf (32 pages, 3208386 bytes).
 PDF statistics:
- 369 PDF objects out of 1000 (max. 8388607)
- 290 compressed objects within 3 object streams
- 84 named destinations out of 1000 (max. 500000)
- 196 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 376 PDF objects out of 1000 (max. 8388607)
+ 297 compressed objects within 3 object streams
+ 86 named destinations out of 1000 (max. 500000)
+ 204 words of extra memory for PDF output out of 10000 (max. 10000000)
 

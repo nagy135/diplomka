@@ -9,6 +9,7 @@ from scipy.signal import convolve2d
 from scipy.misc import imresize
 import scipy.stats as st
 from scipy.signal import medfilt2d
+from scipy import ndimage
 
 
 from fits_control import read_fits_file, edit_fits_data, show_image
@@ -19,7 +20,6 @@ from hist_threshold import histogram_threshold
 
 from decorators import print_function, time_function
 
-@print_function('Starting creation of PSF objects')
 def extract_point_spread_meshes(image):
     threshold = np.mean(np.array([np.max(image), np.median(image)])) * 1/2
 
@@ -73,7 +73,9 @@ def neighbor_check(first_point, second_point):
 
 # image = read_fits_file('data/M27_R_60s-001.fit')
 image = read_fits_file('data/AGO_2017_PR25_R-005.fit')
+# image = read_fits_file('data/STREAK_test_1-003.fit')
 extracted_point_spread_meshes= []
 extract_point_spread_meshes(image)
 for point_mash in extracted_point_spread_meshes:
     params = point_mash.fit_curve()
+    show_image(point_mash.squared_data, 'point mash')
