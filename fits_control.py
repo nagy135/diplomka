@@ -18,6 +18,12 @@ def read_fits_file(fits_file, subfolder=''):
     data_and_headers.close()
     return data
 
+def read_fits_file_headers(fits_file, subfolder=''):
+    data_and_headers = fits.open(subfolder + fits_file)
+    data = data_and_headers[0]
+    print('Headers of astonomical image loaded')
+    return data.header
+
 def edit_fits_data(fits_file, new_data, new_file_name, subfolder="", input_subfolder="", comment=""):
     if os.path.isfile(os.getcwd() + '/' + new_file_name):
         os.remove(os.getcwd() + '/' + new_file_name)

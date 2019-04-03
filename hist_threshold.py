@@ -15,8 +15,9 @@ def gaussian(x, amp, cen, wid):
     return amp * np.exp(-(x-cen)**2 / wid)
 
 def histogram_threshold(image, show=False, threshold_sigma=2):
-    # image = image / 1000
-    hist, bins = np.histogram(image.flatten(), bins=len(np.unique(image)), density=True)
+    print('Finding histogram threshold with params:', show, threshold_sigma)
+    # image = image / 90000
+    hist, bins = np.histogram(image.flatten(), bins=len(np.unique(image)))
 
     init_vals = [1000., 0., 1000.]
 
@@ -26,29 +27,28 @@ def histogram_threshold(image, show=False, threshold_sigma=2):
     hist_fit = gaussian([x for x in range(len(hist))], *best_vals)
 
     center = best_vals[1]
-    offset = best_vals[2] * threshold_sigma
-    threshold = center + offset
+    sigma_offset = best_vals[2]
+    sigma = sigma_offset - center
+    threshold = int(center + sigma*threshold_sigma)
     if show:
         fig = plt.figure()
         ax = fig.add_subplot(111)
         # smoothed = smooth(hist,15)
         # ax.bar([x for x in range(len(hist))], hist)
-        ax.axvline(center + offset, color='green')
+        ax.axvline(threshold, color='green')
+        ax.axvline(center, color='brown')
+        ax.axvline(center+sigma, color='yellow')
         # ax.plot([x for x in range(len(hist))], hist, color="green")
         ax.plot([x for x in range(len(hist))], hist, label='Test data', color='red')
         ax.plot([x for x in range(len(hist))], hist_fit, label='Fitted data', color='blue')
         plt.show()
     else:
-        image[image < offset] = 0
-        return image
-
-
-
-    # show_image(image, 'image')
-
-
+        # image[image < offset] = 0
+        # return image
+        return bins[threshold]
 
 if __name__ == '__main__':
     # image = read_fits_file('data/AGO_2017_PR25_R-005.fit')
     image = read_fits_file('data/STREAK_test_1-002.fit')
-    histogram_threshold(image, True)
+    print(np.median(image))
+    histogram_threshold(image, False)

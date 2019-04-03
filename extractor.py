@@ -2,7 +2,7 @@ import numpy as np
 from astropy.io import fits
 from matplotlib import pyplot as plt
 
-img = fits.open('AGO_2017_PR25_R-005.fit')
+img = fits.open('data/M27_R_60s-002.fit')
 f = np.fft.fft2(img[0].data)
 print(img[0].data.shape)
 fshift = np.fft.fftshift(f)

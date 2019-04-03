@@ -146,38 +146,39 @@ def fix_sizes(a1, a2):
     else:
         return a1, a2[first:-first, second:-second]
 
-for i in range(8,9):
-    input_file = 'data/generated/Comb_' + str(i) + '/Comb/Comb_' + str(i) + '.fits'
-    image = read_fits_file(input_file)
+if __name__ == '__main__':
+    for i in range(8,9):
+        input_file = 'data/generated/Comb_' + str(i) + '/Comb/Comb_' + str(i) + '.fits'
+        image = read_fits_file(input_file)
 
-    original_background_input_file = 'data/generated/Comb_' + str(i) + '/Noise/Noise_' + str(i) + '.fits'
-    original_background = read_fits_file(original_background_input_file)
-    # show_3d_data(original_background, method='matplotlib')
+        original_background_input_file = 'data/generated/Comb_' + str(i) + '/Noise/Noise_' + str(i) + '.fits'
+        original_background = read_fits_file(original_background_input_file)
+        # show_3d_data(original_background, method='matplotlib')
 
-    file_name, extension = os.path.basename(input_file).split('.')
-    # extracted_background = sigma_clipper(image, 50, 50)
-    extracted_background = sigma_clipper(image)
+        file_name, extension = os.path.basename(input_file).split('.')
+        # extracted_background = sigma_clipper(image, 50, 50)
+        extracted_background = sigma_clipper(image)
 
-    difference_between_backgrounds = abs(original_background - extracted_background)
+        difference_between_backgrounds = abs(original_background - extracted_background)
 
-    edit_fits_data(input_file, extracted_background, file_name+'_35x35_bg.'+extension, 'MultiExport/')
+        edit_fits_data(input_file, extracted_background, file_name+'_35x35_bg.'+extension, 'MultiExport/')
 
-    edit_fits_data(input_file, difference_between_backgrounds, file_name+'_35x35_difference_bgs.'+extension, 'MultiExport/')
-    # extracted_background = sigma_clipper(extracted_background)
-    # show_3d_data(extracted_background, method='matplotlib')
-    # edit_fits_data(input_file, extracted_background, file_name+'bg2.'+extension)
+        edit_fits_data(input_file, difference_between_backgrounds, file_name+'_35x35_difference_bgs.'+extension, 'MultiExport/')
+        # extracted_background = sigma_clipper(extracted_background)
+        # show_3d_data(extracted_background, method='matplotlib')
+        # edit_fits_data(input_file, extracted_background, file_name+'bg2.'+extension)
 
-    # extracted_background = extracted_background.astype('uint32')
+        # extracted_background = extracted_background.astype('uint32')
 
-    # image, extracted_background = fix_sizes(image, extracted_background)
-    result = image-extracted_background
+        # image, extracted_background = fix_sizes(image, extracted_background)
+        result = image-extracted_background
 
-    edit_fits_data(input_file, result, file_name+'_35x35_result.'+extension, 'MultiExport/')
+        edit_fits_data(input_file, result, file_name+'_35x35_result.'+extension, 'MultiExport/')
 
-    show_3d_data(image, method='matplotlib')
-    show_3d_data(extracted_background, method='matplotlib')
-    show_3d_data(result, method='matplotlib')
+        show_3d_data(image, method='matplotlib')
+        show_3d_data(extracted_background, method='matplotlib')
+        show_3d_data(result, method='matplotlib')
 
-    # file_name, extension = os.path.basename(input_file).split('.')
-    # edit_fits_data(input_file, extracted_background, file_name+'bg.'+extension)
-    # edit_fits_data(input_file, result, file_name+'result.'+extension)
+        # file_name, extension = os.path.basename(input_file).split('.')
+        # edit_fits_data(input_file, extracted_background, file_name+'bg.'+extension)
+        # edit_fits_data(input_file, result, file_name+'result.'+extension)

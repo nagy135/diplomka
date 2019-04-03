@@ -12,16 +12,41 @@ from scipy.signal import medfilt2d
 from scipy import ndimage
 
 
-from fits_control import read_fits_file, edit_fits_data, show_image
+from fits_control import read_fits_file, read_fits_file_headers, edit_fits_data, show_image
 from plot3d import show_3d_data
 from PointSpreadMesh import PointSpreadMesh
-
 from hist_threshold import histogram_threshold
+
+from background_extract import sigma_clipper
+
 
 from decorators import print_function, time_function
 
-def extract_point_spread_meshes(image):
-    threshold = 50
+def threshold_extract_point_spread_meshes(image):
+    # threshold = np.mean(np.array([np.max(image), np.median(image)])) * 1/2
+    threshold = int( histogram_threshold( image, False, 3 ))
+
+    # image = histogram_threshold(image, threshold_sigma=2)
+
+    mask = image > threshold
+    show_image([image,mask], ['image','maska'])
+    points = list()
+
+    for y, row in enumerate(mask):
+        for x, point in enumerate(row):
+            if point == 1:
+                points.append((x,y))
+    print('Algorithm detected {} points'.format(str(len(points))))
+    joined_points = join_neigbor_points(points)
+    print('{} point meshes detected'.format(len(joined_points)))
+    point_meshes = []
+    for point_mesh in joined_points:
+        point_meshes.append(PointSpreadMesh(point_mesh, image))
+    global extracted_point_spread_meshes
+    extracted_point_spread_meshes = point_meshes
+
+def sobel_extract_point_spread_meshes(image):
+    threshold = 20
     image_int32 = image.astype('int32')
     dx = ndimage.sobel(image_int32, 0)
     dy = ndimage.sobel(image_int32, 1)
@@ -76,10 +101,15 @@ def neighbor_check(first_point, second_point):
 
 
 # image = read_fits_file('data/M27_R_60s-001.fit')
-image = read_fits_file('data/M27_R_60s-002.fit')
-# image = read_fits_file('data/STREAK_test_1-003.fit')
-extracted_point_spread_meshes= []
-extract_point_spread_meshes(image)
+# image = read_fits_file('data/M27_R_60s-002.fit')
+image  = read_fits_file('data/STREAK_test_1-003.fit')
+headers  = read_fits_file_headers('data/STREAK_test_1-003.fit')
+background = sigma_clipper(image)
+# extracted_point_spread_meshes= []
+# sobel_extract_point_spread_meshes(image)
+threshold_extract_point_spread_meshes( image )
 for point_mash in extracted_point_spread_meshes:
-    params = point_mash.fit_curve()
+    point_mash.add_header_data( headers )
+    point_mash.add_background_data( background )
+    params = point_mash.fit_curve(function='veres')
     show_image(point_mash.squared_data, 'point mash')
