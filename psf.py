@@ -127,19 +127,18 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument("file", help="target of psf extraction")
     parser.add_argument("-f", help="function used for object fitting")
+    parser.add_argument("-o", help="file to output data into")
     parser.add_argument("-s", help="segmentation method used")
+    parser.add_argument("-sq", help="width,height of square we fit around the maximum of cluster", nargs="+", type=int)
     parser.add_argument("--sigma_threshold", help="number of sigma removed to the right from center of threholding fit onto histogram", type=int)
     parser.add_argument("--sobel_threshold", help="thresholding value for sobel operator segmentation", type=int)
     parser.add_argument("--background_iterations", help="number of iterations during sigma clipping", type=int)
     parser.add_argument("--show_segmentation", help="show the result of segmentation", action="store_true")
     parser.add_argument("--show_object_fit", help="show the result of each object fitting", action="store_true")
     parser.add_argument("--show_fit_threshold", help="show the result of thresholding fit", action="store_true")
+    parser.add_argument("--show_3d", help="show image in 3d before segmentation", action="store_true")
     args = parser.parse_args()
 
-    if not os.path.isfile(args.file):
-        raise FileNotFoundError
-    image = read_fits_file(args.file)
-    headers  = read_fits_file_headers(args.file)
 
     show_segmentation = False
     if args.show_segmentation:
@@ -153,6 +152,17 @@ if __name__ == '__main__':
     if args.show_object_fit:
         show_object_fit = True
 
+    show_3d = False
+    if args.show_3d:
+        show_3d = True
+
+    if not os.path.isfile(args.file):
+        raise FileNotFoundError
+    image = read_fits_file(args.file)
+    headers  = read_fits_file_headers(args.file)
+
+    if show_3d:
+        show_3d_data(image)
 
     segmentation_options = ['fit_threshold', 'sobel']
     extracted_point_clusters = None
@@ -186,11 +196,16 @@ if __name__ == '__main__':
     number_of_iterations = 2
     if args.background_iterations:
         number_of_iterations = args.background_iterations
+
+    square_size = (11,11)
+    if args.sq:
+        square_size = args.sq
+
     print('Calculating image background...')
     background = sigma_clipper(image, number_of_iterations=number_of_iterations)
 
 
-    cat_result = []
+    output_data = []
     print('Fitting functions to clusters...')
     for cluster in extracted_point_clusters:
         cluster.show_object_fit = show_object_fit
@@ -198,13 +213,19 @@ if __name__ == '__main__':
         cluster.add_background_data( background )
         # params = cluster.fit_curve(function='veres')
         try:
-            params = cluster.fit_curve(function=fit_function)
+            params = cluster.fit_curve(function=fit_function, square_size=square_size)
         except IndexError as e:
             print(e)
             continue
 
-        cat_result.append(cluster.cat_repr())
-        # show_image(cluster.squared_data, 'point mash')
-        # show_3d_data(cluster.squared_data, 'point mash')
-    result = '\n'.join(cat_result)
-    print(result)
+        output_data.append(cluster.output_data())
+
+    result = ""
+    result += '-' * 150 + '\n'
+    result += '{:<15}{:<15}{:<15}{:<15}{:<15}{:<15}{:<15}{:<15}'.format("x", "y", "flux", "fwhm", "peak_SNR", "fit_rms", "skewness", "kurtosis") + '\n'
+    result += '-' * 150 + '\n'
+    for i, data in enumerate(output_data):
+            result += '{:<15}{:<15}{:<15}{:<15}{:<15}{:<15}{:<15}{:<15}'.format(data[0], data[1], data[2], data[3], data[4], data[5], data[6], data[7]) + '\n'
+
+    with open(args.o, 'w') as file:
+        file.write(result)

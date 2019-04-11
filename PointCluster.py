@@ -16,7 +16,7 @@ class PointCluster(object):
 
     def __init__(self, points, image):
         self.points = points
-        self.biggest_intensity_point = 0
+        self.peak_point = None
         self.header_data = None
         self.background_data = None
         self.squared_data = None
@@ -25,8 +25,10 @@ class PointCluster(object):
         self.skew = None
         self.show_object_fit = False
 
-    def cat_repr(self):
-        return "haha"
+    def __repr__(self):
+        '''x y Flux  FWHM PeakSNR RMS Skew Kurtosis'''
+    def output_data(self):
+        return [self.peak_point[0], self.peak_point[1], self.cumulated_flux, "lul", "lul", self.rms, self.skew, self.kurtosis]
 
     def add_header_data( self, header_data ):
         self.header_data = header_data
@@ -34,11 +36,13 @@ class PointCluster(object):
     def add_background_data( self, background_data ):
         self.background_data = background_data
 
-    def gaussian(self, height, center_x, center_y, width_x, width_y):
+    def gaussian(self, data_tuple, height, center_x, center_y, width_x, width_y):
         """Returns a gaussian function with the given parameters"""
+        (x, y) = data_tuple
         width_x = float(width_x)
         width_y = float(width_y)
-        return lambda x,y: height*np.exp(-(((center_x-x)/width_x)**2+((center_y-y)/width_y)**2)/2)
+        res = height*np.exp(-(((center_x-x)/width_x)**2+((center_y-y)/width_y)**2)/2)
+        return res.ravel()
 
     def twoD_Gaussian(self, data_tuple, amplitude, xo, yo, sigma_x, sigma_y, theta, offset):
         (x, y) = data_tuple
@@ -50,16 +54,20 @@ class PointCluster(object):
         g = offset + amplitude*np.exp( - (a*((x-xo)**2) + 2*b*(x-xo)*(y-yo) + c*((y-yo)**2)))
         return g.ravel()
 
-    def veres(self, x0, y0, length, width, rotation):
-        print('my params are {} {}'.format(x0, y0))
-        return lambda x,y: self.background_data[y][x] +\
-            (self.total_flux/length) *\
-            (1/(2*width*math.sqrt(2*math.pi))) *\
-            np.exp(-(((x-x0)*math.sin(math.radians(rotation)) + (y-y0)*math.cos(math.radians(rotation)))**2/(2*(width**2)))) *\
-            (\
-                erf( ((x-x0)*math.cos(math.radians(rotation)) + (y-y0)*math.sin(math.radians(rotation) + (length/2) ))/(width*math.sqrt(2)) ) -\
-                erf( ((x-x0)*math.cos(math.radians(rotation)) + (y-y0)*math.sin(math.radians(rotation) + (length/2) ))/(width*math.sqrt(2)) )\
-            )
+    def veres(self, data_tuple, x0, y0, length, width, total_flux, rotation):
+        (x, y) = data_tuple
+        x0 = float(x0)
+        y0 = float(y0)
+        res = np.exp(-(((x-x0)*math.sin(math.radians(rotation)) + (y-y0)*math.cos(math.radians(rotation)))**2/(2*(width**2))))
+        # res = self.background_data[y][x] +\
+        #     (total_flux/length) *\
+        #     (1/(2*width*math.sqrt(2*math.pi))) *\
+        #     np.exp(-(((x-x0)*math.sin(math.radians(rotation)) + (y-y0)*math.cos(math.radians(rotation)))**2/(2*(width**2)))) *\
+            # (\
+            #     erf( ((x-x0)*math.cos(math.radians(rotation)) + (y-y0)*math.sin(math.radians(rotation) + (length/2) ))/(width*math.sqrt(2)) ) -\
+            #     erf( ((x-x0)*math.cos(math.radians(rotation)) + (y-y0)*math.sin(math.radians(rotation) + (length/2) ))/(width*math.sqrt(2)) )\
+            # )
+        return res.ravel()
 
     def moments(self, data):
         """Returns (height, x, y, width_x, width_y)
@@ -80,40 +88,36 @@ class PointCluster(object):
         max_value = 0
         for point in self.points:
             if self.image[point[1],point[0]] > max_value:
-                self.biggest_intensity_point = point
+                self.peak_point = point
                 max_value = self.image[point[1],point[0]]
         square = np.zeros((square_height, square_width))
         mid_x, mid_y = square_width // 2, square_height // 2
         for y in range(square_height):
             for x in range(square_width):
-                relative_x = self.biggest_intensity_point[0] - mid_x + x
-                relative_y = self.biggest_intensity_point[1] - mid_y + y
+                relative_x = self.peak_point[0] - mid_x + x
+                relative_y = self.peak_point[1] - mid_y + y
                 square[y,x] = self.image[relative_y,relative_x]
         return square
 
 
-    def fit_curve(self, function='gauss'):
-        """Returns (height, x, y, width_x, width_y)
-        the gaussian parameters of a 2D distribution found by a fit"""
-        if self.squared_data is None:
-            try:
-                self.squared_data = self.fill_to_square(11,11)
-            except IndexError:
-                raise IndexError("Border object, ignore")
-
+    def fit_curve(self, function='gauss', square_size=(11,11)):
+        try:
+            self.squared_data = self.fill_to_square(*square_size)
+        except IndexError:
+            raise IndexError("Border object, ignore")
         if function == 'gauss':
-            x = np.linspace(0, 10, 11)
-            y = np.linspace(0, 10, 11)
+            x = np.linspace(0, square_size[0]-1, square_size[0])
+            y = np.linspace(0, square_size[1]-1, square_size[1])
             x, y = np.meshgrid(x, y)
 
-            # initial_guess = (3,100,100,20,40,0,10)
-            popt, pcov = curve_fit(self.twoD_Gaussian, (x, y), self.squared_data.flatten(), maxfev=50000000)
+            popt, pcov = curve_fit(self.twoD_Gaussian, (x, y), self.squared_data.flatten(), maxfev=500000000, xtol=1e-15, ftol=1e-15)
 
-            predicted = self.twoD_Gaussian((x, y), *popt).reshape(*self.squared_data.shape)
+            self.predicted = self.twoD_Gaussian((x, y), *popt).reshape(*self.squared_data.shape)
+            self.rms_res = rms(self.squared_data, self.predicted)
             if self.show_object_fit:
                 print('==============')
-                print('Root mean error:', rms(self.squared_data, predicted))
-                show_3d_data(self.squared_data, secondary_data=[predicted])
+                print('Root mean error:', self.rms_res)
+                show_3d_data(self.squared_data, secondary_data=[self.predicted])
 
         if function == 'astropy_gauss':
             x = np.arange(0, self.squared_data.shape[1], 1)
@@ -122,9 +126,6 @@ class PointCluster(object):
             amp_init = np.matrix(self.squared_data).max()
             halfsize = 5
             stdev_init = 0.33 * halfsize
-
-            # Fit the data using a box model.
-            # Bounds are not really needed but included here to demonstrate usage.
 
             def tie_stddev(model):  # we need this for tying x_std and y_std
                 xstddev = model.x_stddev
@@ -138,44 +139,36 @@ class PointCluster(object):
             m = fit_m(t_init, matrix_x, matrix_y, self.squared_data)
             print(fit_m.fit_info['message'])
 
-            predicted = np.zeros(self.squared_data.shape, dtype=int)
+            self.predicted = np.zeros(self.squared_data.shape, dtype=int)
             for y, row in enumerate(self.squared_data):
                 for x, val in enumerate(row):
-                    predicted[y][x] = m(x,y)
+                    self.predicted[y][x] = m(x,y)
 
-            rme = rms(self.squared_data, predicted)
+            self.rms_res = rms(self.squared_data, self.predicted)
 
-            print('Root mean error:', rme)
+            print('Root mean error:', self.rms_res)
 
-            self.kurtosis = kurtosis(self.squared_data.flatten())
-            self.skew = skew(self.squared_data.flatten())
-            print('kurtosis: {}, skew: {}'.format(self.kurtosis, self.skew))
 
-            show_3d_data(self.squared_data, secondary_data=[predicted])
+            show_3d_data(self.squared_data, secondary_data=[self.predicted])
         elif function == 'veres':
             self.length = 50 # from self.header_data
             self.width = 10 # from self.header_data
-            self.total_flux = self.squared_data.sum() # from self.header_data
             self.rotation = 5 # rotation from self.header_data
-            # x0 = math.ceil(np.mean((self.min_x, self.max_x)))
-            # y0 = math.ceil(np.mean((self.min_y, self.max_y)))
-            x0 = len(self.squared_data[0])//2
-            y0 = len(self.squared_data)//2
-
-            params = np.array([x0, y0, 50, 10, 5])
-            print('fitting object with params {}'.format(params))
-            # print(self.veres(*params)(2,2))
-            print(self.squared_data)
-            res = self.veres(*params)(2, 2)
-            print(np.indices(self.squared_data.shape))
-            print(res)
-            assert False, 'end'
-            errorfunction = lambda p: np.ravel(self.veres(*p)(*np.indices(self.squared_data.shape)))
-            try:
-                p, success = optimize.leastsq(errorfunction, params)
-                assert False, 'SOMETHING WORKS'
-            except TypeError as e:
-                return 'Error during fitting'
             print('################')
-            # print('fitting function to x0: {}, y0: {}'.format(x0, y0))
-            # print(self.points)
+            x = np.linspace(0, square_size[0]-1, square_size[0])
+            y = np.linspace(0, square_size[1]-1, square_size[1])
+            x, y = np.meshgrid(x, y)
+
+            popt, pcov = curve_fit(self.veres, np.array((x, y), dtype=int), self.squared_data.flatten(), maxfev=500000000)
+            print(pcov)
+
+            self.predicted = self.veres((x, y), *popt).reshape(*self.squared_data.shape)
+            if self.show_object_fit:
+                print('==============')
+                print('Root mean error:', rms(self.squared_data, self.predicted))
+                show_3d_data(self.squared_data, secondary_data=[self.predicted])
+
+        self.cumulated_flux = round(self.squared_data.sum())
+        self.kurtosis = round(kurtosis(self.squared_data.flatten()), 3)
+        self.skew = round(skew(self.squared_data.flatten()), 3)
+        self.rms = round(self.rms_res, 3)
