@@ -1,18 +1,34 @@
 \babel@toc {english}{}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {2.1}{\ignorespaces Evolution of debris count over time (ESA, 2018)\relax }}{5}{figure.caption.9}% 
-\contentsline {figure}{\numberline {2.2}{\ignorespaces Space debris distribution (FMPI CU)\relax }}{6}{figure.caption.10}% 
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Evolution of debris count over time \cite {esa_about_space_debris}\relax }}{5}{figure.caption.9}% 
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Space debris distribution (Courtesy of Ji\IeC {\v r}\IeC {\'\i } \IeC {\v S}ilha)\relax }}{6}{figure.caption.10}% 
 \contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Types of orbits}}}{6}{subfigure.2.1}% 
 \contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Aproximate density}}}{6}{subfigure.2.2}% 
 \contentsline {figure}{\numberline {2.3}{\ignorespaces 70cm telescope in AGO modra (FMPI CU)\relax }}{7}{figure.caption.11}% 
-\contentsline {figure}{\numberline {2.4}{\ignorespaces Difference types of images with sidereal tracking (left) and object tracking (right). Courtesy of Ji\IeC {\v r}\IeC {\'\i } \IeC {\v S}ilha.\relax }}{8}{figure.caption.12}% 
+\contentsline {figure}{\numberline {2.4}{\ignorespaces Difference types of images with sidereal tracking (left) and object tracking (right). Courtesy of Ji\IeC {\v r}\IeC {\'\i } \IeC {\v S}ilha.\relax }}{9}{figure.caption.12}% 
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Map produced by initial estimation\relax }}{13}{figure.caption.14}% 
-\contentsline {figure}{\numberline {3.2}{\ignorespaces Final result with 3 iterations\relax }}{14}{figure.caption.16}% 
-\contentsline {figure}{\numberline {3.3}{\ignorespaces Comparison of different choice of number of iterations\relax }}{16}{figure.caption.18}% 
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {3 iterations}}}{16}{subfigure.3.1}% 
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {5 iterations}}}{16}{subfigure.3.2}% 
-\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {7 iterations}}}{16}{subfigure.3.3}% 
-\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {13 iterations}}}{16}{subfigure.3.4}% 
-\contentsline {figure}{\numberline {3.4}{\ignorespaces Grid steps, joining artefacts ($10 \times 1$ grid)\relax }}{19}{figure.caption.21}% 
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Map produced by initial estimation\relax }}{15}{figure.caption.13}% 
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Final result with 3 iterations\relax }}{16}{figure.caption.14}% 
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Comparison of different choice of number of iterations\relax }}{18}{figure.caption.15}% 
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {3 iterations}}}{18}{subfigure.3.1}% 
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {5 iterations}}}{18}{subfigure.3.2}% 
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {7 iterations}}}{18}{subfigure.3.3}% 
+\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {13 iterations}}}{18}{subfigure.3.4}% 
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Synthetic background, background extracted from image, difference \cite {silhaetal}\relax }}{19}{figure.caption.17}% 
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Grid steps, joining artefacts ($10 \times 1$ grid)\relax }}{21}{figure.caption.19}% 
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Example of fit to the histogram representation\relax }}{27}{figure.caption.20}% 
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Closer look, showing position of noise around values 15\relax }}{28}{figure.caption.21}% 
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Sobel circles around objects\relax }}{30}{figure.caption.22}% 
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Joined sobel circles\relax }}{30}{figure.caption.23}% 
+\contentsline {figure}{\numberline {4.5}{\ignorespaces 3D view of streak \cite {kouprianov}\relax }}{32}{figure.caption.24}% 
+\contentsline {figure}{\numberline {4.6}{\ignorespaces Correct gaussian fit to point-like object\relax }}{37}{figure.caption.25}% 
+\contentsline {figure}{\numberline {4.7}{\ignorespaces Incorrect gaussian fit to point-like object\relax }}{38}{figure.caption.26}% 
+\contentsline {figure}{\numberline {4.8}{\ignorespaces Reasonably good gaussian fit to streak-like object\relax }}{39}{figure.caption.27}% 
+\contentsline {figure}{\numberline {4.9}{\ignorespaces Gaussian fit to streak-like object\relax }}{40}{figure.caption.28}% 
+\contentsline {figure}{\numberline {4.10}{\ignorespaces View perpendicular to axis parallel to streak - front view\relax }}{42}{figure.caption.29}% 
+\contentsline {figure}{\numberline {4.11}{\ignorespaces View along axis parallel to streak - side view\relax }}{43}{figure.caption.30}% 
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Header of our output\relax }}{59}{figure.caption.33}% 
+\addvspace {10\p@ }

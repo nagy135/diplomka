@@ -1,0 +1,85 @@
+\documentclass[12pt, a4paper, oneside]{book}
+\usepackage[hidelinks]{hyperref}
+\usepackage[english]{babel}
+\usepackage{epsfig}
+\usepackage{epstopdf}
+\usepackage[chapter]{algorithm}
+\usepackage{algorithmic}
+\usepackage{listings}
+\usepackage{amsmath}
+\usepackage{dirtytalk}
+\usepackage{amssymb}
+\usepackage{float}
+\usepackage{graphicx}
+\usepackage{multirow}
+\usepackage{color}
+\usepackage{url}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{setspace}
+\usepackage{tabularx}
+\usepackage{tabu}
+\usepackage{pbox}
+\usepackage{textcomp}
+\usepackage{caption}
+\usepackage{subfig}
+\usepackage{natbib}
+\usepackage{nopageno}
+
+
+\setstretch{1.5}
+%\renewcommand\baselinestretch{1.5} % riadkovanie jeden a pol
+
+\newcommand\mftitle{Algorithm development for the segmentation of astronomical images with unique features}
+\newcommand\mfthesistype{Diplomová práca}
+\newcommand\mfauthor{Bc. Viktor Nagy}
+\newcommand\mfadvisor{Mgr. Jiří Šilha, PhD.}
+\newcommand\mfconsultant{prof. RNDr. Roman Ďurikovič, PhD.}
+\newcommand\mfplacedate{Bratislava, 2019}
+\newcommand\mfuniversity{UNIVERZITA KOMENSKÉHO V BRATISLAVE}
+\newcommand\mffaculty{FAKULTA MATEMATIKY, FYZIKY A INFORMATIKY}
+\newcommand{\sub}[1]{$_{\text{#1}}$}
+\newcommand{\reference}[1]{č.~\ref{#1}}
+\newcommand{\imageHeight}{150px}
+
+\ifx\pdfoutput\undefined\relax\else\pdfinfo{ /Title (mftitle) /Author (\mfauthor) /Creator (PDFLaTeX) } \fi
+
+\begin{document}
+
+\frontmatter
+
+% \thispagestyle{empty}
+
+\noindent
+\begin{minipage}{\textwidth}
+\begin{center}
+\textbf{\mfuniversity \\
+\mffaculty}
+\end{center}
+\end{minipage}
+
+\vfill
+\begin{figure}[!hbt]
+    \begin{center}
+        \includegraphics{images/logo_fmph}
+        \label{img:logo}
+    \end{center}
+\end{figure}
+\begin{center}
+    \begin{minipage}{0.8\textwidth}
+        \centerline{\textbf{\Large\MakeUppercase{Algorithm development for the segmentation}}}
+        \centerline{\textbf{\Large\MakeUppercase{of astronomical images with unique features}}}
+        \smallskip
+        \smallskip
+        \centerline{\textbf{\Large\MakeUppercase{Algoritmus na segmentáciu astronomických}}}
+        \centerline{\textbf{\Large\MakeUppercase{snímok so špecifickými stopami}}}
+        \smallskip
+        \centerline{\mfthesistype}
+    \end{minipage}
+\end{center}
+\vfill
+2019 \hfill
+\mfauthor
+\eject
+% koniec obalu
+\end{document}

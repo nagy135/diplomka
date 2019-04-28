@@ -1,21 +1,45 @@
 !_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
 !_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
-!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
-!_TAG_PROGRAM_NAME	Exuberant Ctags	//
-!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
-!_TAG_PROGRAM_VERSION	5.8	//
-convolve2d	hist_treshold.py	/^from scipy.signal import convolve2d$/;"	i
-copy	hist_treshold.py	/^import copy$/;"	i
-edit_fits_data	hist_treshold.py	/^from fits_control import read_fits_file, edit_fits_data, show_image$/;"	i
-fits	hist_treshold.py	/^from astropy.io import fits$/;"	i
-image	hist_treshold.py	/^image = read_fits_file('data\/AGO_2017_PR25_R-005.fit')$/;"	v
-math	hist_treshold.py	/^import math$/;"	i
-matplotlib	hist_treshold.py	/^import matplotlib.pyplot as plt$/;"	i
-np	hist_treshold.py	/^import numpy as np$/;"	i
-plt	hist_treshold.py	/^import matplotlib.pyplot as plt$/;"	i
-print_function	hist_treshold.py	/^from decorators import print_function, time_function$/;"	i
-random	hist_treshold.py	/^import random$/;"	i
-read_fits_file	hist_treshold.py	/^from fits_control import read_fits_file, edit_fits_data, show_image$/;"	i
-show_image	hist_treshold.py	/^from fits_control import read_fits_file, edit_fits_data, show_image$/;"	i
-test	hist_treshold.py	/^def test(image):$/;"	f
-time_function	hist_treshold.py	/^from decorators import print_function, time_function$/;"	i
+!_TAG_OUTPUT_MODE	u-ctags	/u-ctags or e-ctags/
+!_TAG_PROGRAM_AUTHOR	Universal Ctags Team	//
+!_TAG_PROGRAM_NAME	Universal Ctags	/Derived from Exuberant Ctags/
+!_TAG_PROGRAM_URL	https://ctags.io/	/official site/
+!_TAG_PROGRAM_VERSION	0.0.0	/45968eff/
+args	psf_segmentation_cli.py	/^    args = parser.parse_args()$/;"	v
+background	psf_segmentation_cli.py	/^    background = sigma_clipper(image, number_of_iterations=number_of_iterations)$/;"	v
+extracted_point_clusters	psf_segmentation_cli.py	/^            extracted_point_clusters = sobel_extract_clusters(image, show_segmentation=show_segm/;"	v
+extracted_point_clusters	psf_segmentation_cli.py	/^            extracted_point_clusters = threshold_extract_clusters( image, show_segmentation=show/;"	v
+extracted_point_clusters	psf_segmentation_cli.py	/^    extracted_point_clusters = None$/;"	v
+fit_function	psf_segmentation_cli.py	/^        fit_function = args.f$/;"	v
+fit_function	psf_segmentation_cli.py	/^    fit_function = None$/;"	v
+fit_options	psf_segmentation_cli.py	/^    fit_options = ['gauss', 'veres']$/;"	v
+headers	psf_segmentation_cli.py	/^    headers  = read_fits_file_headers(args.file)$/;"	v
+image	psf_segmentation_cli.py	/^    image = np.flip(image, axis=0)$/;"	v
+image	psf_segmentation_cli.py	/^    image = read_fits_file(args.file)$/;"	v
+join_neigbor_points	psf_segmentation_cli.py	/^def join_neigbor_points(points):$/;"	f
+join_neigbor_points_mask	psf_segmentation_cli.py	/^def join_neigbor_points_mask(mask):$/;"	f
+np	psf_segmentation_cli.py	/^import numpy as np$/;"	I
+number_of_iterations	psf_segmentation_cli.py	/^        number_of_iterations = args.background_iterations$/;"	v
+number_of_iterations	psf_segmentation_cli.py	/^    number_of_iterations = 2$/;"	v
+output_data	psf_segmentation_cli.py	/^    output_data = []$/;"	v
+parser	psf_segmentation_cli.py	/^    parser = argparse.ArgumentParser()$/;"	v
+plt	psf_segmentation_cli.py	/^import matplotlib.pyplot as plt$/;"	I
+result	psf_segmentation_cli.py	/^    result = ""$/;"	v
+segmentation_options	psf_segmentation_cli.py	/^    segmentation_options = ['fit_threshold', 'sobel']$/;"	v
+show_3d	psf_segmentation_cli.py	/^        show_3d = True$/;"	v
+show_3d	psf_segmentation_cli.py	/^    show_3d = False$/;"	v
+show_fit_threshold	psf_segmentation_cli.py	/^        show_fit_threshold = True$/;"	v
+show_fit_threshold	psf_segmentation_cli.py	/^    show_fit_threshold = False$/;"	v
+show_object_fit	psf_segmentation_cli.py	/^        show_object_fit = True$/;"	v
+show_object_fit	psf_segmentation_cli.py	/^    show_object_fit = False$/;"	v
+show_object_fit_separate	psf_segmentation_cli.py	/^        show_object_fit_separate = True$/;"	v
+show_object_fit_separate	psf_segmentation_cli.py	/^    show_object_fit_separate = False$/;"	v
+show_segmentation	psf_segmentation_cli.py	/^        show_segmentation = True$/;"	v
+show_segmentation	psf_segmentation_cli.py	/^    show_segmentation = False$/;"	v
+sigma_threshold	psf_segmentation_cli.py	/^                sigma_threshold = 2$/;"	v
+sobel_extract_clusters	psf_segmentation_cli.py	/^def sobel_extract_clusters(image, show_segmentation=False, threshold=20):$/;"	f
+sobel_threshold	psf_segmentation_cli.py	/^                sobel_threshold = 20$/;"	v
+square_size	psf_segmentation_cli.py	/^        square_size = args.sq$/;"	v
+square_size	psf_segmentation_cli.py	/^    square_size = (11,11)$/;"	v
+st	psf_segmentation_cli.py	/^import scipy.stats as st$/;"	I
+threshold_extract_clusters	psf_segmentation_cli.py	/^def threshold_extract_clusters(image, sigma_threshold=2, show_segmentation=False, show_fit_thres/;"	f

@@ -6,11 +6,46 @@
 \BOOKMARK [2][-]{subsection.2.3.1}{Types of orbits}{section.2.3}% 6
 \BOOKMARK [1][-]{section.2.4}{Data collection}{chapter.2}% 7
 \BOOKMARK [2][-]{subsection.2.4.1}{FMPI AGO}{section.2.4}% 8
-\BOOKMARK [2][-]{subsection.2.4.2}{Tracking types, fits format}{section.2.4}% 9
-\BOOKMARK [0][-]{chapter.3}{Processing pipeline}{}% 10
-\BOOKMARK [1][-]{section.3.1}{Pipeline definition}{chapter.3}% 11
-\BOOKMARK [1][-]{section.3.2}{Sky background estimation and extraction}{chapter.3}% 12
-\BOOKMARK [2][-]{subsection.3.2.1}{Median filtering}{section.3.2}% 13
-\BOOKMARK [2][-]{subsection.3.2.2}{Sigma clipping}{section.3.2}% 14
-\BOOKMARK [2][-]{subsection.3.2.3}{Grid sigma clipping}{section.3.2}% 15
-\BOOKMARK [1][-]{section.3.3}{Object search and segmentation}{chapter.3}% 16
+\BOOKMARK [2][-]{subsection.2.4.2}{Fits format}{section.2.4}% 9
+\BOOKMARK [2][-]{subsection.2.4.3}{Tracking types}{section.2.4}% 10
+\BOOKMARK [2][-]{subsection.2.4.4}{Equatorial coordinate system \(RADEC\)}{section.2.4}% 11
+\BOOKMARK [1][-]{section.2.5}{Pipeline definition}{chapter.2}% 12
+\BOOKMARK [0][-]{chapter.3}{Sky background estimation and extraction}{}% 13
+\BOOKMARK [1][-]{section.3.1}{Median filtering}{chapter.3}% 14
+\BOOKMARK [1][-]{section.3.2}{Sigma clipping}{chapter.3}% 15
+\BOOKMARK [2][-]{subsection.3.2.1}{Image preprocessing}{section.3.2}% 16
+\BOOKMARK [2][-]{subsection.3.2.2}{Iterative process}{section.3.2}% 17
+\BOOKMARK [2][-]{subsection.3.2.3}{Parameter choice}{section.3.2}% 18
+\BOOKMARK [1][-]{section.3.3}{Grid sigma clipping}{chapter.3}% 19
+\BOOKMARK [1][-]{section.3.4}{Sequential execution}{chapter.3}% 20
+\BOOKMARK [0][-]{chapter.4}{Object search and segmentation}{}% 21
+\BOOKMARK [1][-]{section.4.1}{Signal to noise ratio}{chapter.4}% 22
+\BOOKMARK [1][-]{section.4.2}{Segmentation methods}{chapter.4}% 23
+\BOOKMARK [2][-]{subsection.4.2.1}{Thresholding}{section.4.2}% 24
+\BOOKMARK [2][-]{subsection.4.2.2}{Sobel operator thresholding}{section.4.2}% 25
+\BOOKMARK [2][-]{subsection.4.2.3}{Second derivative thresholding}{section.4.2}% 26
+\BOOKMARK [1][-]{section.4.3}{Cluster creation}{chapter.4}% 27
+\BOOKMARK [2][-]{subsection.4.3.1}{False detections}{section.4.3}% 28
+\BOOKMARK [2][-]{subsection.4.3.2}{Skewness}{section.4.3}% 29
+\BOOKMARK [2][-]{subsection.4.3.3}{Kurtosis}{section.4.3}% 30
+\BOOKMARK [1][-]{section.4.4}{Point spread function}{chapter.4}% 31
+\BOOKMARK [2][-]{subsection.4.4.1}{2D Gaussian}{section.4.4}% 32
+\BOOKMARK [2][-]{subsection.4.4.2}{PSF-Convolution Trail Function}{section.4.4}% 33
+\BOOKMARK [2][-]{subsection.4.4.3}{Function fitting}{section.4.4}% 34
+\BOOKMARK [2][-]{subsection.4.4.4}{Testing}{section.4.4}% 35
+\BOOKMARK [0][-]{chapter.5}{Design and implementation}{}% 36
+\BOOKMARK [1][-]{section.5.1}{Design}{chapter.5}% 37
+\BOOKMARK [1][-]{section.5.2}{Deployment}{chapter.5}% 38
+\BOOKMARK [1][-]{section.5.3}{Language of the implementation}{chapter.5}% 39
+\BOOKMARK [1][-]{section.5.4}{Objects and modules}{chapter.5}% 40
+\BOOKMARK [2][-]{subsection.5.4.1}{Project structure}{section.5.4}% 41
+\BOOKMARK [2][-]{subsection.5.4.2}{background\137extraction\137cli.py}{section.5.4}% 42
+\BOOKMARK [2][-]{subsection.5.4.3}{psf\137segmentation\137cli.py}{section.5.4}% 43
+\BOOKMARK [2][-]{subsection.5.4.4}{PointCluster.py}{section.5.4}% 44
+\BOOKMARK [2][-]{subsection.5.4.5}{plotting.py}{section.5.4}% 45
+\BOOKMARK [2][-]{subsection.5.4.6}{utils.py}{section.5.4}% 46
+\BOOKMARK [2][-]{subsection.5.4.7}{hist\137threshold.py}{section.5.4}% 47
+\BOOKMARK [2][-]{subsection.5.4.8}{testing\137parser.py}{section.5.4}% 48
+\BOOKMARK [2][-]{subsection.5.4.9}{decorators.py}{section.5.4}% 49
+\BOOKMARK [1][-]{section.5.5}{Output form}{chapter.5}% 50
+\BOOKMARK [0][-]{chapter.6}{Conclusion}{}% 51

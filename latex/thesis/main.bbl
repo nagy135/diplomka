@@ -1,28 +1,125 @@
 \newcommand{\etalchar}[1]{$^{#1}$}
-\begin{thebibliography}{MUM{\etalchar{+}}06}
+\begin{thebibliography}{JKLJLM10}
 
-\bibitem[]{SpaceDebris}
-Heiner Klinkrad\\
-\newblock Space Debris, Models and Risk Analysis\\
-\newblock 2006.
+\bibitem[CGW{\etalchar{+}}81]{fits}
+Wells~D. C., Greisen, E.~W., Harten, and R.~H.
+\newblock Fits - a flexible image transport system.
+\newblock {\em Astronomy and Astrophysics Supplement, Vol. 44, P. 363, 1981},
+  1981.
 
-\bibitem[]{Silha}
-J. Šilha et. al.\\
-\newblock Slovakian Optical Sensor for HAMR Objects Cataloguing and Research\\
+\bibitem[esaa]{esa_about_space_debris}
+About space debris.
+\newblock
+  \url{http://www.esa.int/Our_Activities/Operations/Space_Safety_Security/Space_Debris/About_space_debris}.
+\newblock Accessed: 2019-02-30.
+
+\bibitem[esab]{esa_debris_numbers}
+Space debris by the numbers.
+\newblock
+  \url{https://www.esa.int/Our_Activities/Operations/Space_Safety_Security/Space_Debris/Space_debris_by_the_numbers}.
+\newblock Accessed: 2019-02-30.
+
+\bibitem[{Fle}14]{flewelling}
+B.~{Flewelling}.
+\newblock {Computer Vision Techniques Applied to Space Object Detect, Track,
+  ID, Characterize}.
+\newblock page E69, sep 2014.
+
+\bibitem[fmp]{fmpi_cu}
+Space debris.
+\newblock
+  \url{https://fmph.uniba.sk/microsites/daa/daa/veda-a-vyskum/kozmicke-smetie/}.
+\newblock Accessed: 2019-05-10.
+
+\bibitem[Gav13]{lavmar}
+Henri~P. Gavin.
+\newblock The levenberg-marquardt method for nonlinear least squares
+  curve-fitting problems c ©.
+\newblock 2013.
+
+\bibitem[JKLJLM10]{kessler}
+Donald J~Kessler, Nicholas L~Johnson, J.-C Liou, and Mark Matney.
+\newblock The kessler syndrome: Implications to future space operations.
+\newblock {\em Advances in the Astronautical Sciences}, 137, 01 2010.
+
+\bibitem[JVL18]{lambert}
+PhD John V.~Lambert.
+\newblock Fengyun-1c debris cloud evolution over one decade.
 \newblock 2018.
 
-\bibitem[]{KouprianovCCD}
-Vladimir Kouprianov et. al.\\
-\newblock Distinguishing features of CCD astrometry of faint GEO objects\\
-\newblock {\em a COSPAR}, 11 April 2007.
+\bibitem[Kep19]{kepler}
+Johannes Kepler.
+\newblock Kepler's laws of planetary motions.
+\newblock 1619.
 
-\bibitem[]{StreakDetect}
-Jenni Virtanen et. al.\\
-\newblock Streak detection and analysis pipeline for space-debris optical images\\
-\newblock {\em a COSPAR}, 25 September 2015
+\bibitem[Kli06]{klinkrad}
+Heiner Klinkrad.
+\newblock {\em Space Debris, Models and Risk Analysis}.
+\newblock Springer-Verlag Berlin Heidelberg, 2006.
 
-\bibitem[]{VeresFitting}
-Peter Vereš et. al.\\
-\newblock Improved Asteroid Astrometry and Photometry with Trail Fitting
+\bibitem[Kou08]{kouprianov}
+Vladimir Kouprianov.
+\newblock Distinguishing features of ccd astrometry of faint geo objects.
+\newblock {\em Advances in Space Research}, 41, 12 2008.
+
+\bibitem[PTVF07]{numerical_recipes}
+William~H. Press, Saul~A. Teukolsky, William~T. Vetterling, and Brian~P.
+  Flannery.
+\newblock {\em Numerical Recipes in C++: The Art of Scientific Computing}.
+\newblock Cambridge University Press New York, NY, USA, 2007.
+
+\bibitem[Raa02]{snr}
+Herbert Raab.
+\newblock Detecting and measuring faint point sources with a ccd.
+\newblock 01 2002.
+
+\bibitem[SHV95]{median_filtering}
+T~Schildknecht, U~Hugentobler, and Andreas Verdun.
+\newblock Algorithms for ground based optical detection of space debris.
+\newblock {\em Advances in Space Research - ADV SPACE RES}, 16:47--50, 12 1995.
+
+\bibitem[Sob14]{sobel}
+Irwin Sobel.
+\newblock An isotropic 3x3 image gradient operator.
+\newblock {\em Presentation at Stanford A.I. Project 1968}, 02 2014.
+
+\bibitem[SS05]{stovaken}
+E.~{St{\"o}veken} and T.~{Schildknecht}.
+\newblock {Algorithms for the Optical Detection of Space Debris Objects}.
+\newblock 587:637, aug 2005.
+
+\bibitem[VA19]{agapov}
+Alexander~Lapshin Vladimir~Agapov.
+\newblock Survey and follow-up strategies used in operation of aspos okp to
+  gather observation data on geo, heo and meo objects.
+\newblock 2019.
+
+\bibitem[VJD{\etalchar{+}}12]{veres}
+Peter Vereš, Robert Jedicke, Larry Denneau, Richard Wainscoat, Matthew
+  J.~Holman, and Hsing-Wen Lin.
+\newblock Improved asteroid astrometry and photometry with trail fitting.
+\newblock {\em Publications of the Astronomical Society of the Pacific}, 124,
+  09 2012.
+
+\bibitem[Wat67]{watson1967}
+Geoffrey~S. Watson.
+\newblock Linear least squares regression.
+\newblock {\em Ann. Math. Statist.}, 38(6):1679--1699, 12 1967.
+
+\bibitem[WXL{\etalchar{+}}15]{wang}
+Haiyong Wang, Ershuai Xu, Zhifeng Li, Jingjin Li, and Tianmu Qin.
+\newblock {Gaussian Analytic Centroiding method of star image of star tracker}.
+\newblock {\em Advances in Space Research}, 2015.
+
+\bibitem[Yua99]{trf}
+Ya-xiang Yuan.
+\newblock A review of trust region algorithms for optimization.
+\newblock {\em ICM99: Proceedings of the Fourth International Congress on
+  Industrial and Applied Mathematics}, 09 1999.
+
+\bibitem[�aa19]{silhaetal}
+J.~Šilha~at. al.
+\newblock Slovakian optical sensor for hamr objects cataloguing and research.
+\newblock {\em ESA Space Safety Programme Office}, 1, 2019.
 
 \end{thebibliography}

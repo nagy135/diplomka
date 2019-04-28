@@ -5,16 +5,48 @@
 \contentsline {section}{\numberline {2.2}The trend}{4}{section.2.2}% 
 \contentsline {section}{\numberline {2.3}Spatial distribution}{5}{section.2.3}% 
 \contentsline {subsection}{\numberline {2.3.1}Types of orbits}{5}{subsection.2.3.1}% 
-\contentsline {section}{\numberline {2.4}Data collection}{7}{section.2.4}% 
-\contentsline {subsection}{\numberline {2.4.1}FMPI AGO}{7}{subsection.2.4.1}% 
-\contentsline {subsection}{\numberline {2.4.2}Tracking types, fits format}{8}{subsection.2.4.2}% 
-\contentsline {chapter}{\numberline {3}Processing pipeline}{9}{chapter.3}% 
-\contentsline {section}{\numberline {3.1}Pipeline definition}{9}{section.3.1}% 
-\contentsline {section}{\numberline {3.2}Sky background estimation and extraction}{11}{section.3.2}% 
-\contentsline {subsection}{\numberline {3.2.1}Median filtering}{11}{subsection.3.2.1}% 
-\contentsline {subsection}{\numberline {3.2.2}Sigma clipping}{12}{subsection.3.2.2}% 
-\contentsline {subsubsection}{Image preprocessing}{12}{section*.13}% 
-\contentsline {subsubsection}{Iterative process}{13}{section*.15}% 
-\contentsline {subsubsection}{Parameter choice}{14}{section*.17}% 
-\contentsline {subsection}{\numberline {3.2.3}Grid sigma clipping}{17}{subsection.3.2.3}% 
-\contentsline {section}{\numberline {3.3}Object search and segmentation}{18}{section.3.3}% 
+\contentsline {section}{\numberline {2.4}Data collection}{6}{section.2.4}% 
+\contentsline {subsection}{\numberline {2.4.1}FMPI AGO}{6}{subsection.2.4.1}% 
+\contentsline {subsection}{\numberline {2.4.2}Fits format}{7}{subsection.2.4.2}% 
+\contentsline {subsection}{\numberline {2.4.3}Tracking types}{8}{subsection.2.4.3}% 
+\contentsline {subsection}{\numberline {2.4.4}Equatorial coordinate system (RADEC)}{9}{subsection.2.4.4}% 
+\contentsline {section}{\numberline {2.5}Pipeline definition}{10}{section.2.5}% 
+\contentsline {chapter}{\numberline {3}Sky background estimation and extraction}{12}{chapter.3}% 
+\contentsline {section}{\numberline {3.1}Median filtering}{12}{section.3.1}% 
+\contentsline {section}{\numberline {3.2}Sigma clipping}{13}{section.3.2}% 
+\contentsline {subsection}{\numberline {3.2.1}Image preprocessing}{14}{subsection.3.2.1}% 
+\contentsline {subsection}{\numberline {3.2.2}Iterative process}{14}{subsection.3.2.2}% 
+\contentsline {subsection}{\numberline {3.2.3}Parameter choice}{16}{subsection.3.2.3}% 
+\contentsline {section}{\numberline {3.3}Grid sigma clipping}{19}{section.3.3}% 
+\contentsline {section}{\numberline {3.4}Sequential execution}{22}{section.3.4}% 
+\contentsline {chapter}{\numberline {4}Object search and segmentation}{23}{chapter.4}% 
+\contentsline {section}{\numberline {4.1}Signal to noise ratio}{23}{section.4.1}% 
+\contentsline {section}{\numberline {4.2}Segmentation methods}{24}{section.4.2}% 
+\contentsline {subsection}{\numberline {4.2.1}Thresholding}{25}{subsection.4.2.1}% 
+\contentsline {subsection}{\numberline {4.2.2}Sobel operator thresholding}{28}{subsection.4.2.2}% 
+\contentsline {subsection}{\numberline {4.2.3}Second derivative thresholding}{31}{subsection.4.2.3}% 
+\contentsline {section}{\numberline {4.3}Cluster creation}{31}{section.4.3}% 
+\contentsline {subsection}{\numberline {4.3.1}False detections}{32}{subsection.4.3.1}% 
+\contentsline {subsection}{\numberline {4.3.2}Skewness}{33}{subsection.4.3.2}% 
+\contentsline {subsection}{\numberline {4.3.3}Kurtosis}{34}{subsection.4.3.3}% 
+\contentsline {section}{\numberline {4.4}Point spread function}{35}{section.4.4}% 
+\contentsline {subsection}{\numberline {4.4.1}2D Gaussian}{35}{subsection.4.4.1}% 
+\contentsline {subsection}{\numberline {4.4.2}PSF-Convolution Trail Function}{40}{subsection.4.4.2}% 
+\contentsline {subsection}{\numberline {4.4.3}Function fitting}{44}{subsection.4.4.3}% 
+\contentsline {subsection}{\numberline {4.4.4}Testing}{45}{subsection.4.4.4}% 
+\contentsline {chapter}{\numberline {5}Design and implementation}{47}{chapter.5}% 
+\contentsline {section}{\numberline {5.1}Design}{47}{section.5.1}% 
+\contentsline {section}{\numberline {5.2}Deployment}{47}{section.5.2}% 
+\contentsline {section}{\numberline {5.3}Language of the implementation}{48}{section.5.3}% 
+\contentsline {section}{\numberline {5.4}Objects and modules}{49}{section.5.4}% 
+\contentsline {subsection}{\numberline {5.4.1}Project structure}{49}{subsection.5.4.1}% 
+\contentsline {subsection}{\numberline {5.4.2}background\_extraction\_cli.py}{50}{subsection.5.4.2}% 
+\contentsline {subsection}{\numberline {5.4.3}psf\_segmentation\_cli.py}{52}{subsection.5.4.3}% 
+\contentsline {subsection}{\numberline {5.4.4}PointCluster.py}{54}{subsection.5.4.4}% 
+\contentsline {subsection}{\numberline {5.4.5}plotting.py}{55}{subsection.5.4.5}% 
+\contentsline {subsection}{\numberline {5.4.6}utils.py}{56}{subsection.5.4.6}% 
+\contentsline {subsection}{\numberline {5.4.7}hist\_threshold.py}{57}{subsection.5.4.7}% 
+\contentsline {subsection}{\numberline {5.4.8}testing\_parser.py}{58}{subsection.5.4.8}% 
+\contentsline {subsection}{\numberline {5.4.9}decorators.py}{58}{subsection.5.4.9}% 
+\contentsline {section}{\numberline {5.5}Output form}{58}{section.5.5}% 
+\contentsline {chapter}{\numberline {6}Conclusion}{60}{chapter.6}% 

@@ -22,9 +22,9 @@ from background_extract import sigma_clipper
 
 from decorators import print_function, time_function
 
-def threshold_extract_point_spread_meshes(image):
+def threshold_extract_point_spread_meshes(image, sigma_threshold=2, show_threshold=False):
     # threshold = np.mean(np.array([np.max(image), np.median(image)])) * 1/2
-    threshold = int( histogram_threshold( image, False, 3 ))
+    threshold = int( histogram_threshold( image, show_threshold, sigma_threshold ))
 
     # image = histogram_threshold(image, threshold_sigma=2)
 
@@ -101,15 +101,22 @@ def neighbor_check(first_point, second_point):
 
 
 # image = read_fits_file('data/M27_R_60s-001.fit')
-# image = read_fits_file('data/M27_R_60s-002.fit')
-image  = read_fits_file('data/STREAK_test_1-003.fit')
-headers  = read_fits_file_headers('data/STREAK_test_1-003.fit')
+image = read_fits_file('data/AGO_2017_PR25_R-005.fit')
+headers  = read_fits_file_headers('data/AGO_2017_PR25_R-005.fit')
+# image  = read_fits_file('data/STREAK_test_1-003.fit')
+# headers  = read_fits_file_headers('data/STREAK_test_1-003.fit')
 background = sigma_clipper(image)
 # extracted_point_spread_meshes= []
 # sobel_extract_point_spread_meshes(image)
-threshold_extract_point_spread_meshes( image )
+threshold_extract_point_spread_meshes( image, show_threshold=False, sigma_threshold=15)
 for point_mash in extracted_point_spread_meshes:
     point_mash.add_header_data( headers )
     point_mash.add_background_data( background )
-    params = point_mash.fit_curve(function='veres')
-    show_image(point_mash.squared_data, 'point mash')
+    # params = point_mash.fit_curve(function='veres')
+    try:
+        params = point_mash.fit_curve(function='gauss')
+    except IndexError as e:
+        print(e)
+        continue
+    # show_image(point_mash.squared_data, 'point mash')
+    # show_3d_data(point_mash.squared_data, 'point mash')

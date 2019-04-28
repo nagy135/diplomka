@@ -1,12 +1,13 @@
 import time
 
-def time_function(string):
+def time_function(name):
     def timeit(func):
         def wrapper(*args, **kwargs):
             a = time.time()
             res = func(*args)
             b = time.time()
-            print(string, ' -> run time : ',str(b-a), 'sec')
+            print('{} -> {} sec'.format(name, str(b-a)))
+            return res
         return wrapper
     return timeit
 
@@ -15,5 +16,6 @@ def print_function(name):
         def wrapper(*args, **kwargs):
             print('Executing function : {}'.format(str(name)) )
             res = func(*args)
+            return res
         return wrapper
     return printer

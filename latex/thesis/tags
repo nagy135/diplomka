@@ -5,16 +5,80 @@
 !_TAG_PROGRAM_NAME	Universal Ctags	/Derived from Exuberant Ctags/
 !_TAG_PROGRAM_URL	https://ctags.io/	/official site/
 !_TAG_PROGRAM_VERSION	0.0.0	/45968eff/
+2D Gaussian	main.tex	/^\\subsection{2D Gaussian}$/;"	u	section:Object search and segmentation""Point spread function
 Abstract	main.tex	/^\\chapter*{Abstract}\\label{chap:abstract_en}$/;"	c
 Abstrakt	main.tex	/^\\chapter*{Abstrakt}\\label{chap:abstract_sk}$/;"	c
-Chapter 1	main.tex	/^\\chapter{Chapter 1}$/;"	c
-Chapter 2	main.tex	/^\\chapter{Chapter 2}$/;"	c
-Introduction to problematic	main.tex	/^\\section{Introduction to problematic}$/;"	s	chapter:Chapter 2
-Motivation	main.tex	/^\\section{Motivation}$/;"	s	chapter:Chapter 1
-Poďakovanie	main.tex	/^\\chapter*{Poďakovanie}\\label{chap:thank_you}$/;"	c
+Acknowledgement	main.tex	/^\\chapter*{Acknowledgement}\\label{chap:thank_you}$/;"	c
+Cluster creation	main.tex	/^\\section{Cluster creation}$/;"	s	chapter:Object search and segmentation
+Conclusion	main.tex	/^\\chapter{Conclusion}$/;"	c
+Data collection	main.tex	/^\\section{Data collection}$/;"	s	chapter:Introduction
+Equatorial coordinate system (RADEC)	main.tex	/^\\subsection{Equatorial coordinate system (RADEC)}$/;"	u	section:Introduction""Data collection
+FMPI AGO	main.tex	/^\\subsection{FMPI AGO}$/;"	u	section:Introduction""Data collection
+False detections	main.tex	/^\\subsection{False detections}$/;"	u	section:Object search and segmentation""Cluster creation
+Fits format	main.tex	/^\\subsection{Fits format}$/;"	u	section:Introduction""Data collection
+Function fitting	main.tex	/^\\subsection{Function fitting}$/;"	u	section:Object search and segmentation""Point spread function
+Grid sigma clipping	main.tex	/^\\section{Grid sigma clipping}$/;"	s	chapter:Sky background estimation and extraction
+Image preprocessing	main.tex	/^\\subsection{Image preprocessing}$/;"	u	section:Sky background estimation and extraction""Sigma clipping
+Implementation	main.tex	/^\\chapter{Implementation}$/;"	c
+Introduction	main.tex	/^\\chapter{Introduction}$/;"	c
+Iterative process	main.tex	/^\\subsection{Iterative process}$/;"	u	section:Sky background estimation and extraction""Sigma clipping
+Kurtosis	main.tex	/^\\subsection{Kurtosis}$/;"	u	section:Object search and segmentation""Cluster creation
+Language of implementation	main.tex	/^\\section{Language of implementation}$/;"	s	chapter:Implementation
+Median filtering	main.tex	/^\\section{Median filtering}$/;"	s	chapter:Sky background estimation and extraction
+Motivation	main.tex	/^\\chapter{Motivation}$/;"	c
+Object search and segmentation	main.tex	/^\\chapter{Object search and segmentation}$/;"	c
+Objects and modules	main.tex	/^\\section{Objects and modules}$/;"	s	chapter:Implementation
+PSF-Convolution Trail Function	main.tex	/^\\subsection{PSF-Convolution Trail Function}$/;"	u	section:Object search and segmentation""Point spread function
+Parameter choice	main.tex	/^\\subsection{Parameter choice}$/;"	u	section:Sky background estimation and extraction""Sigma clipping
+Pipeline definition	main.tex	/^\\section{Pipeline definition}$/;"	s	chapter:Introduction
+Point spread function	main.tex	/^\\section{Point spread function}$/;"	s	chapter:Object search and segmentation
+PointCluster.py	main.tex	/^\\subsection{PointCluster.py}$/;"	u	section:Implementation""Objects and modules
+Project structure	main.tex	/^\\subsection{Project structure}$/;"	u	section:Implementation""Objects and modules
+Second derivative thresholding	main.tex	/^\\subsection{Second derivative thresholding}$/;"	u	section:Object search and segmentation""Segmentation methods
+Segmentation methods	main.tex	/^\\section{Segmentation methods}$/;"	s	chapter:Object search and segmentation
+Sequential execution	main.tex	/^\\section{Sequential execution}$/;"	s	chapter:Sky background estimation and extraction
+Sigma clipping	main.tex	/^\\section{Sigma clipping}$/;"	s	chapter:Sky background estimation and extraction
+Signal to noise ratio	main.tex	/^\\section{Signal to noise ratio}$/;"	s	chapter:Object search and segmentation
+Skewness	main.tex	/^\\subsection{Skewness}$/;"	u	section:Object search and segmentation""Cluster creation
+Sky background estimation and extraction	main.tex	/^\\chapter{Sky background estimation and extraction}$/;"	c
+Sobel operator	main.tex	/^\\subsection{Sobel operator}$/;"	u	section:Object search and segmentation""Segmentation methods
+Space debris, definition	main.tex	/^\\section{Space debris, definition}$/;"	s	chapter:Introduction
+Spatial distribution	main.tex	/^\\section{Spatial distribution}$/;"	s	chapter:Introduction
+The trend	main.tex	/^\\section{The trend}$/;"	s	chapter:Introduction
+Thresholding	main.tex	/^\\subsection{Thresholding}$/;"	u	section:Object search and segmentation""Segmentation methods
+Tracking types	main.tex	/^\\subsection{Tracking types}$/;"	u	section:Introduction""Data collection
+Types of orbits	main.tex	/^\\subsection{Types of orbits}$/;"	u	section:Introduction""Spatial distribution
+astropy	main.tex	/^\\subsection{astropy}$/;"	u	section:Implementation""Language of implementation
+background\\_extraction\\_cli.py	main.tex	/^\\subsection{background\\_extraction\\_cli.py}$/;"	u	section:Implementation""Objects and modules
 chap:abstract_en	main.tex	/^\\chapter*{Abstract}\\label{chap:abstract_en}$/;"	l
 chap:abstract_sk	main.tex	/^\\chapter*{Abstrakt}\\label{chap:abstract_sk}$/;"	l
-chap:thank_you	main.tex	/^\\chapter*{Poďakovanie}\\label{chap:thank_you}$/;"	l
+chap:thank_you	main.tex	/^\\chapter*{Acknowledgement}\\label{chap:thank_you}$/;"	l
+decorators.py	main.tex	/^\\subsection{decorators.py}$/;"	u	section:Implementation""Objects and modules
+fig:example	main.tex	/^    \\label{fig:example}%$/;"	l
+fig:iterations	main.tex	/^    \\label{fig:iterations}%$/;"	l
+hist\\_threshold.py	main.tex	/^\\subsection{hist\\_threshold.py}$/;"	u	section:Implementation""Objects and modules
+img:background_initial_guess	main.tex	/^        \\label{img:background_initial_guess}$/;"	l
+img:background_result	main.tex	/^        \\label{img:background_result}$/;"	l
+img:circle_objects	main.tex	/^        \\label{img:circle_objects}$/;"	l
+img:debris_count	main.tex	/^        \\label{img:debris_count}$/;"	l
+img:gauss_point	main.tex	/^        \\label{img:gauss_point}$/;"	l
+img:gauss_point_bad	main.tex	/^        \\label{img:gauss_point_bad}$/;"	l
+img:grid_steps	main.tex	/^        \\label{img:grid_steps}$/;"	l
+img:joined_objects	main.tex	/^        \\label{img:joined_objects}$/;"	l
 img:logo	main.tex	/^        \\label{img:logo}$/;"	l
 img:logo_dark	main.tex	/^\\label{img:logo_dark}$/;"	l
+img:telescope	main.tex	/^        \\label{img:telescope}$/;"	l
+img:tracking types	main.tex	/^        \\label{img:tracking types}$/;"	l
+img:veres_front	main.tex	/^        \\label{img:veres_front}$/;"	l
+img:veres_side	main.tex	/^        \\label{img:veres_side}$/;"	l
 img:zadanie	main.tex	/^\\label{img:zadanie}$/;"	l
+matplotlib	main.tex	/^\\subsection{matplotlib}$/;"	u	section:Implementation""Language of implementation
+numpy	main.tex	/^\\subsection{numpy}$/;"	u	section:Implementation""Language of implementation
+plotly	main.tex	/^\\subsection{plotly}$/;"	u	section:Implementation""Language of implementation
+plotting.py	main.tex	/^\\subsection{plotting.py}$/;"	u	section:Implementation""Objects and modules
+psf\\_segmentation\\_cli.py	main.tex	/^\\subsection{psf\\_segmentation\\_cli.py}$/;"	u	section:Implementation""Objects and modules
+scipy	main.tex	/^\\subsection{scipy}$/;"	u	section:Implementation""Language of implementation
+tab:grid_results	main.tex	/^    \\label{tab:grid_results}$/;"	l
+tab:sigma	main.tex	/^    \\label{tab:sigma}$/;"	l
+testing\\_parser.py	main.tex	/^\\subsection{testing\\_parser.py}$/;"	u	section:Implementation""Objects and modules
+utils.py	main.tex	/^\\subsection{utils.py}$/;"	u	section:Implementation""Objects and modules

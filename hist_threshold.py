@@ -7,16 +7,17 @@ import matplotlib.pyplot as plt
 from scipy.signal import convolve2d
 from scipy.optimize import curve_fit
 
-from fits_control import read_fits_file, edit_fits_data, show_image
+from fits_control import read_fits_file, edit_fits_data
 
 from decorators import print_function, time_function
+
+np.seterr(all='ignore')
 
 def gaussian(x, amp, cen, wid):
     return amp * np.exp(-(x-cen)**2 / wid)
 
-def histogram_threshold(image, show=False, threshold_sigma=2):
-    print('Finding histogram threshold with params:', show, threshold_sigma)
-    # image = image / 90000
+def histogram_threshold(image, show=False, threshold_sigma=2, sigma_only=False):
+    print('Finding histogram threshold with {}*sigma offset to remove noise'.format(threshold_sigma))
     hist, bins = np.histogram(image.flatten(), bins=len(np.unique(image)))
 
     init_vals = [1000., 0., 1000.]
@@ -26,29 +27,25 @@ def histogram_threshold(image, show=False, threshold_sigma=2):
     # Get the fitted curve
     hist_fit = gaussian([x for x in range(len(hist))], *best_vals)
 
-    center = best_vals[1]
-    sigma_offset = best_vals[2]
-    sigma = sigma_offset - center
+    center = int(best_vals[1])
+    sigma = int(best_vals[2])
+    if sigma_only:
+        return sigma
     threshold = int(center + sigma*threshold_sigma)
     if show:
         fig = plt.figure()
         ax = fig.add_subplot(111)
-        # smoothed = smooth(hist,15)
-        # ax.bar([x for x in range(len(hist))], hist)
-        ax.axvline(threshold, color='green')
-        ax.axvline(center, color='brown')
-        ax.axvline(center+sigma, color='yellow')
-        # ax.plot([x for x in range(len(hist))], hist, color="green")
+        # smoothed = smooth(hist,15) ax.bar([x for x in range(len(hist))], hist)
+        ax.axvline(threshold, color='green', label='threshold')
+        ax.axvline(center, color='brown', label='center')
+        ax.axvline(center+sigma, color='yellow', label='center+sigma')
         ax.plot([x for x in range(len(hist))], hist, label='Test data', color='red')
         ax.plot([x for x in range(len(hist))], hist_fit, label='Fitted data', color='blue')
         plt.show()
+        return bins[threshold]
     else:
-        # image[image < offset] = 0
-        # return image
         return bins[threshold]
 
 if __name__ == '__main__':
-    # image = read_fits_file('data/AGO_2017_PR25_R-005.fit')
-    image = read_fits_file('data/STREAK_test_1-002.fit')
-    print(np.median(image))
-    histogram_threshold(image, False)
+    image = read_fits_file('data/M27_R_60s-001.fit')
+    histogram_threshold(image, True)
